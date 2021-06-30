@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d29f8424-ba3c-41f7-b0eb-ce324c7d0188" name="Default Changelist" comment=".">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ImageByType.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ImageByType.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Row.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Row.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +36,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/res/category/bibi" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -49,7 +50,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\user\WebstormProjects\hagar_finel\src\res\category\bibi" />
       <recent name="C:\Users\user\WebstormProjects\hagar_finel\src\res\category" />
+      <recent name="C:\Users\user\WebstormProjects\hagar_finel\src\res\category\tour" />
       <recent name="C:\Users\user\WebstormProjects\hagar_finel\src\res" />
       <recent name="C:\Users\user\WebstormProjects\hagar_finel\src" />
     </key>
@@ -81,7 +84,7 @@
       <workItem from="1624986633781" duration="9193000" />
       <workItem from="1625075447176" duration="5674000" />
       <workItem from="1625082101849" duration="1113000" />
-      <workItem from="1625083230966" duration="569000" />
+      <workItem from="1625083230966" duration="3789000" />
     </task>
     <task id="LOCAL‎00001" summary=".">
       <created>1625081433632</created>
@@ -95,7 +98,13 @@
       <option name="presentableId" value="LOCAL‎00002" />
       <updated>1625082400393</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL‎00003" summary=".">
+      <created>1625083813131</created>
+      <option name="number" value="LOCAL‎00003" />
+      <option name="presentableId" value="LOCAL‎00003" />
+      <updated>1625083813131</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

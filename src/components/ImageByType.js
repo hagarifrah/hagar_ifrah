@@ -9,11 +9,13 @@ const ImageByType = (props) => {
     const classes = hover ? 'image' : 'image hide'
     const dimension=isDesktopOrLaptop?'25vh':'65vw';
     const imageDivStyle = {
+        cursor: props.image.image!=-1?'pointer':undefined,
         height:dimension,
         width: dimension,
         marginLeft: '0.5vw',
         marginRight: '0.5vw',
-        backgroundColor: hover && props.image.type === TYPE_OF_IMAGE.HOVER ? APP_COLOR.MAIN_COLOR : undefined,
+        backgroundColor: hover && props.image.type === TYPE_OF_IMAGE.HOVER ? APP_COLOR.MAIN_COLOR : 'transparent',
+        borderColor:'transparent',
     }
     const imageStyle = {
         filter: hover && props.image.type === TYPE_OF_IMAGE.FILTERED ?  undefined: isDesktopOrLaptop?'grayscale(100%)':undefined,
@@ -28,10 +30,11 @@ const ImageByType = (props) => {
 
     return (
 
-        <div  onMouseLeave={onMouseOut} onMouseEnter={onMouseEnter} style={imageDivStyle}>
+        <button  onMouseLeave={onMouseOut} onMouseEnter={onMouseEnter} style={imageDivStyle}>
             {
                 props.image.type === TYPE_OF_IMAGE.HOVER &&hover&&
                 <div   style={{
+
                     position: 'absolute',
                     width: dimension,
                     height:dimension,
@@ -48,8 +51,12 @@ const ImageByType = (props) => {
 
                 </div>
             }
-            <img   style={imageStyle} src={props.image.image}/>
-        </div>
+            {
+                props.image.image!=-1&&
+                <img   style={imageStyle} src={props.image.image}/>
+            }
+
+        </button>
 
 
     )

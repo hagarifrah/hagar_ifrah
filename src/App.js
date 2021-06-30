@@ -3,6 +3,11 @@ import cosmetic_logo from './res/category/cosmetic/cosmetic_logo.png'
 import landLogo from './res/category/land_car/land_logo.png'
 import lifeBoatLogo from './res/category/save_boat/life_boat_logo.png'
 import betterFlyLogo from './res/category/better_fly/better_fly_logo.png'
+import pizzaLogo from './res/category/pizza/pizza_logo.png'
+import alian_logo from './res/category/alian/alian_logo.png'
+import tourLogo from './res/category/tour/tour_logo.jpg'
+import bibiLogo from './res/category/bibi/bibi_logo.jpg'
+import weddingLogo from './res/category/events/wedding_logo.jpg'
 import {BiDotsHorizontalRounded} from "react-icons/bi";
 import Row from "./components/Row";
 import {APP_COLOR, TYPE_OF_IMAGE} from "./utils/Utils";
@@ -34,12 +39,54 @@ const App = (props) => {
             index: 3,
             image: betterFlyLogo,
             type: TYPE_OF_IMAGE.FILTERED
+        },],
+        secondRow:[{
+            key: 0,
+            index: 0,
+            image: pizzaLogo,
+            type: TYPE_OF_IMAGE.FILTERED
+        },{
+            key: 1,
+            index: 1,
+            image: alian_logo,
+            type: TYPE_OF_IMAGE.FILTERED
+        },{
+            key: 0,
+            index: 0,
+            image: -1,
+            type: TYPE_OF_IMAGE.FILTERED
+        },{
+            key: 0,
+            index: 0,
+            image: -1,
+            type: TYPE_OF_IMAGE.FILTERED
+        }],
+        moreDesign:[{
+            key: 0,
+            index: 0,
+            image: weddingLogo,
+            type: TYPE_OF_IMAGE.HOVER
+        },{
+            key: 1,
+            index: 1,
+            image: tourLogo,
+            type: TYPE_OF_IMAGE.HOVER
+        },{
+            key: 2,
+            index: 2,
+            image: bibiLogo,
+            type: TYPE_OF_IMAGE.HOVER
+        },{
+            key: 3,
+            index: 3,
+            image: -1,
+            type: TYPE_OF_IMAGE.HOVER
         }]
     }
-    const Brand = () => {
-        const [showSetMore,setMore]=useState(false);
+    const ShowWork = (props) => {
+        const [showSetMore, setMore] = useState(false);
         return <div style={{
-            marginBottom: '5%',
+
             flexDirection: 'column',
             display: 'flex',
             alignItems: 'center',
@@ -51,29 +98,31 @@ const App = (props) => {
                 fontSize: '2rem',
                 color: APP_COLOR.MAIN_COLOR
             }}>
-               fffff מיתוג
-
+                {props.title}
             </div>
 
-            <Row images={images.firstRow}/>
+            <Row images={props.row}/>
             {
-                showSetMore&&
+                showSetMore &&
                 <>
-                    <Row images={images.firstRow}/>
-                    <Row images={images.firstRow}/>
-                    <Row images={images.firstRow}/>
+                    <Row images={props.moreArray[0]}/>
+
                 </>
             }
-            <MoreWork action={()=>{setMore(!showSetMore)}}/>
+            {
+                props.moreArray.length>0&&
+                <MoreWork action={() => {
+                    setMore(!showSetMore)
+                }}/>
+            }
+
         </div>
     }
-    const MoreWork=(action)=>{
+    const MoreWork = (props) => {
         const isDesktopOrLaptop = useMediaQuery({minDeviceWidth: 1224})
         return <button
-            onClick={action}
+            onClick={props.action}
             style={{
-                marginTop: isDesktopOrLaptop ? '2%' : '5%',
-                marginBottom: isDesktopOrLaptop ? '15%' : 0,
                 cursor: 'pointer',
                 borderWidth: 0,
                 backgroundColor: 'transparent',
@@ -96,7 +145,8 @@ const App = (props) => {
             justifyContent: 'space-evenly',
         }}>
             <Header/>
-            <Brand/>
+            <ShowWork title={"מיתוג"} moreArray={[images.secondRow]} row={images.firstRow}/>
+            <ShowWork title={"עיצובים נוספים"} moreArray={[]} row={images.moreDesign}/>
         </div>
 
 
