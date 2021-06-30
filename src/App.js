@@ -51,7 +51,7 @@ const App = (props) => {
                 fontSize: '2rem',
                 color: APP_COLOR.MAIN_COLOR
             }}>
-                מיתוג
+               fffff מיתוג
 
             </div>
 
