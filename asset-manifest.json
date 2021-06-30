@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/hagar_ifrah/static/css/main.bac908f1.chunk.css",
+    "main.js": "/hagar_ifrah/static/js/main.22777c59.chunk.js",
+    "main.js.map": "/hagar_ifrah/static/js/main.22777c59.chunk.js.map",
+    "runtime-main.js": "/hagar_ifrah/static/js/runtime-main.7ec4be39.js",
+    "runtime-main.js.map": "/hagar_ifrah/static/js/runtime-main.7ec4be39.js.map",
+    "static/js/2.0a126fe9.chunk.js": "/hagar_ifrah/static/js/2.0a126fe9.chunk.js",
+    "static/js/2.0a126fe9.chunk.js.map": "/hagar_ifrah/static/js/2.0a126fe9.chunk.js.map",
+    "static/js/3.93306078.chunk.js": "/hagar_ifrah/static/js/3.93306078.chunk.js",
+    "static/js/3.93306078.chunk.js.map": "/hagar_ifrah/static/js/3.93306078.chunk.js.map",
+    "index.html": "/hagar_ifrah/index.html",
+    "static/css/main.bac908f1.chunk.css.map": "/hagar_ifrah/static/css/main.bac908f1.chunk.css.map",
+    "static/js/2.0a126fe9.chunk.js.LICENSE.txt": "/hagar_ifrah/static/js/2.0a126fe9.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/hagar_ifrah/static/media/OpenSansHebrewCondensed-Light.176e7602.ttf",
+    "static/media/better_fly_logo.42037eb3.png": "/hagar_ifrah/static/media/better_fly_logo.42037eb3.png",
+    "static/media/cosmetic_logo.11303cf9.png": "/hagar_ifrah/static/media/cosmetic_logo.11303cf9.png",
+    "static/media/land_logo.4528838d.png": "/hagar_ifrah/static/media/land_logo.4528838d.png",
+    "static/media/life_boat_logo.beed980e.png": "/hagar_ifrah/static/media/life_boat_logo.beed980e.png",
+    "static/media/logo.e830d34a.png": "/hagar_ifrah/static/media/logo.e830d34a.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7ec4be39.js",
+    "static/js/2.0a126fe9.chunk.js",
+    "static/css/main.bac908f1.chunk.css",
+    "static/js/main.22777c59.chunk.js"
+  ]
+}
