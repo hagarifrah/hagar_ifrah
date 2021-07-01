@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/hagar_ifrah/static/css/main.bac908f1.chunk.css",
-    "main.js": "/hagar_ifrah/static/js/main.d1188771.chunk.js",
-    "main.js.map": "/hagar_ifrah/static/js/main.d1188771.chunk.js.map",
+    "main.js": "/hagar_ifrah/static/js/main.1186fa76.chunk.js",
+    "main.js.map": "/hagar_ifrah/static/js/main.1186fa76.chunk.js.map",
     "runtime-main.js": "/hagar_ifrah/static/js/runtime-main.7ec4be39.js",
     "runtime-main.js.map": "/hagar_ifrah/static/js/runtime-main.7ec4be39.js.map",
     "static/js/2.0a126fe9.chunk.js": "/hagar_ifrah/static/js/2.0a126fe9.chunk.js",
@@ -17,17 +17,23 @@
     "static/media/better_fly_logo.42037eb3.png": "/hagar_ifrah/static/media/better_fly_logo.42037eb3.png",
     "static/media/bibi_logo.a7cc8145.jpg": "/hagar_ifrah/static/media/bibi_logo.a7cc8145.jpg",
     "static/media/cosmetic_logo.11303cf9.png": "/hagar_ifrah/static/media/cosmetic_logo.11303cf9.png",
+    "static/media/instagram.66cfc24b.png": "/hagar_ifrah/static/media/instagram.66cfc24b.png",
     "static/media/land_logo.4528838d.png": "/hagar_ifrah/static/media/land_logo.4528838d.png",
     "static/media/life_boat_logo.beed980e.png": "/hagar_ifrah/static/media/life_boat_logo.beed980e.png",
     "static/media/logo.e830d34a.png": "/hagar_ifrah/static/media/logo.e830d34a.png",
+    "static/media/photoshop1.47f0e33c.jpg": "/hagar_ifrah/static/media/photoshop1.47f0e33c.jpg",
+    "static/media/photoshop2.68483ae9.jpg": "/hagar_ifrah/static/media/photoshop2.68483ae9.jpg",
+    "static/media/photoshop3.622e0db0.jpg": "/hagar_ifrah/static/media/photoshop3.622e0db0.jpg",
+    "static/media/photoshop4.bbe2bc3d.jpg": "/hagar_ifrah/static/media/photoshop4.bbe2bc3d.jpg",
     "static/media/pizza_logo.52209297.png": "/hagar_ifrah/static/media/pizza_logo.52209297.png",
     "static/media/tour_logo.5d2c6a56.jpg": "/hagar_ifrah/static/media/tour_logo.5d2c6a56.jpg",
-    "static/media/wedding_logo.f35e55e0.jpg": "/hagar_ifrah/static/media/wedding_logo.f35e55e0.jpg"
+    "static/media/wedding_logo.f35e55e0.jpg": "/hagar_ifrah/static/media/wedding_logo.f35e55e0.jpg",
+    "static/media/whatsapp.c28000b0.png": "/hagar_ifrah/static/media/whatsapp.c28000b0.png"
   },
   "entrypoints": [
     "static/js/runtime-main.7ec4be39.js",
     "static/js/2.0a126fe9.chunk.js",
     "static/css/main.bac908f1.chunk.css",
-    "static/js/main.d1188771.chunk.js"
+    "static/js/main.1186fa76.chunk.js"
   ]
 }
