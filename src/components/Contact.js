@@ -8,7 +8,7 @@ const Contact = () => {
     const isDesktopOrLaptop = useMediaQuery({minDeviceWidth: 1224})
     const navStyle={
 
-        marginLeft:isDesktopOrLaptop? '2%':0, height:isDesktopOrLaptop? '4vh':'7vh'
+        marginLeft:isDesktopOrLaptop? '2%':0, height:isDesktopOrLaptop? '4vh':'5vh'
     }
     return <div style={{
         marginTop: isDesktopOrLaptop?"2%":'4%',
