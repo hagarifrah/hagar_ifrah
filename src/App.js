@@ -18,6 +18,7 @@ import {APP_COLOR, TYPE_OF_IMAGE} from "./utils/Utils";
 import logo from './res/logo.png'
 import {useMediaQuery} from "react-responsive";
 import ContactForm from "./components/ContactForm";
+import Contact from "./components/Contact";
 
 const App = (props) => {
 
@@ -112,7 +113,7 @@ const App = (props) => {
     const ShowWork = (props) => {
         const [showSetMore, setMore] = useState(false);
         return <div style={{
-
+            width:'100%',
             flexDirection: 'column',
             display: 'flex',
             alignItems: 'center',
@@ -131,8 +132,12 @@ const App = (props) => {
             {
                 showSetMore &&
                 <>
+                {
+                    props.moreArray.map((images)=>{
+                        return   <Row images={images}/>
+                    })
+                }
 
-                    <Row images={props.moreArray[0]}/>
 
 
                 </>
@@ -169,14 +174,13 @@ const App = (props) => {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-
-            justifyContent: 'space-evenly',
         }}>
             <Header/>
-            <ShowWork title={"מיתוג"} moreArray={[images.secondRow]} row={images.firstRow}/>
+            <ShowWork title={"מיתוג"} moreArray={[images.secondRow,images.secondRow,images.secondRow,images.secondRow]} row={images.firstRow}/>
             <ShowWork title={"עיצובים נוספים"} moreArray={[]} row={images.moreDesign}/>
             <ShowWork title={"עיצובים בפוטושופ"} moreArray={[]} row={images.photoShop}/>
             <ContactForm/>
+            <Contact/>
         </div>
 
 

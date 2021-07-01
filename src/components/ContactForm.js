@@ -1,123 +1,90 @@
-import React,{useState} from 'react';
+import React, {useState} from 'react';
 import instagram from '../res/icons/instagram.png';
 import whatsApp from '../res/icons/whatsapp.png';
 import facebook from '../res/icons/facebook.png'
+import {useMediaQuery} from "react-responsive";
+import {APP_COLOR} from "../utils/Utils";
+
 const ContactForm = () => {
-    const [hover, setHover] = useState(false);
-    const [subject, setSubject] = useState("");
+    const isDesktopOrLaptop = useMediaQuery({minDeviceWidth: 1224})
     const [phone, setPhone] = useState("");
-    const [body, setBody] = useState("");
     const [fullName, setFullName] = useState("");
-    return <div style={{
-        paddingTop: '1%',
-        flexDirection: 'column',
-        display: 'flex',
-        width:'100vw'
-    }}>
+    const [subject, setSubject] = useState("");
+    const [hover, setHover] = useState(false);
+    const [body, setBody] = useState("");
+    const InputSection = () => {
 
-        <div style={{
-            backgroundColor: '#E9A8A950',
+        const inputStyle = {
+            boxSizing: 'border-box',
+            fontFamily: 'Assistant',
+            fontSize: '1em',
+            color: '#575756',
+            borderRadius: '0.5vw',
+            outlineWidth: 0,
+            height:isDesktopOrLaptop?'3.5vh':'4.5vh',
+            width: isDesktopOrLaptop?'50%':'62%',
+            borderColor: 'transparent',
+
+
+        }
+
+        return <div style={{
+
             display: 'flex',
-            flex: 1,
-            paddingTop: '1%',
-            paddingBottom: '1%',
-
-
-            flexDirection: 'row',
-            alignItems: 'center',
-            justifyContent: 'center',
-
+            justifyContent: 'space-evenly',
+            alignItems: isDesktopOrLaptop?'flex-end':'center',
+            flexDirection: 'column',
+            width:'100%',
+            height:isDesktopOrLaptop?'unset':'25vh'
         }}>
-            <div style={{
-
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center',
-                width: '25.10vw',
-                height: '10rem',
-                marginLeft: '0.15%',
-            }}>
-                <input
-                    onChange={(event) => {
-                        setFullName(event.target.value)
-                    }}
-                    style={{
-                        boxSizing: 'border-box',
-                        paddingRight: '2%',
-                        margin: '1.5%',
-                        fontFamily: 'Assistant',
-                        fontSize: '1em',
-                        color: '#575756',
-                        borderRadius: '0.5vw',
-                        outlineWidth: 0,
-                        width: '100%',
-                        borderColor: 'transparent',
-                        height: '100%',
-                    }}
-                    placeholder={"שם מלא"}/>
-
-                <input
-                    onChange={(event) => {
-                        setPhone(event.target.value)
-                    }}
-                    style={{
-                        boxSizing: 'border-box',
-                        paddingRight: '2%',
-                        margin: '1.5%',
-                        fontFamily: 'Assistant',
-                        borderRadius: '0.5vw',
-                        outlineWidth: 0,
-                        fontSize: '1em',
-                        color: '#575756',
-                        width: '100%',
-                        borderColor: 'transparent',
-                        height: '100%',
-                    }}
-                    placeholder={"טלפון"}/>
-
-                <input
-                    onChange={(event) => {
-                        setSubject(event.target.value)
-                    }}
-                    style={{
-                        boxSizing: 'border-box',
-                        paddingRight: '2%',
-                        margin: '1.5%',
-                        fontFamily: 'Assistant',
-                        borderRadius: '0.5vw',
-                        fontSize: '1em',
-                        color: '#575756',
-                        outlineWidth: 0,
-                        width: '100%',
-                        borderColor: 'transparent',
-                        height: '100%',
-                    }}
-                    placeholder={"נושא"}/>
-            </div>
-            <textarea
+            <input
                 onChange={(event) => {
-                    setBody(event.target.value)
+                    setFullName(event.target.value)
                 }}
-                style={{
-                    boxSizing: 'border-box',
-                    paddingTop: '0.4%',
-                    paddingRight: '0.6%',
-                    fontFamily: 'Assistant',
-                    outlineWidth: 0,
-                    fontSize: '1em',
-                    color: '#575756',
-                    '-webkit-input-placeholder': { /* Chrome, Firefox, Opera, Safari 10.1+ */
-                        color: 'red',
-                    },
-                    resize: 'none',
-                    borderColor: 'transparent',
-                    marginRight: '0.52%',
-                    width: '25.10vw',
-                    borderRadius: '0.5vw',
-                    height: '9rem'
-                }} placeholder={"תוכן הודעה"}/>
+                style={inputStyle}
+                placeholder={"שם מלא"}/>
 
+            <input
+                onChange={(event) => {
+                    setPhone(event.target.value)
+                }}
+                style={inputStyle}
+                placeholder={"טלפון"}/>
+
+            <input
+                onChange={(event) => {
+                    setSubject(event.target.value)
+                }}
+                style={inputStyle}
+                placeholder={"נושא"}/>
+
+        </div>
+    }
+
+
+
+    const TextSend=()=>{
+
+        return <div style={{justifyContent:isDesktopOrLaptop?'unset':'center',display:'flex',flex:1}}>
+        <textarea
+            onChange={(event) => {
+                setBody(event.target.value)
+            }}
+            style={{
+                boxSizing: 'border-box',
+                fontFamily: 'Assistant',
+                outlineWidth: 0,
+                fontSize: '1em',
+                color: '#575756',
+                '-webkit-input-placeholder': { /* Chrome, Firefox, Opera, Safari 10.1+ */
+                    color: 'red',
+                },
+                resize: 'none',
+                borderColor: 'transparent',
+                borderRadius: '0.5vw',
+                margin: '1.7vh',
+                width:isDesktopOrLaptop?'50%':'52%',
+            }} placeholder={"תוכן הודעה"}/>
             <a
                 target="_blank"
                 href={"https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=hagar.ifrah94@gmail.com&su=" + subject + "&body=" + body + '%0d%0a' + "מספר טלפון: " + phone + '%0d%0a' + "שם מלא: " + fullName}
@@ -132,13 +99,14 @@ const ContactForm = () => {
                 style={{
                     color: 'transparent',
                     borderRadius: '0.5vw',
-                    width: '2.5rem',
+                    width:isDesktopOrLaptop? '2.5rem':'1.5rem',
                     borderColor: 'transparent',
-                    marginRight: '0.7%',
                     alignItems: 'center',
                     justifyContent: 'center',
                     display: 'flex',
-                    height: '9rem',
+                    margin: '1.7vh',
+                    marginRight:0,
+
                     backgroundColor: hover ? '#E9A8A9' : '#a5a5a5',
                 }}>
                 <div style={{
@@ -152,53 +120,27 @@ const ContactForm = () => {
                     שלח
                 </div>
             </a>
-
-
         </div>
-        <div style={{
-            marginTop: '2%',
-            marginBottom: '2%',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            flexDirection: 'row',
-        }}>
+    }
 
-            <a
-                target="_blank"
-                style={{
-                    marginLeft: '2%', height: '4vh'
-                }}
-                href={"https://www.instagram.com/hagarifrah/"}>
-                <img
-                    style={{height: '70%'}}
-                    src={instagram}/>
-            </a>
-            <a
-                target="_blank"
-                style={{
-                    marginLeft: '2%', height: '4vh'
-                }}
-                href={"https://www.facebook.com/hagar.ifrah"}>
-                <img
-                    style={{height: '70%'}}
-                    src={facebook}/>
-            </a>
-
-
-            <a
-                target="_blank"
-                style={{
-                    marginLeft: '2%', height: '4vh'
-                }}
-                href={"https://wa.me/0523080322?text=היי הגר"}>
-                <img
-                    style={{height: '70%'}}
-                    src={whatsApp}/>
-            </a>
-
+    return <div style={{
+        display: 'flex',
+        backgroundColor:APP_COLOR.MAIN_COLOR+"50",
+        width: '100vw',
+        flexDirection: isDesktopOrLaptop?'row':'column',
+        justifyContent:isDesktopOrLaptop?'unset':'center',
+        marginTop:'5vh',
+    }}>
+        <div style={{display: 'flex', flex: 1, height: '18vh'}}>
+            <InputSection/>
         </div>
+        <div style={{display: 'flex', flex: 1,}}>
+            <TextSend/>
+        </div>
+
     </div>
 }
+
+
 
 export default ContactForm;
