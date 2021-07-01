@@ -6,7 +6,6 @@ const ImageByType = (props) => {
 
     const isDesktopOrLaptop = useMediaQuery({ minDeviceWidth: 1224 })
     const [hover, setHover] = useState(false);
-    const classes = hover ? 'image' : 'image hide'
     const dimension=isDesktopOrLaptop?'25vh':'65vw';
     const imageDivStyle = {
         cursor: props.image.image!=-1?'pointer':undefined,
@@ -17,8 +16,14 @@ const ImageByType = (props) => {
         backgroundColor: hover && props.image.type === TYPE_OF_IMAGE.HOVER ? APP_COLOR.MAIN_COLOR : 'transparent',
         borderColor:'transparent',
     }
+    let filter=undefined;
+    if(props.image.type === TYPE_OF_IMAGE.FILTERED&&isDesktopOrLaptop){
+       if(!hover){
+           filter='grayscale(100%)';
+       }
+    }
     const imageStyle = {
-        filter: hover && props.image.type === TYPE_OF_IMAGE.FILTERED ?  undefined: isDesktopOrLaptop?'grayscale(100%)':undefined,
+        filter,
         height: hover && props.image.type === TYPE_OF_IMAGE.HOVER ? 0 : '100%',
     }
     const onMouseEnter = () => {

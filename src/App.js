@@ -8,11 +8,16 @@ import alian_logo from './res/category/alian/alian_logo.png'
 import tourLogo from './res/category/tour/tour_logo.jpg'
 import bibiLogo from './res/category/bibi/bibi_logo.jpg'
 import weddingLogo from './res/category/events/wedding_logo.jpg'
+import photoshop1 from './res/category/photo_shop/photoshop1.jpg'
+import photoshop2 from './res/category/photo_shop/photoshop2.jpg'
+import photoshop3 from './res/category/photo_shop/photoshop3.jpg'
+import photoshop4 from './res/category/photo_shop/photoshop4.jpg'
 import {BiDotsHorizontalRounded} from "react-icons/bi";
 import Row from "./components/Row";
 import {APP_COLOR, TYPE_OF_IMAGE} from "./utils/Utils";
 import logo from './res/logo.png'
 import {useMediaQuery} from "react-responsive";
+import ContactForm from "./components/ContactForm";
 
 const App = (props) => {
 
@@ -81,6 +86,27 @@ const App = (props) => {
             index: 3,
             image: -1,
             type: TYPE_OF_IMAGE.HOVER
+        }],
+        photoShop:[{
+            key: 0,
+            index: 0,
+            image: photoshop1,
+            type: TYPE_OF_IMAGE.FILTERED
+        },{
+            key: 1,
+            index: 1,
+            image: photoshop2,
+            type: TYPE_OF_IMAGE.FILTERED
+        },{
+            key: 2,
+            index: 2,
+            image: photoshop3,
+            type: TYPE_OF_IMAGE.FILTERED
+        },{
+            key: 3,
+            index: 3,
+            image: photoshop4,
+            type: TYPE_OF_IMAGE.FILTERED
         }]
     }
     const ShowWork = (props) => {
@@ -105,7 +131,9 @@ const App = (props) => {
             {
                 showSetMore &&
                 <>
+
                     <Row images={props.moreArray[0]}/>
+
 
                 </>
             }
@@ -147,6 +175,8 @@ const App = (props) => {
             <Header/>
             <ShowWork title={"מיתוג"} moreArray={[images.secondRow]} row={images.firstRow}/>
             <ShowWork title={"עיצובים נוספים"} moreArray={[]} row={images.moreDesign}/>
+            <ShowWork title={"עיצובים בפוטושופ"} moreArray={[]} row={images.photoShop}/>
+            <ContactForm/>
         </div>
 
 

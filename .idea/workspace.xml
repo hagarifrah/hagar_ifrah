@@ -36,7 +36,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/res/category/bibi" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/res/icons" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -50,11 +50,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\user\WebstormProjects\hagar_finel\src\res\icons" />
+      <recent name="C:\Users\user\WebstormProjects\hagar_finel\src\res\category\photo_shop" />
+      <recent name="C:\Users\user\WebstormProjects\hagar_finel\public" />
       <recent name="C:\Users\user\WebstormProjects\hagar_finel\src\res\category\bibi" />
       <recent name="C:\Users\user\WebstormProjects\hagar_finel\src\res\category" />
-      <recent name="C:\Users\user\WebstormProjects\hagar_finel\src\res\category\tour" />
-      <recent name="C:\Users\user\WebstormProjects\hagar_finel\src\res" />
-      <recent name="C:\Users\user\WebstormProjects\hagar_finel\src" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
@@ -84,7 +84,8 @@
       <workItem from="1624986633781" duration="9193000" />
       <workItem from="1625075447176" duration="5674000" />
       <workItem from="1625082101849" duration="1113000" />
-      <workItem from="1625083230966" duration="3789000" />
+      <workItem from="1625083230966" duration="4196000" />
+      <workItem from="1625168120635" duration="1358000" />
     </task>
     <task id="LOCAL‎00001" summary=".">
       <created>1625081433632</created>
@@ -104,7 +105,19 @@
       <option name="presentableId" value="LOCAL‎00003" />
       <updated>1625083813131</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL‎00004" summary=".">
+      <created>1625087091600</created>
+      <option name="number" value="LOCAL‎00004" />
+      <option name="presentableId" value="LOCAL‎00004" />
+      <updated>1625087091600</updated>
+    </task>
+    <task id="LOCAL‎00005" summary=".">
+      <created>1625087261905</created>
+      <option name="number" value="LOCAL‎00005" />
+      <option name="presentableId" value="LOCAL‎00005" />
+      <updated>1625087261905</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
