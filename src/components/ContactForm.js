@@ -19,10 +19,11 @@ const ContactForm = () => {
             fontFamily: 'Assistant',
             fontSize: '1em',
             color: '#575756',
-            borderRadius: '0.5vw',
+            borderRadius:isDesktopOrLaptop? '0.5vw':'1vh',
+            paddingRight:'2%',
             outlineWidth: 0,
-            height:isDesktopOrLaptop?'3.5vh':'4.5vh',
-            width: isDesktopOrLaptop?'50%':'62%',
+            height: isDesktopOrLaptop ? '3.5vh' : '4.5vh',
+            width: isDesktopOrLaptop ? '53%' : '80%',
             borderColor: 'transparent',
 
 
@@ -32,10 +33,10 @@ const ContactForm = () => {
 
             display: 'flex',
             justifyContent: 'space-evenly',
-            alignItems: isDesktopOrLaptop?'flex-end':'center',
+            alignItems: isDesktopOrLaptop ? 'flex-end' : 'center',
             flexDirection: 'column',
-            width:'100%',
-            height:isDesktopOrLaptop?'unset':'25vh'
+            width: '100%',
+            height: isDesktopOrLaptop ? 'unset' : '25vh'
         }}>
             <input
                 onChange={(event) => {
@@ -62,17 +63,18 @@ const ContactForm = () => {
     }
 
 
+    const TextSend = () => {
 
-    const TextSend=()=>{
-
-        return <div style={{justifyContent:isDesktopOrLaptop?'unset':'center',display:'flex',flex:1}}>
+        return <div style={{justifyContent: isDesktopOrLaptop ? 'unset' : 'center', display: 'flex',  width: isDesktopOrLaptop ? '55%' : '100%',}}>
         <textarea
             onChange={(event) => {
                 setBody(event.target.value)
             }}
             style={{
+                paddingRight:'2%',
                 boxSizing: 'border-box',
                 fontFamily: 'Assistant',
+                width: isDesktopOrLaptop ?'100%':'70%',
                 outlineWidth: 0,
                 fontSize: '1em',
                 color: '#575756',
@@ -81,9 +83,13 @@ const ContactForm = () => {
                 },
                 resize: 'none',
                 borderColor: 'transparent',
-                borderRadius: '0.5vw',
+                borderRadius:isDesktopOrLaptop? '0.5vw':'1vh',
                 margin: '1.7vh',
-                width:isDesktopOrLaptop?'50%':'52%',
+                marginRight: isDesktopOrLaptop ? "1.7vh" : 0,
+
+
+                marginTop: isDesktopOrLaptop ? '1.7vh' : 0,
+
             }} placeholder={"תוכן הודעה"}/>
             <a
                 target="_blank"
@@ -98,14 +104,15 @@ const ContactForm = () => {
                 }
                 style={{
                     color: 'transparent',
-                    borderRadius: '0.5vw',
-                    width:isDesktopOrLaptop? '2.5rem':'1.5rem',
+                    borderRadius:isDesktopOrLaptop? '0.5vw':'1vh',
+                    padding:'1%',
                     borderColor: 'transparent',
                     alignItems: 'center',
                     justifyContent: 'center',
                     display: 'flex',
-                    margin: '1.7vh',
-                    marginRight:0,
+                    margin:isDesktopOrLaptop ? '1.7vh':0,
+                    marginRight: 0,
+                    marginBottom:'1.7vh',
 
                     backgroundColor: hover ? '#E9A8A9' : '#a5a5a5',
                 }}>
@@ -114,7 +121,7 @@ const ContactForm = () => {
                     color: 'white',
                     borderColor: 'transparent',
                     fontWeight: 'bold',
-
+                    fontSize: '0.8rem',
                     transform: 'rotate(90deg)',
                 }}>
                     שלח
@@ -125,14 +132,14 @@ const ContactForm = () => {
 
     return <div style={{
         display: 'flex',
-        backgroundColor:APP_COLOR.MAIN_COLOR+"50",
+        backgroundColor: APP_COLOR.MAIN_COLOR + "50",
         width: '100vw',
-        flexDirection: isDesktopOrLaptop?'row':'column',
-        justifyContent:isDesktopOrLaptop?'unset':'center',
-        marginTop:'5vh',
+        flexDirection: isDesktopOrLaptop ? 'row' : 'column',
+        justifyContent: isDesktopOrLaptop ? 'unset' : 'center',
+        marginTop: '5vh',
     }}>
         <div style={{display: 'flex', flex: 1, height: '18vh'}}>
-            <InputSection/>
+            <InputSection />
         </div>
         <div style={{display: 'flex', flex: 1,}}>
             <TextSend/>
@@ -140,7 +147,6 @@ const ContactForm = () => {
 
     </div>
 }
-
 
 
 export default ContactForm;

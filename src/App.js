@@ -70,22 +70,26 @@ const App = (props) => {
         moreDesign:[{
             key: 0,
             index: 0,
+            outerTitle:'טקסט 0',
             image: weddingLogo,
             type: TYPE_OF_IMAGE.HOVER
         },{
             key: 1,
             index: 1,
             image: tourLogo,
+            outerTitle:'טקסט 1',
             type: TYPE_OF_IMAGE.HOVER
         },{
             key: 2,
             index: 2,
             image: bibiLogo,
+            outerTitle:'טקסט 2',
             type: TYPE_OF_IMAGE.HOVER
         },{
             key: 3,
             index: 3,
             image: -1,
+            outerTitle:'טקסט 3',
             type: TYPE_OF_IMAGE.HOVER
         }],
         photoShop:[{
@@ -211,7 +215,7 @@ const Header = () => {
                 borderBottomWidth: '1px',
                 borderTopWidth: '1px',
                 padding: '3%',
-                width: isDesktopOrLaptop ? '50vw' : '85vw',
+                width: isDesktopOrLaptop ? '47vw' : '85vw',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center'

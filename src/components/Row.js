@@ -8,10 +8,13 @@ const Row = (props) => {
     return (
         <>
             <div style={{
+                width:'100%',
+                alignSelf:'center',
                 marginTop: '5vh',
                 display: 'flex',
                 flexDirection: isDesktopOrLaptop ? 'row' : 'column',
                 alignItems:'center',
+                justifyContent:'center',
             }}>
 
                 {

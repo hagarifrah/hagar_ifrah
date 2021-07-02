@@ -7,14 +7,14 @@ const ImageByType = (props) => {
 
     const isDesktopOrLaptop = useMediaQuery({minDeviceWidth: 1224})
     const [hover, setHover] = useState(false);
-    const dimension = isDesktopOrLaptop ? '25vh' : '65vw';
+    const dimension = isDesktopOrLaptop ? '25vh' : '85vw';
     const imageDivStyle = {
         cursor: props.image.image != -1 ? 'pointer' : undefined,
         height: dimension,
-        width: isDesktopOrLaptop ? dimension : 'auto',
-        marginLeft: isDesktopOrLaptop ? '0.5vw' : 0,
-        marginRight: isDesktopOrLaptop ? '0.5vw' : 0,
-        backgroundColor: hover && props.image.type === TYPE_OF_IMAGE.HOVER ? APP_COLOR.MAIN_COLOR : 'transparent',
+        marginLeft: '1vh',
+        marginRight: '1vh',
+        width: dimension,
+        backgroundColor: 'transparent',
         borderColor: 'transparent',
     }
     let filter = undefined;
@@ -23,10 +23,7 @@ const ImageByType = (props) => {
             filter = 'grayscale(100%)';
         }
     }
-    const imageStyle = {
-        filter,
-        height: hover && props.image.type === TYPE_OF_IMAGE.HOVER ? 0 : '100%',
-    }
+
     const onMouseEnter = () => {
         if (props.image.image != -1) {
             setHover(true)
@@ -40,34 +37,55 @@ const ImageByType = (props) => {
     return (
 
         <button onMouseLeave={onMouseOut} onMouseEnter={onMouseEnter} style={imageDivStyle}>
-            {
-                props.image.type === TYPE_OF_IMAGE.HOVER && hover &&
-                <div
-                    style={{
-                        position: 'absolute',
-                        width: dimension,
-                        height: dimension,
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                    }}>
-                    <div style={{fontFamily: 'OpenSansHebrewCondensedRegular'}}>
-                        {
-                            props.image.title
-                        }
-                    </div>
 
-                </div>
+            {/* {
+                hover && props.image.type === TYPE_OF_IMAGE.HOVER ?
+                    <div style={{height:'100%',width:'100%'}}>
+                        {
+                            props.image.outerTitle
+                        }
+                    </div> :
+                    props.image.image != -1 &&
+                    <img style={{backgroundColor:'red',filter, height: '100%', width: '100%'}} src={props.image.image}/>
             }
+*/}
             {
-                props.image.image != -1 &&
-                <img style={imageStyle} src={props.image.image}/>
+                props.image.image != -1 && (props.image.type === TYPE_OF_IMAGE.FILTERED || props.image.type === TYPE_OF_IMAGE.HOVER && !hover) &&
+                <img
+
+                    style={{
+                        filter,
+                        height: '100%',
+                        width: '100%',
+                        textIndent: -10000
+                    }}
+
+
+                    src={props.image.image}/>
+            }
+
+            {
+                hover && props.image.type === TYPE_OF_IMAGE.HOVER &&
+                <div style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    height: '100%',
+                    width: '100%',
+                    fontFamily: 'OpenSansHebrewCondensedRegular',
+                    backgroundColor:APP_COLOR.MAIN_COLOR,
+                    fontSize:'2rem'
+                }}>
+                    {
+                        props.image.outerTitle
+                    }
+                </div>
             }
 
         </button>
 
 
     )
-}
+};
 
 export default ImageByType;
