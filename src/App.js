@@ -128,7 +128,8 @@ const App = (props) => {
             <div style={{
                 fontFamily: 'OpenSansHebrewCondensedRegular',
                 fontSize:isDesktopOrLaptop? '2rem':'5rem',
-                color: APP_COLOR.MAIN_COLOR
+                color: APP_COLOR.MAIN_COLOR,
+                textAlign:'center'
             }}>
                 {props.title}
             </div>
@@ -176,9 +177,12 @@ const App = (props) => {
 
 
         <div style={{
+            flex:1,
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
+            margin:0,
+            padding:0
         }}>
             <Header/>
             <ShowWork title={"מיתוג"} moreArray={[images.secondRow,images.secondRow,images.secondRow,images.secondRow]} row={images.firstRow}/>
