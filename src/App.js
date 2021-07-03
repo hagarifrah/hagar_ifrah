@@ -176,14 +176,14 @@ const App = (props) => {
                         setShowFullScreen(false)
                     }}
                     style={{marginRight: '10vw', zIndex: 200}}
-                    size={'5vh'}
+                    size={isDesktopOrLaptop?'5vh':'10vmin'}
                 />
                 <BsChevronLeft
                     onClick={() => {
                         setShowFullScreen(false)
                     }}
                     style={{marginLeft: '10vw', zIndex: 200}}
-                    size={'5vh'}
+                    size={isDesktopOrLaptop?'5vh':'10vmin'}
                 />
             </div>
 
@@ -285,8 +285,6 @@ const App = (props) => {
     }
     const isDesktopOrLaptop = useMediaQuery({minWidth: 1224})
     const [positionOfBottomDiv, setPositionOfButtonDiv] = useState(0)
-    console.log(window.innerWidth)
-
 
     return (
 
@@ -308,15 +306,19 @@ const App = (props) => {
                         }}>
 
                         <FullScreen/>
-                        <div
-                            style={{
-                                zIndex: 0,
-                                position: 'absolute',
-                                top: positionOfBottomDiv - window.innerHeight / 10,
-                                height: '20vmin',
-                                width: '100vw',
-                                backgroundColor: APP_COLOR.MAIN_COLOR
-                            }}/>
+                        {
+                            isDesktopOrLaptop&&
+                            <div
+                                style={{
+                                    zIndex: 0,
+                                    position: 'absolute',
+                                    top: positionOfBottomDiv - window.innerHeight / 10,
+                                    height: '20vmin',
+                                    width: '100vw',
+                                    backgroundColor: APP_COLOR.MAIN_COLOR
+                                }}/>
+                        }
+
 
                     </div>
 
