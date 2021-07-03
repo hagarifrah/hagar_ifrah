@@ -115,6 +115,7 @@ const App = (props) => {
         }]
     }
     const ShowWork = (props) => {
+        const isDesktopOrLaptop = useMediaQuery({minWidth: 1224})
         const [showSetMore, setMore] = useState(false);
         return <div style={{
             width:'100%',
@@ -126,7 +127,7 @@ const App = (props) => {
         }}>
             <div style={{
                 fontFamily: 'OpenSansHebrewCondensedRegular',
-                fontSize: '2rem',
+                fontSize:isDesktopOrLaptop? '2rem':'5rem',
                 color: APP_COLOR.MAIN_COLOR
             }}>
                 {props.title}

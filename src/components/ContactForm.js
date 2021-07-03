@@ -142,7 +142,7 @@ const TextSend = (props) => {
                 color: 'white',
                 borderColor: 'transparent',
                 fontWeight: 'bold',
-                fontSize:isDesktopOrLaptop?'0.8rem':'1.5rem',
+                fontSize:isDesktopOrLaptop?'0.8em':'1.5em',
                 transform: isDesktopOrLaptop?'rotate(90deg)':undefined,
             }}>
                 שלח
