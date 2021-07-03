@@ -34,6 +34,9 @@ const App = (props) => {
     const [imagesArrayOnFullScreen, setImagesArrayOnFullScreen] = useState([]);
     const [showFullScreen, setShowFullScreen] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
+    useEffect(()=>{
+        setShowFullScreen(true)
+    },[imagesArrayOnFullScreen])
     const images = {
         firstRow: [{
             key: 0,
@@ -173,17 +176,19 @@ const App = (props) => {
             }}>
                 <BsChevronRight
                     onClick={() => {
-                        setShowFullScreen(false)
+
                     }}
+                    color={APP_COLOR.MAIN_COLOR}
                     style={{marginRight: '10vw', zIndex: 200}}
-                    size={isDesktopOrLaptop?'5vh':'10vmin'}
+                    size={isDesktopOrLaptop ? '5vh' : '10vmin'}
                 />
                 <BsChevronLeft
+                    color={APP_COLOR.MAIN_COLOR}
                     onClick={() => {
-                        setShowFullScreen(false)
+
                     }}
                     style={{marginLeft: '10vw', zIndex: 200}}
-                    size={isDesktopOrLaptop?'5vh':'10vmin'}
+                    size={isDesktopOrLaptop ? '5vh' : '10vmin'}
                 />
             </div>
 
@@ -192,7 +197,7 @@ const App = (props) => {
     }
     const onClickFullScreen = (props) => {
 
-        setShowFullScreen(true)
+
         setCurrentIndex(props.index);
         const images = props.images.find((item) => {
             return item.index == currentIndex
@@ -307,7 +312,7 @@ const App = (props) => {
 
                         <FullScreen/>
                         {
-                            isDesktopOrLaptop&&
+                            isDesktopOrLaptop &&
                             <div
                                 style={{
                                     zIndex: 0,

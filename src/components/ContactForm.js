@@ -85,6 +85,7 @@ const TextSend = (props) => {
             value={props.body}
             style={{
                 paddingRight: '2%',
+                paddingTop:'2%',
                 boxSizing: 'border-box',
                 fontFamily: 'Assistant',
                 width: '100%',
@@ -158,7 +159,6 @@ const ContactForm = () => {
         display: 'flex',
         backgroundColor: APP_COLOR.MAIN_COLOR + "50",
         width: '100vw',
-
         flexDirection: isDesktopOrLaptop ? 'row' : 'column',
         alignItems: 'center',
         justifyContent: 'center',

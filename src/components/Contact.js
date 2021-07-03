@@ -5,6 +5,7 @@ import React from "react";
 import {useMediaQuery} from "react-responsive";
 
 const Contact = () => {
+
     const isDesktopOrLaptop = useMediaQuery({minWidth: 1224})
     const navStyle={
 
@@ -24,7 +25,7 @@ const Contact = () => {
         <a
             target="_blank"
             style={navStyle}
-            href={"https://www.instagram.com/hagarifrah/"}>
+            href={!navigator.userAgent.includes("Mobile")?"https://www.instagram.com/hagarifrah/":'instagram://user?username=hagarifrah'}>
             <img
                 style={{height: '70%'}}
                 src={instagram}/>
@@ -32,7 +33,7 @@ const Contact = () => {
         <a
             target="_blank"
             style={navStyle}
-            href={"https://www.facebook.com/hagar.ifrah"}>
+            href={!navigator.userAgent.includes("Mobile")?"https://www.facebook.com/hagar.ifrah":'fb://profile/100007881699145'}>
             <img
                 style={{height: '70%'}}
                 src={facebook}/>
@@ -42,7 +43,7 @@ const Contact = () => {
         <a
             target="_blank"
             style={navStyle}
-            href={"https://wa.me/0523080322?text=היי הגר"}>
+            href={!navigator.userAgent.includes("Mobile")?"https://wa.me/0523080322?text=היי הגר":'whatsapp://send?phone=+9720523080322&text=היי הגר '}>
             <img
                 style={{height: '70%'}}
                 src={whatsApp}/>
