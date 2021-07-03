@@ -21,7 +21,7 @@ const Row = (props) => {
                     props.images.map((image,index) => {
                         return <div style={{
                         }} key={image.key}>
-                            <ImageByType image={image}/>
+                            <ImageByType onClick={props.onClick} image={image}/>
                         </div>
 
                     })

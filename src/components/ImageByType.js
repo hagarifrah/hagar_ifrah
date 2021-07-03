@@ -28,15 +28,24 @@ const ImageByType = (props) => {
         if (props.image.image != -1) {
             setHover(true)
         }
-
     }
     const onMouseOut = () => {
         setHover(false)
     }
+    const onClick=()=>{
+        if(props.onClick!=undefined){
+            props.onClick(props.image.index);
+        }
+
+    }
 
     return (
 
-        <button onMouseLeave={onMouseOut} onMouseEnter={onMouseEnter} style={imageDivStyle}>
+        <button
+            onClick={onClick}
+            onMouseLeave={onMouseOut}
+            onMouseEnter={onMouseEnter}
+            style={imageDivStyle}>
 
             {/* {
                 hover && props.image.type === TYPE_OF_IMAGE.HOVER ?

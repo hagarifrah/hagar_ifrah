@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import cosmetic_logo from './res/category/cosmetic/cosmetic_logo.png'
 import landLogo from './res/category/land_car/land_logo.png'
 import lifeBoatLogo from './res/category/save_boat/life_boat_logo.png'
@@ -12,21 +12,38 @@ import photoshop1 from './res/category/photo_shop/photoshop1.jpg'
 import photoshop2 from './res/category/photo_shop/photoshop2.jpg'
 import photoshop3 from './res/category/photo_shop/photoshop3.jpg'
 import photoshop4 from './res/category/photo_shop/photoshop4.jpg'
+import {BsChevronRight, BsChevronLeft} from 'react-icons/bs';
 import {BiDotsHorizontalRounded} from "react-icons/bi";
 import Row from "./components/Row";
+import {FiX} from "react-icons/fi"
 import {APP_COLOR, TYPE_OF_IMAGE} from "./utils/Utils";
 import logo from './res/logo.png'
 import {useMediaQuery} from "react-responsive";
 import ContactForm from "./components/ContactForm";
 import Contact from "./components/Contact";
+import cosmetic1 from './res/category/cosmetic/cosmetic1.jpg'
+import cosmetic2 from './res/category/cosmetic/cosmetic2.jpg'
+import cosmetic3 from './res/category/cosmetic/cosmetic3.jpg'
+import cosmetic4 from './res/category/cosmetic/cosmetic4.jpg'
+import ImageByType from "./components/ImageByType";
+import ImageOnFullScreen from "./components/ImageOnFullScreen";
 
 const App = (props) => {
 
-
+    const [yPosition, setYPosition] = useState(0);
+    const [imagesArrayOnFullScreen, setImagesArrayOnFullScreen] = useState([]);
+    const [showFullScreen, setShowFullScreen] = useState(false);
+    const [currentIndex, setCurrentIndex] = useState(0);
     const images = {
         firstRow: [{
             key: 0,
             index: 0,
+            imagesOnFullScreen: [
+                {image: cosmetic1, pressAble: true},
+                {image: cosmetic2, pressAble: false},
+                {image: cosmetic3, pressAble: true},
+                {image: cosmetic4, pressAble: false},
+            ],
             image: cosmetic_logo,
             type: TYPE_OF_IMAGE.FILTERED
         }, {
@@ -46,79 +63,149 @@ const App = (props) => {
             image: betterFlyLogo,
             type: TYPE_OF_IMAGE.FILTERED
         },],
-        secondRow:[{
-            key: 0,
-            index: 0,
+        secondRow: [{
+            key: 4,
+            index: 4,
             image: pizzaLogo,
             type: TYPE_OF_IMAGE.FILTERED
-        },{
-            key: 1,
-            index: 1,
+        }, {
+            key: 5,
+            index: 5,
             image: alian_logo,
             type: TYPE_OF_IMAGE.FILTERED
-        },{
-            key: 0,
-            index: 0,
+        }, {
+            key: 6,
+            index: 6,
             image: -1,
             type: TYPE_OF_IMAGE.FILTERED
-        },{
-            key: 0,
-            index: 0,
+        }, {
+            key: 7,
+            index: 7,
             image: -1,
             type: TYPE_OF_IMAGE.FILTERED
         }],
-        moreDesign:[{
-            key: 0,
-            index: 0,
-            outerTitle:'טקסט 0',
+        moreDesign: [{
+            key: 8,
+            index: 8,
+            outerTitle: 'טקסט 0',
             image: weddingLogo,
             type: TYPE_OF_IMAGE.HOVER
-        },{
-            key: 1,
-            index: 1,
+        }, {
+            key: 9,
+            index: 9,
             image: tourLogo,
-            outerTitle:'טקסט 1',
+            outerTitle: 'טקסט 1',
             type: TYPE_OF_IMAGE.HOVER
-        },{
-            key: 2,
-            index: 2,
+        }, {
+            key: 10,
+            index: 10,
             image: bibiLogo,
-            outerTitle:'טקסט 2',
+            outerTitle: 'טקסט 2',
             type: TYPE_OF_IMAGE.HOVER
-        },{
-            key: 3,
-            index: 3,
+        }, {
+            key: 11,
+            index: 11,
             image: -1,
-            outerTitle:'טקסט 3',
+            outerTitle: 'טקסט 3',
             type: TYPE_OF_IMAGE.HOVER
         }],
-        photoShop:[{
-            key: 0,
-            index: 0,
+        photoShop: [{
+            key: 12,
+            index: 12,
             image: photoshop1,
             type: TYPE_OF_IMAGE.FILTERED
-        },{
-            key: 1,
-            index: 1,
+        }, {
+            key: 13,
+            index: 13,
             image: photoshop2,
             type: TYPE_OF_IMAGE.FILTERED
-        },{
-            key: 2,
-            index: 2,
+        }, {
+            key: 14,
+            index: 14,
             image: photoshop3,
             type: TYPE_OF_IMAGE.FILTERED
-        },{
-            key: 3,
-            index: 3,
+        }, {
+            key: 15,
+            index: 15,
             image: photoshop4,
             type: TYPE_OF_IMAGE.FILTERED
         }]
+    }
+    const FullScreen = () => {
+
+        return <div
+            style={{zIndex: 100, width: '100%', display: 'flex', alignItems: 'center', flexDirection: 'column'}}>
+
+            <FiX
+                onClick={() => {
+                    setShowFullScreen(false)
+                }}
+                style={{padding: '5vmin', display: 'flex', alignSelf: 'flex-end'}}
+                size={'5vh'}/>
+            <TextComponent
+                noMarginTop={true}
+                text={
+                    `asdasd
+              asdasdsad
+              asd`
+
+                }/>
+            <div style={{marginTop: '5vmin'}}/>
+
+            {
+                imagesArrayOnFullScreen.map((item) => {
+                    return <ImageOnFullScreen image={item.image}/>
+                })
+            }
+
+            <div style={{
+                top: window.outerHeight / 2,
+                margin: -window.outerHeight / 5 / 1.2,
+                position: 'fixed',
+                display: 'flex',
+                zIndex: 100,
+
+                justifyContent: 'space-between',
+                alignItems: 'center',
+
+                width: '100vw',
+                height: window.outerHeight / 5
+            }}>
+                <BsChevronRight
+                    onClick={() => {
+                        setShowFullScreen(false)
+                    }}
+                    style={{marginRight: '10vw', zIndex: 200}}
+                    size={'5vh'}
+                />
+                <BsChevronLeft
+                    onClick={() => {
+                        setShowFullScreen(false)
+                    }}
+                    style={{marginLeft: '10vw', zIndex: 200}}
+                    size={'5vh'}
+                />
+            </div>
+
+
+        </div>
+    }
+    const onClickFullScreen = (props) => {
+
+        setShowFullScreen(true)
+        setCurrentIndex(props.index);
+        const images = props.images.find((item) => {
+            return item.index == currentIndex
+
+        }).imagesOnFullScreen
+
+        setImagesArrayOnFullScreen(images);
     }
     const ShowWork = (props) => {
         const isDesktopOrLaptop = useMediaQuery({minWidth: 1224})
         const [showSetMore, setMore] = useState(false);
         return <div style={{
-            width:'100%',
+            width: '100%',
             flexDirection: 'column',
             display: 'flex',
             alignItems: 'center',
@@ -127,29 +214,32 @@ const App = (props) => {
         }}>
             <div style={{
                 fontFamily: 'OpenSansHebrewCondensedRegular',
-                fontSize:isDesktopOrLaptop? '2rem':'5rem',
+                fontSize: isDesktopOrLaptop ? '2rem' : '3rem',
                 color: APP_COLOR.MAIN_COLOR,
-                textAlign:'center'
+                textAlign: 'center'
             }}>
                 {props.title}
             </div>
 
-            <Row images={props.row}/>
+            <Row
+                onClick={(index) => onClickFullScreen({images: props.row, index})}
+                images={props.row}/>
             {
                 showSetMore &&
                 <>
-                {
-                    props.moreArray.map((images)=>{
-                        return   <Row images={images}/>
-                    })
-                }
-
+                    {
+                        props.moreArray.map((images) => {
+                            return <Row
+                                onClick={(index) => onClickFullScreen({images: props.row})}
+                                images={images}/>
+                        })
+                    }
 
 
                 </>
             }
             {
-                props.moreArray.length>0&&
+                props.moreArray.length > 0 &&
                 <MoreWork action={() => {
                     setMore(!showSetMore)
                 }}/>
@@ -172,28 +262,102 @@ const App = (props) => {
             <BiDotsHorizontalRounded color={"#E9A8A9"} size={'3.5vh'}/>
         </button>
     }
+    const MainFrame = () => {
+        return <>
+            <Header/>
+            <ShowWork title={"מיתוג"}
+                      moreArray={[images.secondRow, images.secondRow, images.secondRow, images.secondRow]}
+                      row={images.firstRow}/>
+            <ShowWork title={"עיצובים נוספים"} moreArray={[]} row={images.moreDesign}/>
+            <ShowWork title={"עיצובים בפוטושופ"} moreArray={[]} row={images.photoShop}/>
+            <div style={{
+                marginTop: '2.5%',
+                fontFamily: 'OpenSansHebrewCondensedRegular',
+                fontSize: isDesktopOrLaptop ? '2rem' : '3rem',
+                color: APP_COLOR.MAIN_COLOR,
+                textAlign: 'center'
+            }}>
+                צור קשר
+            </div>
+            <ContactForm/>
+            <Contact/>
+        </>
+    }
+    const isDesktopOrLaptop = useMediaQuery({minWidth: 1224})
+    const [positionOfBottomDiv, setPositionOfButtonDiv] = useState(0)
+    console.log(window.innerWidth)
+
 
     return (
 
 
-        <div style={{
-            flex:1,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            margin:0,
-            padding:0
-        }}>
-            <Header/>
-            <ShowWork title={"מיתוג"} moreArray={[images.secondRow,images.secondRow,images.secondRow,images.secondRow]} row={images.firstRow}/>
-            <ShowWork title={"עיצובים נוספים"} moreArray={[]} row={images.moreDesign}/>
-            <ShowWork title={"עיצובים בפוטושופ"} moreArray={[]} row={images.photoShop}/>
-            <ContactForm/>
-            <Contact/>
+        <div
+            style={{
+                flex: 1,
+                display: 'flex',
+                flexDirection: 'column',
+                margin: 0,
+                padding: 0
+            }}>
+            {
+                showFullScreen ? <div
+                        style={{}}
+                        id={"test"}
+                        onLoad={(event) => {
+                            setPositionOfButtonDiv(document.getElementById('test').clientHeight)
+                        }}>
+
+                        <FullScreen/>
+                        <div
+                            style={{
+                                zIndex: 0,
+                                position: 'absolute',
+                                top: positionOfBottomDiv - window.innerHeight / 10,
+                                height: '20vmin',
+                                width: '100vw',
+                                backgroundColor: APP_COLOR.MAIN_COLOR
+                            }}/>
+
+                    </div>
+
+                    :
+                    <MainFrame/>
+            }
+
         </div>
 
 
     );
+}
+const TextComponent = (props) => {
+    const isDesktopOrLaptop = useMediaQuery({minWidth: 1224})
+    return <div
+        style={{
+            whiteSpace: 'pre-line',
+            marginTop: props.noMarginTop ? 0 : '5%',
+            borderLeftWidth: 0,
+            borderRightWidth: 0,
+            borderStyle: 'solid',
+            borderColor: 'black',
+            borderBottomWidth: '1px',
+            borderTopWidth: '1px',
+            padding: '2vmin',
+            width: isDesktopOrLaptop ? '35vw' : '75vw',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+        }}>
+        <div style={{
+            fontSize: '1.3em',
+            fontFamily: 'OpenSansHebrewCondensedRegular',
+            color: APP_COLOR.TEXT_COLOR,
+            textAlign: 'center'
+        }}>
+            {
+                props.text
+            }
+        </div>
+    </div>
 }
 const Header = () => {
     const isDesktopOrLaptop = useMediaQuery({minWidth: 1224})
@@ -211,36 +375,15 @@ const Header = () => {
                 <img style={{height: '100%'}} src={logo}/>
             </div>
 
-            <div style={{
-                marginTop: '5%',
-                borderLeftWidth: 0,
-                borderRightWidth: 0,
-                borderStyle: 'solid',
-                borderColor: 'black',
-                borderBottomWidth: '1px',
-                borderTopWidth: '1px',
-                padding: '3%',
-                width: isDesktopOrLaptop ? '47vw' : '85vw',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center'
-            }}>
-                <div style={{
-                    fontSize: isDesktopOrLaptop ? '1.5rem' : '1.2rem',
-                    fontFamily: 'OpenSansHebrewCondensedRegular',
-                    color: APP_COLOR.TEXT_COLOR,
-                    textAlign: 'center'
-                }}>
-                    היי שמי הגר ואני מעצבת גרפית.<br/>
-                    אז קצת עלי, אני פרפקציוניסטית, תחרותית ותמיד שואפת ללמוד דברים חדשים.
+            <TextComponent text={
+                ` היי שמי הגר ואני מעצבת גרפית.
+            אז קצת עלי, אני פרפקציוניסטית, תחרותית ותמיד שואפת ללמוד דברים חדשים.
 
-                    אני מאוד אוהבת את העיצוב המנימליסטי והנקי ושמה דגש גם על הפרטים הקטנים ביותר.
-                    <br/>
-                    <br/>
-                    תוכלו להציץ בתיק העבודות שלי ואם אהבתם והתחברתם צרו איתי קשר ואשמח לקדם את העסק שלכם ע"י מיתוג
-                    ייחודי ועכשווי שיבדיל אתכם מהמתחרים.
-                </div>
-            </div>
+            אני מאוד אוהבת את העיצוב המנימליסטי והנקי ושמה דגש גם על הפרטים הקטנים ביותר.
+            
+            תוכלו להציץ בתיק העבודות שלי ואם אהבתם והתחברתם צרו איתי קשר ואשמח לקדם את העסק שלכם ע"י מיתוג ייחודי ועכשווי שיבדיל אתכם מהמתחרים.
+               `
+            }/>
         </div>
     )
 };

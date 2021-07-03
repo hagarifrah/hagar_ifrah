@@ -11,16 +11,13 @@ const InputSection = (props) => {
     const inputStyle = {
         boxSizing: 'border-box',
         fontFamily: 'Assistant',
-        fontSize:isDesktopOrLaptop?'1em':'1.5em',
-
+        fontSize:'1em',
         borderRadius:isDesktopOrLaptop? '0.5vw':'1vh',
         paddingRight:'2%',
         outlineWidth: 0,
         height:isDesktopOrLaptop?'5vmin':'10vmin',
         color: '#575756',
         width:isDesktopOrLaptop?undefined:'80vmin',
-
-
         borderColor: 'transparent',
     }
 
@@ -32,8 +29,7 @@ const InputSection = (props) => {
         margin: '1.7vh',
         marginLeft: 0,
         marginRight: 0,
-
-
+        marginBottom:isDesktopOrLaptop?'1.7vh':'2.5%'
     }}>
 
         <input
@@ -45,7 +41,7 @@ const InputSection = (props) => {
             style={inputStyle}
             placeholder={"שם מלא"}/>
         <div style={{
-            marginTop: '5%',
+            marginTop: '2.5%',
         }}/>
 
         <input
@@ -57,7 +53,7 @@ const InputSection = (props) => {
             style={inputStyle}
             placeholder={"טלפון"}/>
         <div style={{
-            marginTop: '5%',
+            marginTop: '2.5%',
         }}/>
         <input
             onChange={(event) => {
@@ -78,6 +74,7 @@ const TextSend = (props) => {
         flex: 1,
         display: 'flex',
         alignSelf:isDesktopOrLaptop?undefined:'center',
+        flexDirection:isDesktopOrLaptop?undefined:'column'
 
     }}>
 
@@ -88,20 +85,20 @@ const TextSend = (props) => {
             value={props.body}
             style={{
                 paddingRight: '2%',
-                paddingTop:!isDesktopOrLaptop?'2%':0,
                 boxSizing: 'border-box',
                 fontFamily: 'Assistant',
                 width: '100%',
                 outlineWidth: 0,
-                fontSize:isDesktopOrLaptop?'1em':'1.5em',
+                fontSize:'1em',
                 color: '#575756',
                 resize: 'none',
                 borderColor: 'transparent',
                 borderRadius: isDesktopOrLaptop ? '0.5vw' : '1vh',
                 margin: '1.7vh',
                 marginRight: isDesktopOrLaptop ? "1.7vh":0,
-                height:isDesktopOrLaptop ?undefined:'10vmin',
+                height:isDesktopOrLaptop ?undefined:'20vmin',
                 marginTop:isDesktopOrLaptop ?'1.7vh':0 ,
+                marginBottom:isDesktopOrLaptop ?'1.7vh':'2.5%'
             }}
             placeholder={"תוכן הודעה"}/>
         <a
@@ -118,31 +115,26 @@ const TextSend = (props) => {
             style={{
                 color: 'transparent',
                 borderRadius: isDesktopOrLaptop ? '0.5vw' : '1vh',
-                padding: '2%',
+                padding: isDesktopOrLaptop?'2%':0,
                 borderColor: 'transparent',
                 alignItems: 'center',
                 justifyContent: 'center',
                 display: 'flex',
                 margin:'1.7vh',
-                width:isDesktopOrLaptop?undefined:'10vmin',
-
                 marginRight: 0,
                 marginLeft: 0,
                 marginBottom: isDesktopOrLaptop?'1.7vh':0,
                 marginTop: isDesktopOrLaptop?'1.7vh':0,
-                paddingBottom:isDesktopOrLaptop?'2%':0,
-                paddingTop:isDesktopOrLaptop?'2%':0,
+
                 height:isDesktopOrLaptop?undefined:'10vmin',
-
-
-                backgroundColor: props.hover ? '#E9A8A9' : '#a5a5a5',
+                backgroundColor: props.hover||!isDesktopOrLaptop ? '#E9A8A9' : '#a5a5a5',
             }}>
             <div style={{
                 fontFamily: 'Assistant',
                 color: 'white',
                 borderColor: 'transparent',
                 fontWeight: 'bold',
-                fontSize:isDesktopOrLaptop?'0.8em':'1.5em',
+                fontSize:'1em',
                 transform: isDesktopOrLaptop?'rotate(90deg)':undefined,
             }}>
                 שלח
@@ -188,12 +180,7 @@ const ContactForm = () => {
                 setPhone={(phone)=>{setPhone(phone)}}
                 setFullName={(fullName)=>{setFullName(fullName)}}
                 setSubject={(subject)=>{setSubject(subject)}}/>
-            {
-                !isDesktopOrLaptop&&
-                <div style={{
-                    marginTop: '2.5%',
-                }}/>
-            }
+
             <TextSend
                 fullName={fullName}
                 phone={phone}
