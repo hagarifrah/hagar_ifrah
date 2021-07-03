@@ -5,7 +5,7 @@ import React from "react";
 import {useMediaQuery} from "react-responsive";
 
 const Contact = () => {
-    const isDesktopOrLaptop = useMediaQuery({minDeviceWidth: 1224})
+    const isDesktopOrLaptop = useMediaQuery({minWidth: 1224})
     const navStyle={
 
         marginLeft:isDesktopOrLaptop? '2%':0, height:isDesktopOrLaptop? '4vh':'5vh'

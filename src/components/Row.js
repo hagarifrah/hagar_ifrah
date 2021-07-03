@@ -3,7 +3,7 @@ import ImageByType from "./ImageByType";
 import {useMediaQuery} from 'react-responsive'
 
 const Row = (props) => {
-    const isDesktopOrLaptop = useMediaQuery({minDeviceWidth: 1224})
+    const isDesktopOrLaptop = useMediaQuery({minWidth: 1224})
 
     return (
         <>
@@ -20,7 +20,6 @@ const Row = (props) => {
                 {
                     props.images.map((image,index) => {
                         return <div style={{
-
                         }} key={image.key}>
                             <ImageByType image={image}/>
                         </div>

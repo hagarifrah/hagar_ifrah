@@ -156,7 +156,7 @@ const App = (props) => {
         </div>
     }
     const MoreWork = (props) => {
-        const isDesktopOrLaptop = useMediaQuery({minDeviceWidth: 1224})
+        const isDesktopOrLaptop = useMediaQuery({minWidth: 1224})
         return <button
             onClick={props.action}
             style={{
@@ -191,7 +191,7 @@ const App = (props) => {
     );
 }
 const Header = () => {
-    const isDesktopOrLaptop = useMediaQuery({minDeviceWidth: 1224})
+    const isDesktopOrLaptop = useMediaQuery({minWidth: 1224})
     return (
         <div style={{
 

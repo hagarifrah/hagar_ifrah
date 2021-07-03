@@ -5,12 +5,12 @@ import {useMediaQuery} from "react-responsive";
 
 const ImageByType = (props) => {
 
-    const isDesktopOrLaptop = useMediaQuery({minDeviceWidth: 1224})
+    const isDesktopOrLaptop = useMediaQuery({minWidth: 1224})
     const [hover, setHover] = useState(false);
     const dimension = isDesktopOrLaptop ? '25vh' : '85vw';
     const imageDivStyle = {
         cursor: props.image.image != -1 ? 'pointer' : undefined,
-        height: dimension,
+        height:isDesktopOrLaptop? dimension:props.image.image == -1?0:dimension,
         marginLeft: '1vh',
         marginRight: '1vh',
         width: dimension,
