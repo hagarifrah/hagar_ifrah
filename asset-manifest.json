@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/hagar_ifrah/static/css/main.e7aca440.chunk.css",
-    "main.js": "/hagar_ifrah/static/js/main.e35039c2.chunk.js",
-    "main.js.map": "/hagar_ifrah/static/js/main.e35039c2.chunk.js.map",
+    "main.js": "/hagar_ifrah/static/js/main.e111c82c.chunk.js",
+    "main.js.map": "/hagar_ifrah/static/js/main.e111c82c.chunk.js.map",
     "runtime-main.js": "/hagar_ifrah/static/js/runtime-main.2c5fbf00.js",
     "runtime-main.js.map": "/hagar_ifrah/static/js/runtime-main.2c5fbf00.js.map",
     "static/js/2.1573624b.chunk.js": "/hagar_ifrah/static/js/2.1573624b.chunk.js",
@@ -23,6 +23,10 @@
     "static/media/better_fly_3.78185d3a.jpg": "/hagar_ifrah/static/media/better_fly_3.78185d3a.jpg",
     "static/media/better_fly_4.825b91c3.jpg": "/hagar_ifrah/static/media/better_fly_4.825b91c3.jpg",
     "static/media/better_fly_logo.42037eb3.png": "/hagar_ifrah/static/media/better_fly_logo.42037eb3.png",
+    "static/media/bibi1.b61074da.jpg": "/hagar_ifrah/static/media/bibi1.b61074da.jpg",
+    "static/media/bibi2.a48dbaa1.jpg": "/hagar_ifrah/static/media/bibi2.a48dbaa1.jpg",
+    "static/media/bibi3.ebb35ed4.jpg": "/hagar_ifrah/static/media/bibi3.ebb35ed4.jpg",
+    "static/media/bibi4.32e8f259.jpg": "/hagar_ifrah/static/media/bibi4.32e8f259.jpg",
     "static/media/bibi_logo.a7cc8145.jpg": "/hagar_ifrah/static/media/bibi_logo.a7cc8145.jpg",
     "static/media/cosmetic1.e0a4426d.jpg": "/hagar_ifrah/static/media/cosmetic1.e0a4426d.jpg",
     "static/media/cosmetic2.754c2345.jpg": "/hagar_ifrah/static/media/cosmetic2.754c2345.jpg",
@@ -51,12 +55,14 @@
     "static/media/pizza3.1d571f6c.jpg": "/hagar_ifrah/static/media/pizza3.1d571f6c.jpg",
     "static/media/pizza_logo.52209297.png": "/hagar_ifrah/static/media/pizza_logo.52209297.png",
     "static/media/tour_logo.5d2c6a56.jpg": "/hagar_ifrah/static/media/tour_logo.5d2c6a56.jpg",
+    "static/media/ui_ux_1.b6b120f6.jpg": "/hagar_ifrah/static/media/ui_ux_1.b6b120f6.jpg",
+    "static/media/ui_ux_2.5d2c6a56.jpg": "/hagar_ifrah/static/media/ui_ux_2.5d2c6a56.jpg",
     "static/media/whatsapp.c28000b0.png": "/hagar_ifrah/static/media/whatsapp.c28000b0.png"
   },
   "entrypoints": [
     "static/js/runtime-main.2c5fbf00.js",
     "static/js/2.1573624b.chunk.js",
     "static/css/main.e7aca440.chunk.css",
-    "static/js/main.e35039c2.chunk.js"
+    "static/js/main.e111c82c.chunk.js"
   ]
 }
