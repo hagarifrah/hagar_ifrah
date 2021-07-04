@@ -6,7 +6,7 @@ const ImageOnFullScreen = (props) => {
     return <img
         style={{
             zIndex:100,
-            width:isDesktopOrLaptop? '100vmin':'85vmin',
+            width:props.width!=undefined?props.width:isDesktopOrLaptop? '100vmin':'85vmin',
             height: 'auto'
         }}
         src={props.image}
