@@ -9,9 +9,13 @@ const ImageByType = (props) => {
     const [hover, setHover] = useState(false);
     const [firstClick,setFirstClick]=useState(true);
     const dimension = isDesktopOrLaptop ? '25vh' : '85vw';
+    const mainImage=props.item.mainImage;
+    const type=props.item.type;
+    const id=props.item.id;
+    const title=props.item.title
     const imageDivStyle = {
-        cursor: props.image.image != -1 ? 'pointer' : undefined,
-        height:isDesktopOrLaptop? dimension:props.image.image == -1?0:dimension,
+        cursor: mainImage != -1 ? 'pointer' : undefined,
+        height:isDesktopOrLaptop? dimension:mainImage == -1?0:dimension,
         marginLeft: '1vh',
         marginRight: '1vh',
         width: dimension,
@@ -19,14 +23,14 @@ const ImageByType = (props) => {
         borderColor: 'transparent',
     }
     let filter = undefined;
-    if (props.image.type === TYPE_OF_IMAGE.FILTERED && isDesktopOrLaptop) {
+    if (type === TYPE_OF_IMAGE.FILTERED && isDesktopOrLaptop) {
         if (!hover) {
             filter = 'grayscale(100%)';
         }
     }
 
     const onMouseEnter = () => {
-        if (props.image.image != -1) {
+        if (mainImage != -1) {
             setHover(true)
         }
     }
@@ -34,9 +38,9 @@ const ImageByType = (props) => {
         setHover(false)
     }
     const onClick=()=>{
-        if(!navigator.userAgent.includes("Mobile")||props.image.type == TYPE_OF_IMAGE.FILTERED){
+        if(!navigator.userAgent.includes("Mobile")||type == TYPE_OF_IMAGE.FILTERED){
             if(props.onClick!=undefined){
-                props.onClick(props.image.index);
+                props.onClick(id);
             }
         }else{
             if(firstClick){
@@ -46,11 +50,13 @@ const ImageByType = (props) => {
 
             else{
                 if(props.onClick!=undefined){
-                    props.onClick(props.image.index);
+                    props.onClick(id);
                 }
             }
         }
     }
+
+
 
     return (
 
@@ -60,19 +66,9 @@ const ImageByType = (props) => {
             onMouseEnter={onMouseEnter}
             style={imageDivStyle}>
 
-            {/* {
-                hover && props.image.type === TYPE_OF_IMAGE.HOVER ?
-                    <div style={{height:'100%',width:'100%'}}>
-                        {
-                            props.image.outerTitle
-                        }
-                    </div> :
-                    props.image.image != -1 &&
-                    <img style={{backgroundColor:'red',filter, height: '100%', width: '100%'}} src={props.image.image}/>
-            }
-*/}
+
             {
-                props.image.image != -1 && (props.image.type === TYPE_OF_IMAGE.FILTERED || props.image.type === TYPE_OF_IMAGE.HOVER && !hover) &&
+                mainImage != -1 && (type === TYPE_OF_IMAGE.FILTERED || type === TYPE_OF_IMAGE.HOVER && !hover) &&
                 <img
 
                     style={{
@@ -83,11 +79,11 @@ const ImageByType = (props) => {
                     }}
 
 
-                    src={props.image.image}/>
+                    src={mainImage}/>
             }
 
             {
-                hover && props.image.type === TYPE_OF_IMAGE.HOVER &&
+                hover && type === TYPE_OF_IMAGE.HOVER &&
                 <div style={{
                     display: 'flex',
                     alignItems: 'center',
@@ -99,7 +95,7 @@ const ImageByType = (props) => {
                     fontSize:'2rem'
                 }}>
                     {
-                        props.image.outerTitle
+                        title
                     }
                 </div>
             }

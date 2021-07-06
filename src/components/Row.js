@@ -8,20 +8,25 @@ const Row = (props) => {
     return (
         <>
             <div style={{
-                width:'100%',
-                alignSelf:'center',
+                width: '100%',
+                alignSelf: 'center',
                 marginTop: '5vh',
                 display: 'flex',
                 flexDirection: isDesktopOrLaptop ? 'row' : 'column',
-                alignItems:'center',
-                justifyContent:'center',
+                alignItems: 'center',
+                justifyContent: 'center',
             }}>
 
                 {
-                    props.images.map((image,index) => {
-                        return <div style={{
-                        }} key={image.key}>
-                            <ImageByType onClick={props.onClick} image={image}/>
+                    props.data.map((item, index) => {
+
+                        return <div
+                            style={{}}
+                            key={index}>
+                            <ImageByType
+                                item={item}
+                                onClick={props.onClick}
+                               />
                         </div>
 
                     })

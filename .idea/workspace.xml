@@ -3,25 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="d29f8424-ba3c-41f7-b0eb-ce324c7d0188" name="Default Changelist" comment=".">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ImageByType.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ImageByType.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ImageOnFullScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ImageOnFullScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/res/category/alian/חיזרים6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/category/alian/alian4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/res/category/alian/חייזרים1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/category/alian/alian2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/res/category/alian/חייזרים2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/category/alian/alian3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/res/category/alian/חייזרים3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/category/alian/alian1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/res/category/better_fly/אפליקציה.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/category/better_fly/better_fly_1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/res/category/better_fly/אתר מןקאפ.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/category/better_fly/better_fly_2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/res/category/better_fly/דף נחיתהה.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/category/better_fly/better_fly_3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/res/category/better_fly/פוסטים מוקאפפ.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/category/better_fly/better_fly_4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/res/category/events/wedding_logo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/category/events/event_logo.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/res/category/events/ברית ארי.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/category/events/event2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/res/category/events/פלייסמנט ספיר.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/res/category/land_car/383.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/category/land_car/land_car_3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/res/category/land_car/Place The Logo Here.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/category/land_car/land_car_1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/res/category/land_car/אדמה מפתחות.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/category/land_car/land_car_2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/res/category/pizza/מגבון פיצה.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/category/pizza/pizza3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/res/category/pizza/פיציp.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/category/pizza/pizza2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Row.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Row.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/category/bibi/חוברת ביבי1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/category/bibi/bibi1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/category/bibi/חוברת ביבי11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/category/bibi/חוברת ביבי2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/category/bibi/bibi2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/category/bibi/חוברת ביבי3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/category/bibi/bibi3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/category/bibi/חוברת ביבי4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/category/bibi/bibi4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/category/tour/סיורים.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/category/tour/tour1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/category/tour/סיורים4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/category/tour/tour2.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +45,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/res/category/events" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/res/category/running" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -67,11 +60,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\user\WebstormProjects\hagar_finel\src\res\category\running" />
+      <recent name="C:\Users\user\WebstormProjects\hagar_finel\src\res\category\ui_ux" />
       <recent name="C:\Users\user\WebstormProjects\hagar_finel\src\res\category\events" />
       <recent name="C:\Users\user\WebstormProjects\hagar_finel\src\res\category\pizza" />
       <recent name="C:\Users\user\WebstormProjects\hagar_finel\src\res\icons" />
-      <recent name="C:\Users\user\WebstormProjects\hagar_finel\src\res\category\photo_shop" />
-      <recent name="C:\Users\user\WebstormProjects\hagar_finel\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\user\WebstormProjects\hagar_finel\public" />
@@ -109,7 +102,8 @@
       <workItem from="1625168120635" duration="6551000" />
       <workItem from="1625216854339" duration="6439000" />
       <workItem from="1625313442807" duration="22779000" />
-      <workItem from="1625421619564" duration="5349000" />
+      <workItem from="1625421619564" duration="8633000" />
+      <workItem from="1625588249955" duration="12123000" />
     </task>
     <task id="LOCAL‎00001" summary=".">
       <created>1625081433632</created>
@@ -201,7 +195,13 @@
       <option name="presentableId" value="LOCAL‎00015" />
       <updated>1625342757172</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL‎00016" summary=".">
+      <created>1625428405913</created>
+      <option name="number" value="LOCAL‎00016" />
+      <option name="presentableId" value="LOCAL‎00016" />
+      <updated>1625428405913</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

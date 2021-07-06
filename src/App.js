@@ -39,6 +39,20 @@ import event1 from './res/category/events/event_logo.jpg'
 import event2 from './res/category/events/event2.jpg'
 import event3 from './res/category/events/event_3.jpg'
 
+import UIUX1 from './res/category/ui_ux/ui_ux_1.jpg'
+import UIUX2 from './res/category/ui_ux/ui_ux_2.jpg'
+
+import tour1 from './res/category/tour/tour1.jpg'
+import tour2 from './res/category/tour/tour2.jpg'
+
+import running1 from './res/category/running/running1.jpg'
+import running2 from './res/category/running/running2.jpg'
+import running3 from './res/category/running/running3.jpg'
+
+import bibi1 from './res/category/bibi/bibi1.jpg'
+import bibi2 from './res/category/bibi/bibi2.jpg'
+import bibi3 from './res/category/bibi/bibi3.jpg'
+import bibi4 from './res/category/bibi/bibi4.jpg'
 
 import {BsChevronRight, BsChevronLeft} from 'react-icons/bs';
 import {BiDotsHorizontalRounded} from "react-icons/bi";
@@ -61,148 +75,139 @@ const App = (props) => {
     const [imagesArrayOnFullScreen, setImagesArrayOnFullScreen] = useState(undefined);
     const [showFullScreen, setShowFullScreen] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [currentCategory, setCurrentCategory] = useState(undefined);
     const [twoColumn, setTwoColumn] = useState(false);
+
     useEffect(() => {
-        if (imagesArrayOnFullScreen != undefined) {
+
+        if (currentCategory != undefined) {
             setShowFullScreen(true)
         }
+    }, [currentCategory])
 
-    }, [imagesArrayOnFullScreen])
-    const images = {
-        firstRow: [{
+    const allCategories = {
+        0: {
+            type: TYPE_OF_IMAGE.FILTERED,
+            arrayOfImages: [
+                cosmetic1,
+                cosmetic2,
+                cosmetic3,
+                cosmetic4
+            ],
+            mainImage: cosmetic_logo,
+            title: 'Cosmetic',
             key: 0,
-            index: 0,
-            imagesOnFullScreen: [
-                {image: cosmetic1, key: 1, pressAble: true},
-                {image: cosmetic2, key: 2, pressAble: false},
-                {image: cosmetic3, key: 3, pressAble: true},
-                {image: cosmetic4, key: 4, pressAble: false},
+            id: 0
+        },
+        1: {
+            type: TYPE_OF_IMAGE.FILTERED,
+            arrayOfImages: [
+                landCar1,
+                landCar2,
+                landCar3,
             ],
-            image: cosmetic_logo,
-            type: TYPE_OF_IMAGE.FILTERED
-        }, {
+            mainImage: landLogo,
+            title: 'Land',
             key: 1,
-            index: 1,
-            image: landLogo,
+            id: 1
+        },
+        2: {
             type: TYPE_OF_IMAGE.FILTERED,
-            imagesOnFullScreen: [
-                {image: landCar1, key: 1, pressAble: true},
-                {image: landCar2, key: 2, pressAble: false},
-                {image: landCar3, key: 3, pressAble: true},
-
+            arrayOfImages: [
+                lifeBoat1,
+                lifeBoat2,
+                lifeBoat3,
             ],
-        }, {
+            mainImage: lifeBoatLogo,
+            title: 'Life Boat',
             key: 2,
-            index: 2,
-            image: lifeBoatLogo,
+            id: 2
+        },
+        3: {
             type: TYPE_OF_IMAGE.FILTERED,
-            title: 'My Title',
-            imagesOnFullScreen: [
-                {image: lifeBoat1, key: 4, pressAble: true},
-                {image: lifeBoat2, key: 5, pressAble: false},
-                {image: lifeBoat3, key: 6, pressAble: true},
-
+            arrayOfImages: [
+                betterFly1,
+                betterFly2,
+                betterFly3,
+                betterFly4,
             ],
-        }, {
+            mainImage: betterFlyLogo,
+            title: 'Better Fly',
             key: 3,
-            index: 3,
-            image: betterFlyLogo,
+            id: 3
+        },
+        4: {
             type: TYPE_OF_IMAGE.FILTERED,
-            imagesOnFullScreen: [
-                {image: betterFly1, key: 7, pressAble: true},
-                {image: betterFly2, key: 8, pressAble: false},
-                {image: betterFly3, key: 9, pressAble: true},
-                {image: betterFly4, key: 10, pressAble: true},
+            arrayOfImages: [
+                pizza1,
+                pizza2,
+                pizza3,
             ],
-        },],
-        secondRow: [{
-            imagesOnFullScreen: [
-                {image: pizza1, key: 1, pressAble: true},
-                {image: pizza2, key: 2, pressAble: false},
-                {image: pizza3, key: 3, pressAble: true},
-            ],
-
+            mainImage: pizzaLogo,
+            title: 'Pizza',
             key: 4,
-            index: 4,
-            image: pizzaLogo,
-            type: TYPE_OF_IMAGE.FILTERED
-        }, {
-            imagesOnFullScreen: [
-                {image: alian1, key: 4, pressAble: true},
-                {image: alian2, key: 5, pressAble: false},
-                {image: alian3, key: 6, pressAble: true},
-                {image: alian4, key: 7, pressAble: true},
+            id: 4
+        },
+        5: {
+            type: TYPE_OF_IMAGE.FILTERED,
+            arrayOfImages: [
+                alian1,
+                alian2,
+                alian3,
+                alian4
             ],
+            mainImage: alian_logo,
+            title: 'Alian',
             key: 5,
-            index: 5,
-            image: alian_logo,
-            type: TYPE_OF_IMAGE.FILTERED
-        }, {
-            key: 6,
-            index: 6,
-            image: -1,
-            type: TYPE_OF_IMAGE.FILTERED
-        }, {
-            key: 7,
-            index: 7,
-            image: -1,
-            type: TYPE_OF_IMAGE.FILTERED
-        }],
-        moreDesign: [{
-            key: 8,
-            index: 8,
-            outerTitle: 'טקסט 0',
-            image: weddingLogo,
+            id: 5
+        },
+        6: {
             type: TYPE_OF_IMAGE.HOVER,
-            imagesOnFullScreen: [
-                {image: event1, key: 1, pressAble: true},
-                {image: event2, key: 2, pressAble: false},
-                {image: event3, key: 3, pressAble: true},
+            arrayOfImages: [
+                event1,
+                event2,
+                event3,
             ],
-            twoColumn: true,
-        }, {
-            key: 9,
-            index: 9,
-            image: tourLogo,
-            outerTitle: 'טקסט 1',
-            type: TYPE_OF_IMAGE.HOVER
-        }, {
-            key: 10,
-            index: 10,
-            image: bibiLogo,
-            outerTitle: 'טקסט 2',
-            type: TYPE_OF_IMAGE.HOVER
-        }, {
-            key: 11,
-            index: 11,
-            image: -1,
-            outerTitle: 'טקסט 3',
-            type: TYPE_OF_IMAGE.HOVER
-        }],
-        photoShop: [{
-            key: 12,
-            index: 12,
-            image: photoshop1,
-            type: TYPE_OF_IMAGE.FILTERED
-        }, {
-            key: 13,
-            index: 13,
-            image: photoshop2,
-            type: TYPE_OF_IMAGE.FILTERED
-        }, {
-            key: 14,
-            index: 14,
-            image: photoshop3,
-            type: TYPE_OF_IMAGE.FILTERED
-        }, {
-            key: 15,
-            index: 15,
-            image: photoshop4,
-            type: TYPE_OF_IMAGE.FILTERED
-        }]
-    }
-    const FullScreen = () => {
+            mainImage: event1,
+            title: 'Events',
+            key: 6,
+            id: 6
+        },
+        7: {
+            type: TYPE_OF_IMAGE.HOVER,
+            arrayOfImages: [
+                running1,
+                tourLogo,
+            ],
+            mainImage: tourLogo,
+            title: 'Tour',
+            key: 7,
+            id: 7
+        },
+        8: {
+            type: TYPE_OF_IMAGE.HOVER,
+            arrayOfImages: [
+                bibi1,
+                bibi2,
+                bibi3,
+                bibi4,
 
+            ],
+            mainImage: bibiLogo,
+            title: 'bibi',
+            key: 8,
+            id: 8
+        },
+        9: {
+            arrayOfImages: [],
+            mainImage: -1,
+            title: '',
+            key: 8,
+            id: 8
+        }
+    }
+
+    const FullScreenTest = () => {
         return <div
 
             style={{zIndex: 100, width: '100%', display: 'flex', alignItems: 'center', flexDirection: 'column'}}>
@@ -221,12 +226,13 @@ const App = (props) => {
                 }/>
             <div style={{marginTop: '5vmin'}}/>
 
+
             {
-                twoColumn &&isDesktopOrLaptop?
+                twoColumn && isDesktopOrLaptop ?
                     <div style={{display: 'flex', flex: 1, flexDirection: 'row'}}>
-                        <div style={{marginLeft:'1vmin',display: 'flex', flexDirection: 'column'}}>
+                        <div style={{marginLeft: '1vmin', display: 'flex', flexDirection: 'column'}}>
                             {
-                                imagesArrayOnFullScreen.map((item, index) => {
+                                currentCategory.arrayOfImages.map((item, index) => {
                                     return index % 2 == 0 && <div
                                         style={{
                                             display: "flex",
@@ -236,15 +242,21 @@ const App = (props) => {
                                             marginRight: 0,
                                             marginBottom: 0
                                         }}>
-                                        <ImageOnFullScreen width={"55vmin"} key={item.key} image={item.image}/>
+                                        <ImageOnFullScreen
+                                            pressAble={false}
+                                            width={"55vmin"}
+                                            key={index}
+                                            onClick={() => {
+                                            }}
+                                            image={item}/>
                                     </div>
                                 })
                             }
                         </div>
 
-                        <div style={{marginRight:'1vmin',display: 'flex', flexDirection: 'column'}}>
+                        <div style={{marginRight: '1vmin', display: 'flex', flexDirection: 'column'}}>
                             {
-                                imagesArrayOnFullScreen.map((item, index) => {
+                                currentCategory.arrayOfImages.map((item, index) => {
                                     return index % 2 == 1 && <div
                                         style={{
                                             display: "flex",
@@ -254,7 +266,13 @@ const App = (props) => {
                                             marginRight: 0,
                                             marginBottom: 0
                                         }}>
-                                        <ImageOnFullScreen width={"55vmin"} key={item.key} image={item.image}/>
+                                        <ImageOnFullScreen
+                                            pressAble={false}
+                                            width={"55vmin"}
+                                            key={index}
+                                            onClick={() => {
+                                            }}
+                                            image={item}/>
                                     </div>
                                 })
                             }
@@ -262,8 +280,8 @@ const App = (props) => {
                     </div>
 
                     :
-                    imagesArrayOnFullScreen.map((item) => {
-                        return <ImageOnFullScreen key={item.key} image={item.image}/>
+                    currentCategory.arrayOfImages.map((item, index) => {
+                        return <ImageOnFullScreen key={index} image={item}/>
                     })
             }
 
@@ -272,7 +290,7 @@ const App = (props) => {
                 margin: -window.outerHeight / 5 / 1.2,
                 position: 'fixed',
                 display: 'flex',
-                zIndex: 100,
+                zIndex: 0,
 
                 justifyContent: 'space-between',
                 alignItems: 'center',
@@ -283,17 +301,25 @@ const App = (props) => {
                 <BsChevronRight
                     onClick={() => {
 
-                    }}
+                        /*  ({
+                              images: currentCategory.images,
+                              index: currentIndex + 1 >= currentCategory.images.length ? 0 : currentIndex + 1
+                          })*/
+                    }
+                    }
                     color={APP_COLOR.MAIN_COLOR}
-                    style={{marginRight: '10vw', zIndex: 200}}
+                    style={{cursor: 'pointer', marginRight: '10vw', zIndex: 200}}
                     size={isDesktopOrLaptop ? '5vh' : '10vmin'}
                 />
                 <BsChevronLeft
                     color={APP_COLOR.MAIN_COLOR}
                     onClick={() => {
-
+                        /*({
+                            images: currentCategory.images,
+                            index: currentIndex - 1 <= 0 ? currentCategory.images.length - 1 : currentIndex - 1
+                        })*/
                     }}
-                    style={{marginLeft: '10vw', zIndex: 200}}
+                    style={{cursor: 'pointer', marginLeft: '10vw', zIndex: 200}}
                     size={isDesktopOrLaptop ? '5vh' : '10vmin'}
                 />
             </div>
@@ -301,24 +327,15 @@ const App = (props) => {
 
         </div>
     }
+
     const onClickFullScreen = (props) => {
-
-
-        setCurrentIndex(props.index);
-        let twoColumn = false;
-        const images = props.images.find((item) => {
-            console.log("images", item)
-            if (item.index == props.index) {
-                twoColumn = item.twoColumn
-            }
-            return item.index == props.index
-
-        }).imagesOnFullScreen
-
-        setTwoColumn(twoColumn)
-        setImagesArrayOnFullScreen(images);
+        console.log("propspropsprops", props)
+        setCurrentCategory(props);
     }
     const ShowWork = (props) => {
+        const action = (index) => {
+            onClickFullScreen(allCategories[index])
+        }
         const isDesktopOrLaptop = useMediaQuery({minWidth: 1224})
         const [showSetMore, setMore] = useState(false);
         return <div style={{
@@ -339,16 +356,17 @@ const App = (props) => {
             </div>
 
             <Row
-                onClick={(index) => onClickFullScreen({images: props.row, index})}
-                images={props.row}/>
+                data={props.row}
+                onClick={action}
+            />
             {
                 showSetMore &&
                 <>
                     {
                         props.moreArray.map((images) => {
                             return <Row
-                                onClick={(index) => onClickFullScreen({images, index})}
-                                images={images}/>
+                                data={images}
+                                onClick={action}/>
                         })
                     }
 
@@ -382,11 +400,40 @@ const App = (props) => {
     const MainFrame = () => {
         return <>
             <Header/>
-            <ShowWork title={"מיתוג"}
-                      moreArray={[images.secondRow, images.secondRow, images.secondRow, images.secondRow]}
-                      row={images.firstRow}/>
-            <ShowWork title={"עיצובים נוספים"} moreArray={[]} row={images.moreDesign}/>
-            <ShowWork title={"עיצובים בפוטושופ"} moreArray={[]} row={images.photoShop}/>
+            <ShowWork
+                title={"מיתוג"}
+                moreArray={[
+                    [
+                        allCategories["4"],
+                        allCategories["5"],
+                        {},
+                        {}
+                    ]
+                ]}
+                row={[
+                    allCategories["0"],
+                    allCategories["1"],
+                    allCategories["2"],
+                    allCategories["3"]
+                ]}/>
+             <ShowWork
+                 title={"עיצובים נוספים"}
+                 moreArray={[]}
+                 row={[
+                     allCategories["6"],
+                     allCategories["7"],
+                     allCategories["8"],
+                     allCategories["9"]
+                 ]}/>
+            <ShowWork
+                title={"עיצובים בפוטושופ"}
+                moreArray={[]}
+                row={[
+                    allCategories["0"],
+                    allCategories["1"],
+                    allCategories["2"],
+                    allCategories["3"]
+                ]}/>
             <div style={{
                 marginTop: '2.5%',
                 fontFamily: 'OpenSansHebrewCondensedRegular',
@@ -422,7 +469,7 @@ const App = (props) => {
                             setPositionOfButtonDiv(document.getElementById('test').clientHeight)
                         }}>
 
-                        <FullScreen/>
+                        <FullScreenTest/>
                         {
                             isDesktopOrLaptop &&
                             <div
@@ -432,7 +479,7 @@ const App = (props) => {
                                     top: positionOfBottomDiv - window.innerHeight / 10,
                                     height: '20vmin',
                                     width: '100vw',
-                                    backgroundColor: APP_COLOR.MAIN_COLOR+"50"
+                                    backgroundColor: APP_COLOR.MAIN_COLOR + "50"
                                 }}/>
                         }
 
