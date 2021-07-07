@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/hagar_ifrah/static/css/main.e7aca440.chunk.css",
-    "main.js": "/hagar_ifrah/static/js/main.e111c82c.chunk.js",
-    "main.js.map": "/hagar_ifrah/static/js/main.e111c82c.chunk.js.map",
+    "main.js": "/hagar_ifrah/static/js/main.15e758f4.chunk.js",
+    "main.js.map": "/hagar_ifrah/static/js/main.15e758f4.chunk.js.map",
     "runtime-main.js": "/hagar_ifrah/static/js/runtime-main.2c5fbf00.js",
     "runtime-main.js.map": "/hagar_ifrah/static/js/runtime-main.2c5fbf00.js.map",
-    "static/js/2.1573624b.chunk.js": "/hagar_ifrah/static/js/2.1573624b.chunk.js",
-    "static/js/2.1573624b.chunk.js.map": "/hagar_ifrah/static/js/2.1573624b.chunk.js.map",
+    "static/js/2.193d1b72.chunk.js": "/hagar_ifrah/static/js/2.193d1b72.chunk.js",
+    "static/js/2.193d1b72.chunk.js.map": "/hagar_ifrah/static/js/2.193d1b72.chunk.js.map",
     "static/js/3.e87246f4.chunk.js": "/hagar_ifrah/static/js/3.e87246f4.chunk.js",
     "static/js/3.e87246f4.chunk.js.map": "/hagar_ifrah/static/js/3.e87246f4.chunk.js.map",
     "index.html": "/hagar_ifrah/index.html",
     "static/css/main.e7aca440.chunk.css.map": "/hagar_ifrah/static/css/main.e7aca440.chunk.css.map",
-    "static/js/2.1573624b.chunk.js.LICENSE.txt": "/hagar_ifrah/static/js/2.1573624b.chunk.js.LICENSE.txt",
+    "static/js/2.193d1b72.chunk.js.LICENSE.txt": "/hagar_ifrah/static/js/2.193d1b72.chunk.js.LICENSE.txt",
     "static/media/index.css": "/hagar_ifrah/static/media/OpenSansHebrewCondensed-Light.176e7602.ttf",
     "static/media/alian1.aaee96e7.jpg": "/hagar_ifrah/static/media/alian1.aaee96e7.jpg",
     "static/media/alian2.9354c9e6.jpg": "/hagar_ifrah/static/media/alian2.9354c9e6.jpg",
@@ -54,6 +54,11 @@
     "static/media/pizza2.28e87ed3.jpg": "/hagar_ifrah/static/media/pizza2.28e87ed3.jpg",
     "static/media/pizza3.1d571f6c.jpg": "/hagar_ifrah/static/media/pizza3.1d571f6c.jpg",
     "static/media/pizza_logo.52209297.png": "/hagar_ifrah/static/media/pizza_logo.52209297.png",
+    "static/media/running1.241b6841.jpg": "/hagar_ifrah/static/media/running1.241b6841.jpg",
+    "static/media/running2.94a4c47b.jpg": "/hagar_ifrah/static/media/running2.94a4c47b.jpg",
+    "static/media/running3.5523ce77.jpg": "/hagar_ifrah/static/media/running3.5523ce77.jpg",
+    "static/media/tour1.22db0754.jpg": "/hagar_ifrah/static/media/tour1.22db0754.jpg",
+    "static/media/tour2.0dbd0b4f.jpg": "/hagar_ifrah/static/media/tour2.0dbd0b4f.jpg",
     "static/media/tour_logo.5d2c6a56.jpg": "/hagar_ifrah/static/media/tour_logo.5d2c6a56.jpg",
     "static/media/ui_ux_1.b6b120f6.jpg": "/hagar_ifrah/static/media/ui_ux_1.b6b120f6.jpg",
     "static/media/ui_ux_2.5d2c6a56.jpg": "/hagar_ifrah/static/media/ui_ux_2.5d2c6a56.jpg",
@@ -61,8 +66,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.2c5fbf00.js",
-    "static/js/2.1573624b.chunk.js",
+    "static/js/2.193d1b72.chunk.js",
     "static/css/main.e7aca440.chunk.css",
-    "static/js/main.e111c82c.chunk.js"
+    "static/js/main.15e758f4.chunk.js"
   ]
 }
