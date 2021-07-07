@@ -77,13 +77,20 @@ const App = (props) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [currentCategory, setCurrentCategory] = useState(undefined);
     const [twoColumn, setTwoColumn] = useState(false);
-
+    const [moveBetweenCategoriesObjects,setMoveBetweenCategoriesObjects]=useState([]);
     useEffect(() => {
 
         if (currentCategory != undefined) {
             setShowFullScreen(true)
         }
     }, [currentCategory])
+
+    useEffect(()=>{
+        if(!showFullScreen){
+            window.scrollTo(0,yPosition)
+        }
+
+    },[showFullScreen])
 
     const allCategories = {
         0: {
@@ -94,6 +101,7 @@ const App = (props) => {
                 cosmetic3,
                 cosmetic4
             ],
+            category:1,
             mainImage: cosmetic_logo,
             title: 'Cosmetic',
             key: 0,
@@ -106,6 +114,7 @@ const App = (props) => {
                 landCar2,
                 landCar3,
             ],
+            category:1,
             mainImage: landLogo,
             title: 'Land',
             key: 1,
@@ -113,6 +122,7 @@ const App = (props) => {
         },
         2: {
             type: TYPE_OF_IMAGE.FILTERED,
+            category:1,
             arrayOfImages: [
                 lifeBoat1,
                 lifeBoat2,
@@ -131,6 +141,7 @@ const App = (props) => {
                 betterFly3,
                 betterFly4,
             ],
+            category:1,
             mainImage: betterFlyLogo,
             title: 'Better Fly',
             key: 3,
@@ -143,6 +154,7 @@ const App = (props) => {
                 pizza2,
                 pizza3,
             ],
+            category:1,
             mainImage: pizzaLogo,
             title: 'Pizza',
             key: 4,
@@ -156,12 +168,15 @@ const App = (props) => {
                 alian3,
                 alian4
             ],
+            category:1,
             mainImage: alian_logo,
             title: 'Alian',
             key: 5,
             id: 5
         },
         6: {
+            twoColumn:true,
+            category:2,
             type: TYPE_OF_IMAGE.HOVER,
             arrayOfImages: [
                 event1,
@@ -174,17 +189,20 @@ const App = (props) => {
             id: 6
         },
         7: {
+            twoColumn:true,
             type: TYPE_OF_IMAGE.HOVER,
             arrayOfImages: [
-                running1,
-                tourLogo,
+                UIUX1,
+                UIUX2,
             ],
+            category:2,
             mainImage: tourLogo,
             title: 'Tour',
             key: 7,
             id: 7
         },
         8: {
+            category:2,
             type: TYPE_OF_IMAGE.HOVER,
             arrayOfImages: [
                 bibi1,
@@ -199,11 +217,48 @@ const App = (props) => {
             id: 8
         },
         9: {
+            category:2,
             arrayOfImages: [],
             mainImage: -1,
             title: '',
-            key: 8,
-            id: 8
+            key: 9,
+            id: 9
+        },
+        10: {
+            category:3,
+            type: TYPE_OF_IMAGE.FILTERED,
+            arrayOfImages: [photoshop1],
+            mainImage: photoshop1,
+            title: '',
+            key: 10,
+            id: 10
+        },
+        11: {
+            category:3,
+            type: TYPE_OF_IMAGE.FILTERED,
+            arrayOfImages: [photoshop2],
+            mainImage: photoshop2,
+            title: '',
+            key: 11,
+            id: 11
+        },
+        12: {
+            category:3,
+            type: TYPE_OF_IMAGE.FILTERED,
+            arrayOfImages: [photoshop3],
+            mainImage: photoshop3,
+            title: '',
+            key: 12,
+            id: 12
+        },
+        13: {
+            category:3,
+            type: TYPE_OF_IMAGE.FILTERED,
+            arrayOfImages: [photoshop4],
+            mainImage: photoshop4,
+            title: '',
+            key: 13,
+            id: 13
         }
     }
 
@@ -216,10 +271,10 @@ const App = (props) => {
                 onClick={() => {
                     setShowFullScreen(false)
                 }}
-                style={{padding: '5vmin', display: 'flex', alignSelf: 'flex-end'}}
+                style={{position:'fixed',padding: '5vmin', display: 'flex', alignSelf: 'flex-end'}}
                 size={'5vh'}/>
             <TextComponent
-                noMarginTop={true}
+
                 text={
                     `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et posuere sapien,
                      ut interdum dolor nulla eget mi. Suspendisse eget volutpat lectus. Nulla a scelerisque nibh,`
@@ -300,11 +355,29 @@ const App = (props) => {
             }}>
                 <BsChevronRight
                     onClick={() => {
+                        for (let i = 0; i <Object.keys(moveBetweenCategoriesObjects).length; i++) {
 
-                        /*  ({
-                              images: currentCategory.images,
-                              index: currentIndex + 1 >= currentCategory.images.length ? 0 : currentIndex + 1
-                          })*/
+
+                            if(currentIndex==moveBetweenCategoriesObjects[i].key){
+                                if(i-1>=0&&moveBetweenCategoriesObjects[i-1].mainImage!=-1){
+                                    setCurrentIndex(moveBetweenCategoriesObjects[i-1].key)
+                                    onClickFullScreen(moveBetweenCategoriesObjects[i-1])
+                                }else if(moveBetweenCategoriesObjects[Object.keys(moveBetweenCategoriesObjects).length-1].mainImage!=-1){
+                                    setCurrentIndex(moveBetweenCategoriesObjects[Object.keys(moveBetweenCategoriesObjects).length-1].key)
+                                    onClickFullScreen(moveBetweenCategoriesObjects[Object.keys(moveBetweenCategoriesObjects).length-1])
+                                }
+
+                                /*if(i-1==0){
+                                    setCurrentIndex(moveBetweenCategoriesObjects[Object.keys(moveBetweenCategoriesObjects).length-1].key)
+                                    onClickFullScreen(moveBetweenCategoriesObjects[Object.keys(moveBetweenCategoriesObjects).length-1])
+                                }else{
+                                    setCurrentIndex(moveBetweenCategoriesObjects[i-1].key)
+                                    onClickFullScreen(moveBetweenCategoriesObjects[i-1])
+                                }*/
+
+                                break;
+                            }
+                        }
                     }
                     }
                     color={APP_COLOR.MAIN_COLOR}
@@ -314,10 +387,23 @@ const App = (props) => {
                 <BsChevronLeft
                     color={APP_COLOR.MAIN_COLOR}
                     onClick={() => {
-                        /*({
-                            images: currentCategory.images,
-                            index: currentIndex - 1 <= 0 ? currentCategory.images.length - 1 : currentIndex - 1
-                        })*/
+                        for (let i = 0; i <Object.keys(moveBetweenCategoriesObjects).length ; i++) {
+
+
+                            if(currentIndex==moveBetweenCategoriesObjects[i].key){
+                                if(i+1>Object.keys(moveBetweenCategoriesObjects).length-1&&moveBetweenCategoriesObjects[0].mainImage!=-1){
+                                    setCurrentIndex(moveBetweenCategoriesObjects[0].key)
+                                    onClickFullScreen(moveBetweenCategoriesObjects[0])
+                                }else if(moveBetweenCategoriesObjects[i+1].mainImage!=-1){
+                                    setCurrentIndex(moveBetweenCategoriesObjects[i+1].key)
+                                    onClickFullScreen(moveBetweenCategoriesObjects[i+1])
+                                }
+
+
+                                break;
+                            }
+                        }
+
                     }}
                     style={{cursor: 'pointer', marginLeft: '10vw', zIndex: 200}}
                     size={isDesktopOrLaptop ? '5vh' : '10vmin'}
@@ -329,8 +415,21 @@ const App = (props) => {
     }
 
     const onClickFullScreen = (props) => {
-        console.log("propspropsprops", props)
         setCurrentCategory(props);
+        const test=[];
+        Object.values(allCategories).map((item)=>{
+            if(item.category==props.category){
+                test.push(item)
+            }
+
+        })
+        setYPosition(window.pageYOffset)
+
+
+        setTwoColumn(props.twoColumn)
+        setCurrentIndex(props.id)
+        setMoveBetweenCategoriesObjects(test);
+        window.scrollTo(0,0)
     }
     const ShowWork = (props) => {
         const action = (index) => {
@@ -429,10 +528,10 @@ const App = (props) => {
                 title={"עיצובים בפוטושופ"}
                 moreArray={[]}
                 row={[
-                    allCategories["0"],
-                    allCategories["1"],
-                    allCategories["2"],
-                    allCategories["3"]
+                    allCategories["10"],
+                    allCategories["11"],
+                    allCategories["12"],
+                    allCategories["13"]
                 ]}/>
             <div style={{
                 marginTop: '2.5%',
