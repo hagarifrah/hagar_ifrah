@@ -10,8 +10,10 @@ const ImageOnFullScreen = (props) => {
             }
         }}
         style={{
+
+            outline:'none',
             cursor:props.pressAble?"pointer":'default',
-            zIndex:100,
+            zIndex:200,
             width:props.width!=undefined?props.width:isDesktopOrLaptop? '100vmin':'85vmin',
             height: 'auto'
         }}

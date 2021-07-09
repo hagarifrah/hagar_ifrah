@@ -34,6 +34,10 @@ const ImageByType = (props) => {
             setHover(true)
         }
     }
+    const onBlur=()=>{
+        setHover(false);
+        setFirstClick(true)
+    }
     const onMouseOut = () => {
         setHover(false)
     }
@@ -61,6 +65,7 @@ const ImageByType = (props) => {
     return (
 
         <button
+            onBlur={onBlur}
             onClick={onClick}
             onMouseLeave={onMouseOut}
             onMouseEnter={onMouseEnter}
