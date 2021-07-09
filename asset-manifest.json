@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/hagar_ifrah/static/css/main.e7aca440.chunk.css",
-    "main.js": "/hagar_ifrah/static/js/main.29222353.chunk.js",
-    "main.js.map": "/hagar_ifrah/static/js/main.29222353.chunk.js.map",
+    "main.js": "/hagar_ifrah/static/js/main.d2487b52.chunk.js",
+    "main.js.map": "/hagar_ifrah/static/js/main.d2487b52.chunk.js.map",
     "runtime-main.js": "/hagar_ifrah/static/js/runtime-main.2c5fbf00.js",
     "runtime-main.js.map": "/hagar_ifrah/static/js/runtime-main.2c5fbf00.js.map",
     "static/js/2.193d1b72.chunk.js": "/hagar_ifrah/static/js/2.193d1b72.chunk.js",
@@ -68,6 +68,6 @@
     "static/js/runtime-main.2c5fbf00.js",
     "static/js/2.193d1b72.chunk.js",
     "static/css/main.e7aca440.chunk.css",
-    "static/js/main.29222353.chunk.js"
+    "static/js/main.d2487b52.chunk.js"
   ]
 }
