@@ -8,7 +8,7 @@ const ImageByType = (props) => {
     const isDesktopOrLaptop = useMediaQuery({minWidth: 1224})
     const [hover, setHover] = useState(false);
     const [firstClick,setFirstClick]=useState(true);
-    const dimension = isDesktopOrLaptop ? '25vh' : '85vw';
+    const dimension = isDesktopOrLaptop ? '18vw' : '85vw';
     const mainImage=props.item.mainImage;
     const type=props.item.type;
     const id=props.item.id;

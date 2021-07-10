@@ -14,7 +14,7 @@ const ImageOnFullScreen = (props) => {
             outline:'none',
             cursor:props.pressAble?"pointer":'default',
             zIndex:200,
-            width:props.width!=undefined?props.width:isDesktopOrLaptop? '100vmin':'85vmin',
+            width:props.width!=undefined?props.width:isDesktopOrLaptop? '100vmin':'90vmin',
             height: 'auto'
         }}
         src={props.image}

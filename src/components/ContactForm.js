@@ -15,7 +15,7 @@ const InputSection = (props) => {
         borderRadius: isDesktopOrLaptop ? '0.5vw' : '1vh',
         paddingRight: '2%',
         outlineWidth: 0,
-        height: isDesktopOrLaptop ? '5vmin' : '10vmin',
+        height: isDesktopOrLaptop ? '7vmin' : '10vmin',
         color: '#575756',
         width: isDesktopOrLaptop ? undefined : '80vmin',
         borderColor: 'transparent',
@@ -103,8 +103,14 @@ const TextSend = (props) => {
             }}
             placeholder={"תוכן הודעה"}/>
         <a
+            onClick={()=>{
+                const text="subject="+ props.subject + "&body=" + props.body + '%0d%0a' + "מספר טלפון: " + props.phone + '%0d%0a' + "שם מלא: " + props.fullName
+                const url=navigator.userAgent.includes("Mobile")?
+                    'mailto:hagar.ifrah@gmail.com?'+text:
+                    "https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=hagar.ifrah94@gmail.com&su=" +text
+                window.open(url)
+            }}
             target="_blank"
-            href={"https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=hagar.ifrah94@gmail.com&su=" + props.subject + "&body=" + props.body + '%0d%0a' + "מספר טלפון: " + props.phone + '%0d%0a' + "שם מלא: " + props.fullName}
             onMouseOver={() => {
                 props.setHover(true)
             }
@@ -160,14 +166,15 @@ const ContactForm = () => {
         alignItems: 'center',
         justifyContent: 'center',
         marginTop: isDesktopOrLaptop ? '5vh' : 0,
-        paddingTop: '2.5vmin',
+
         paddingBottom: '5vmin',
     }}>
         <div style={{
             flexDirection: isDesktopOrLaptop ? 'row' : 'column',
             justifyContent: 'space-between',
+
             display: 'flex',
-            width: '105vmin',
+            width: '150vmin',
 
         }}>
             <InputSection

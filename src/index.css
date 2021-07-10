@@ -5,8 +5,19 @@
   url("./fonts/OpenSansHebrewCondensed-Light.ttf") format("truetype");
   font-weight: normal;
 }
+@font-face {
+  font-family: "AssistantRegular";
+  src: local("AssistantRegular"),
+  url("./fonts/Assistant-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
 
-
+@font-face {
+  font-family: "AssistantBold";
+  src: local("AssistantBold"),
+  url("./fonts/Assistant-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
 
 .image {
   transition: opacity 1s;
