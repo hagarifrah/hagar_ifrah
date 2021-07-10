@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/hagar_ifrah/static/css/main.22739fbe.chunk.css",
-    "main.js": "/hagar_ifrah/static/js/main.550b63d0.chunk.js",
-    "main.js.map": "/hagar_ifrah/static/js/main.550b63d0.chunk.js.map",
+    "main.css": "/hagar_ifrah/static/css/main.959d44e0.chunk.css",
+    "main.js": "/hagar_ifrah/static/js/main.9142be56.chunk.js",
+    "main.js.map": "/hagar_ifrah/static/js/main.9142be56.chunk.js.map",
     "runtime-main.js": "/hagar_ifrah/static/js/runtime-main.a9823542.js",
     "runtime-main.js.map": "/hagar_ifrah/static/js/runtime-main.a9823542.js.map",
     "static/js/2.29aaab96.chunk.js": "/hagar_ifrah/static/js/2.29aaab96.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.71293f44.chunk.js": "/hagar_ifrah/static/js/3.71293f44.chunk.js",
     "static/js/3.71293f44.chunk.js.map": "/hagar_ifrah/static/js/3.71293f44.chunk.js.map",
     "index.html": "/hagar_ifrah/index.html",
-    "static/css/main.22739fbe.chunk.css.map": "/hagar_ifrah/static/css/main.22739fbe.chunk.css.map",
+    "static/css/main.959d44e0.chunk.css.map": "/hagar_ifrah/static/css/main.959d44e0.chunk.css.map",
     "static/js/2.29aaab96.chunk.js.LICENSE.txt": "/hagar_ifrah/static/js/2.29aaab96.chunk.js.LICENSE.txt",
     "static/media/index.css": "/hagar_ifrah/static/media/OpenSansHebrewCondensed-Light.176e7602.ttf",
     "static/media/alian1.aaee96e7.jpg": "/hagar_ifrah/static/media/alian1.aaee96e7.jpg",
@@ -67,7 +67,7 @@
   "entrypoints": [
     "static/js/runtime-main.a9823542.js",
     "static/js/2.29aaab96.chunk.js",
-    "static/css/main.22739fbe.chunk.css",
-    "static/js/main.550b63d0.chunk.js"
+    "static/css/main.959d44e0.chunk.css",
+    "static/js/main.9142be56.chunk.js"
   ]
 }
