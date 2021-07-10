@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/hagar_ifrah/static/css/main.22739fbe.chunk.css",
-    "main.js": "/hagar_ifrah/static/js/main.801a1497.chunk.js",
-    "main.js.map": "/hagar_ifrah/static/js/main.801a1497.chunk.js.map",
-    "runtime-main.js": "/hagar_ifrah/static/js/runtime-main.2c5fbf00.js",
-    "runtime-main.js.map": "/hagar_ifrah/static/js/runtime-main.2c5fbf00.js.map",
-    "static/js/2.193d1b72.chunk.js": "/hagar_ifrah/static/js/2.193d1b72.chunk.js",
-    "static/js/2.193d1b72.chunk.js.map": "/hagar_ifrah/static/js/2.193d1b72.chunk.js.map",
-    "static/js/3.e87246f4.chunk.js": "/hagar_ifrah/static/js/3.e87246f4.chunk.js",
-    "static/js/3.e87246f4.chunk.js.map": "/hagar_ifrah/static/js/3.e87246f4.chunk.js.map",
+    "main.js": "/hagar_ifrah/static/js/main.e6f104fa.chunk.js",
+    "main.js.map": "/hagar_ifrah/static/js/main.e6f104fa.chunk.js.map",
+    "runtime-main.js": "/hagar_ifrah/static/js/runtime-main.a9823542.js",
+    "runtime-main.js.map": "/hagar_ifrah/static/js/runtime-main.a9823542.js.map",
+    "static/js/2.29aaab96.chunk.js": "/hagar_ifrah/static/js/2.29aaab96.chunk.js",
+    "static/js/2.29aaab96.chunk.js.map": "/hagar_ifrah/static/js/2.29aaab96.chunk.js.map",
+    "static/js/3.71293f44.chunk.js": "/hagar_ifrah/static/js/3.71293f44.chunk.js",
+    "static/js/3.71293f44.chunk.js.map": "/hagar_ifrah/static/js/3.71293f44.chunk.js.map",
     "index.html": "/hagar_ifrah/index.html",
     "static/css/main.22739fbe.chunk.css.map": "/hagar_ifrah/static/css/main.22739fbe.chunk.css.map",
-    "static/js/2.193d1b72.chunk.js.LICENSE.txt": "/hagar_ifrah/static/js/2.193d1b72.chunk.js.LICENSE.txt",
+    "static/js/2.29aaab96.chunk.js.LICENSE.txt": "/hagar_ifrah/static/js/2.29aaab96.chunk.js.LICENSE.txt",
     "static/media/index.css": "/hagar_ifrah/static/media/OpenSansHebrewCondensed-Light.176e7602.ttf",
     "static/media/alian1.aaee96e7.jpg": "/hagar_ifrah/static/media/alian1.aaee96e7.jpg",
     "static/media/alian2.9354c9e6.jpg": "/hagar_ifrah/static/media/alian2.9354c9e6.jpg",
@@ -65,9 +65,9 @@
     "static/media/whatsapp.c28000b0.png": "/hagar_ifrah/static/media/whatsapp.c28000b0.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.2c5fbf00.js",
-    "static/js/2.193d1b72.chunk.js",
+    "static/js/runtime-main.a9823542.js",
+    "static/js/2.29aaab96.chunk.js",
     "static/css/main.22739fbe.chunk.css",
-    "static/js/main.801a1497.chunk.js"
+    "static/js/main.e6f104fa.chunk.js"
   ]
 }
