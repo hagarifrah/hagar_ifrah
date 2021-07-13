@@ -156,6 +156,38 @@ const App = (props) => {
         stateRef.current.showFullScreen = showFullScreen;
 
     }, [showFullScreen])
+    useEffect(() => {
+
+        if (navigator.language.includes("he")) {
+            strings.setLanguage('heb');
+            document.getElementById("root").style.direction = "rtl";
+        } else {
+            strings.setLanguage('en');
+            document.getElementById("root").style.direction = "ltr";
+        }
+
+        setLang(!navigator.language.includes("he"))
+
+
+
+        window.onpopstate = () => {
+
+            if (stateRef.current.history.length > 0 && stateRef.current.currentCategory != undefined) {
+
+                setMoveBetweenCategoriesObjects(stateRef.current.moveBetweenCategoriesObjects)
+                setTwoColumn(stateRef.current.history[0].twoColumn);
+                setCurrentCategory(stateRef.current.history[0])
+                setHistory([])
+            } else {
+                setShowFullScreen(false)
+                /*  setState({
+                      ...state,
+                      showFullScreen:false
+                  })*/
+            }
+
+        }
+    }, [])
 
     const allCategories = {
         0: {
@@ -273,7 +305,7 @@ const App = (props) => {
                 event2,
                 event3,
             ],
-
+            marginBetweenImages: true,
             mainImage: event1,
             title: strings.events,
             key: 6,
@@ -282,8 +314,8 @@ const App = (props) => {
         7: {
             showLogoOnFullScreen: false,
             twoColumn: true,
+            marginBetweenImages: true,
             type: TYPE_OF_IMAGE.HOVER,
-            showTitle: false,
             arrayOfImages: [
                 UIUX1,
                 UIUX2,
@@ -338,7 +370,7 @@ const App = (props) => {
             id: 7
         },
         8: {
-            showLogoOnFullScreen: true,
+            showLogoOnFullScreen: false,
             category: 2,
             type: TYPE_OF_IMAGE.HOVER,
             arrayOfImages: [
@@ -354,7 +386,6 @@ const App = (props) => {
             id: 8
         },
         9: {
-            category: 2,
             arrayOfImages: [],
             mainImage: -1,
             title: '',
@@ -446,6 +477,13 @@ const App = (props) => {
                 const test = [];
                 history1.push(currentCategory);
                 setHistory(history1);
+                currentCategory.nextObject.map((item) => {
+                    test.push(item)
+                })
+                setCurrentIndex(currentCategory.nextObject[index].id)
+
+                setMoveBetweenCategoriesObjects(test);
+                window.history.pushState("asfasfss", "title2");
             }
         }
         return <div
@@ -458,6 +496,7 @@ const App = (props) => {
                 display: 'flex',
                 alignItems: 'center',
                 flexDirection: 'column',
+                marginBottom: !isDesktopOrLaptop ? '5vmin' : 0
 
 
             }}>
@@ -474,21 +513,21 @@ const App = (props) => {
 
             }
 
-            <div   style={{marginTop: '5vmin'}}/>
             {
                 twoColumn && isDesktopOrLaptop ?
                     <div style={{display: 'flex', flex: 1, flexDirection: 'row'}}>
-                        <div style={{marginLeft: '1vmin', display: 'flex', flexDirection: 'column'}}>
+                        <div style={{display: 'flex', flexDirection: 'column'}}>
                             {
                                 currentCategory.arrayOfImages.map((item, index) => {
                                     return index % 2 == 0 && <div
                                         style={{
+                                            margin: '1.5vmin',
                                             zIndex: 200,
                                             display: "flex",
-                                            marginTop:currentCategory.secondLevelEnter?'5%':0,
+
                                         }}>
                                         <ImageOnFullScreen
-                                            pressAble={false}
+                                            pressAble={currentCategory.secondLevelEnter}
                                             width={"55vmin"}
                                             key={index}
                                             onClick={() => onClickImage(index)}
@@ -500,8 +539,6 @@ const App = (props) => {
 
                         <div style={{
                             zIndex: 200,
-
-                            marginRight: '1vmin',
                             display: 'flex',
                             flexDirection: 'column'
                         }}>
@@ -509,13 +546,13 @@ const App = (props) => {
                                 currentCategory.arrayOfImages.map((item, index) => {
                                     return index % 2 == 1 && <div
                                         style={{
+                                            margin: '1.5vmin',
                                             zIndex: 200,
                                             display: "flex",
-                                            marginTop:currentCategory.secondLevelEnter?'5%':0,
 
                                         }}>
                                         <ImageOnFullScreen
-                                            pressAble={false}
+                                            pressAble={currentCategory.secondLevelEnter}
                                             width={"55vmin"}
                                             key={index}
                                             onClick={() => onClickImage(index)}
@@ -530,15 +567,15 @@ const App = (props) => {
                     currentCategory.arrayOfImages.map((item, index) => {
                         return <div
                             style={{
-                                marginTop:currentCategory.secondLevelEnter?'5%':0,
                                 display: 'flex',
-                                flex:currentCategory.arrayOfImages.length<=1&&!isDesktopOrLaptop?1:0,
-                                justifyContent:currentCategory.arrayOfImages.length<=1&&!isDesktopOrLaptop?'center':undefined,
-                                alignItems:currentCategory.arrayOfImages.length<=1&&!isDesktopOrLaptop?'center':undefined,
+                                flex: currentCategory.arrayOfImages.length <= 1 && !isDesktopOrLaptop ? 1 : 0,
+                                justifyContent: currentCategory.arrayOfImages.length <= 1 && !isDesktopOrLaptop ? 'center' : undefined,
+                                alignItems: currentCategory.arrayOfImages.length <= 1 && !isDesktopOrLaptop ? 'center' : undefined,
                                 zIndex: 100,
-                                marginBottom: !isDesktopOrLaptop && index == currentCategory.arrayOfImages.length - 1 ? '2.5%' : 0
+                                marginTop: currentCategory.marginBetweenImages ? marginValue : 0
                             }}>
                             <ImageOnFullScreen
+                                pressAble={currentCategory.secondLevelEnter}
                                 onClick={() => onClickImage(index)}
                                 key={index}
                                 image={item}/>
@@ -642,13 +679,15 @@ const App = (props) => {
         const [showSetMore, setMore] = useState(false);
         return <div style={{
             width: '100%',
+
             flexDirection: 'column',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            marginTop: '5vmin'
         }}>
             <div style={{
+                marginTop: marginValue,
+                marginBottom: marginValue,
                 fontFamily: 'OpenSansHebrewCondensedRegular',
                 fontSize: isDesktopOrLaptop ? '2.5rem' : '3rem',
                 color: APP_COLOR.MAIN_COLOR,
@@ -747,7 +786,7 @@ const App = (props) => {
             </button>
             <Header/>
             <ShowWork
-                title={"מיתוג"}
+                title={strings.branding}
                 moreArray={[
                     [
                         allCategories["4"],
@@ -765,7 +804,7 @@ const App = (props) => {
                     allCategories["3"]
                 ]}/>
             <ShowWork
-                title={"עיצובים נוספים"}
+                title={strings.moreDesign}
                 moreArray={[]}
                 row={[
                     allCategories["6"],
@@ -774,7 +813,7 @@ const App = (props) => {
                     allCategories["9"]
                 ]}/>
             <ShowWork
-                title={"עיצובים בפוטושופ"}
+                title={strings.photoShopDesign}
                 moreArray={[]}
                 row={[
                     allCategories["10"],
@@ -783,15 +822,16 @@ const App = (props) => {
                     allCategories["13"]
                 ]}/>
             <div style={{
-
+                marginTop: marginValue,
+                marginBottom: '6vmin',
                 fontFamily: 'OpenSansHebrewCondensedRegular',
                 fontSize: isDesktopOrLaptop ? '2rem' : '3rem',
-                marginBottom:'5vmin',
-                marginTop:'4.5vmin',
                 color: APP_COLOR.MAIN_COLOR,
                 textAlign: 'center',
             }}>
-                צור קשר
+                {
+                    strings.fullName
+                }
             </div>
             <ContactForm lang={lang}/>
             <Contact/>
@@ -808,8 +848,6 @@ const App = (props) => {
                 flex: 1,
                 display: 'flex',
                 flexDirection: 'column',
-                margin: 0,
-                padding: 0
             }}>
             {
                 showFullScreen ? <div
@@ -820,13 +858,13 @@ const App = (props) => {
 
                         <FullScreenTest/>
                         {
-                            (currentCategory.arrayOfImages.length>=2||isDesktopOrLaptop)&&
+
                             <div
                                 style={{
                                     zIndex: 0,
                                     position: 'absolute',
-                                    top: positionOfBottomDiv - window.innerHeight / 10,
-                                    height:positionOfBottomDiv===0?0: '20vmin',
+                                    top: (twoColumn && currentCategory.arrayOfImages.length <= 2) ? "80vmin" : positionOfBottomDiv - window.innerHeight / 10,
+                                    height: '20vmin',
                                     width: '100vw',
                                     backgroundColor: APP_COLOR.MAIN_COLOR + "50"
                                 }}/>
@@ -846,19 +884,21 @@ const App = (props) => {
 const TextComponent = (props) => {
     const isDesktopOrLaptop = useMediaQuery({minWidth: 1224})
     const lineStyle = {
-        width: '10vmin',
+        width: '15vmin',
         borderWidth: 0,
         borderBottomWidth: 1,
         borderStyle: 'solid',
         borderColor: APP_COLOR.TEXT_COLOR,
+        marginTop: '2.5vmin',
+        marginBottom: '2.5vmin',
     }
     return <div
         style={{
             whiteSpace: 'pre-line',
-            marginTop: '1%',
             borderWidth: 0,
-            padding: '2vmin',
-            width: isDesktopOrLaptop ? '35vw' : '75vw',
+            marginTop: marginValue,
+            marginBottom: marginValue,
+            width: isDesktopOrLaptop ? '40vw' : '75vw',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -867,7 +907,7 @@ const TextComponent = (props) => {
         }}>
         {
             props.showLines &&
-            <div style={Object.assign(lineStyle, {marginBottom: '5vmin'})}/>
+            <div style={Object.assign(lineStyle,)}/>
         }
         <div style={{
             fontSize: '1em',
@@ -892,7 +932,7 @@ const TextComponent = (props) => {
 
         {
             props.showLines &&
-            <div style={Object.assign(lineStyle, {marginTop: '5vmin'})}/>
+            <div style={Object.assign(lineStyle,)}/>
         }
     </div>
 }
@@ -900,13 +940,12 @@ const Header = () => {
     const isDesktopOrLaptop = useMediaQuery({minWidth: 1224})
     return (
         <div style={{
-
-            marginTop: '5vh',
             width: '100vw',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            flexDirection: 'column'
+            flexDirection: 'column',
+            marginTop: marginValue,
         }}>
             <div style={{
                 marginBottom: isDesktopOrLaptop ? 0 : '10vmin',
@@ -918,13 +957,7 @@ const Header = () => {
             <TextComponent
                 showLines={true}
                 text={
-                    ` היי שמי הגר ואני מעצבת גרפית.
-            אז קצת עלי, אני פרפקציוניסטית, תחרותית ותמיד שואפת ללמוד דברים חדשים.
-
-            אני מאוד אוהבת את העיצוב המנימליסטי והנקי ושמה דגש גם על הפרטים הקטנים ביותר.
-            
-            תוכלו להציץ בתיק העבודות שלי ואם אהבתם והתחברתם צרו איתי קשר ואשמח לקדם את העסק שלכם ע"י מיתוג ייחודי ועכשווי שיבדיל אתכם מהמתחרים.
-               `
+                    strings.mainTitle
                 }/>
         </div>
     )
