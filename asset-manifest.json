@@ -1,18 +1,20 @@
 {
   "files": {
     "main.css": "/hagar_ifrah/static/css/main.959d44e0.chunk.css",
-    "main.js": "/hagar_ifrah/static/js/main.52353ab5.chunk.js",
-    "main.js.map": "/hagar_ifrah/static/js/main.52353ab5.chunk.js.map",
-    "runtime-main.js": "/hagar_ifrah/static/js/runtime-main.315b6510.js",
-    "runtime-main.js.map": "/hagar_ifrah/static/js/runtime-main.315b6510.js.map",
-    "static/js/2.f489461b.chunk.js": "/hagar_ifrah/static/js/2.f489461b.chunk.js",
-    "static/js/2.f489461b.chunk.js.map": "/hagar_ifrah/static/js/2.f489461b.chunk.js.map",
-    "static/js/3.fef27f67.chunk.js": "/hagar_ifrah/static/js/3.fef27f67.chunk.js",
-    "static/js/3.fef27f67.chunk.js.map": "/hagar_ifrah/static/js/3.fef27f67.chunk.js.map",
+    "main.js": "/hagar_ifrah/static/js/main.b533e0e5.chunk.js",
+    "main.js.map": "/hagar_ifrah/static/js/main.b533e0e5.chunk.js.map",
+    "runtime-main.js": "/hagar_ifrah/static/js/runtime-main.99b3248f.js",
+    "runtime-main.js.map": "/hagar_ifrah/static/js/runtime-main.99b3248f.js.map",
+    "static/js/2.ffb30c1e.chunk.js": "/hagar_ifrah/static/js/2.ffb30c1e.chunk.js",
+    "static/js/2.ffb30c1e.chunk.js.map": "/hagar_ifrah/static/js/2.ffb30c1e.chunk.js.map",
+    "static/js/3.cb5f4fcb.chunk.js": "/hagar_ifrah/static/js/3.cb5f4fcb.chunk.js",
+    "static/js/3.cb5f4fcb.chunk.js.map": "/hagar_ifrah/static/js/3.cb5f4fcb.chunk.js.map",
     "index.html": "/hagar_ifrah/index.html",
     "static/css/main.959d44e0.chunk.css.map": "/hagar_ifrah/static/css/main.959d44e0.chunk.css.map",
-    "static/js/2.f489461b.chunk.js.LICENSE.txt": "/hagar_ifrah/static/js/2.f489461b.chunk.js.LICENSE.txt",
+    "static/js/2.ffb30c1e.chunk.js.LICENSE.txt": "/hagar_ifrah/static/js/2.ffb30c1e.chunk.js.LICENSE.txt",
     "static/media/index.css": "/hagar_ifrah/static/media/OpenSansHebrewCondensed-Light.176e7602.ttf",
+    "static/media/EnglishIcon.8ba59b9f.svg": "/hagar_ifrah/static/media/EnglishIcon.8ba59b9f.svg",
+    "static/media/Flag_of_Israel.03cc4936.svg": "/hagar_ifrah/static/media/Flag_of_Israel.03cc4936.svg",
     "static/media/alian1.aaee96e7.jpg": "/hagar_ifrah/static/media/alian1.aaee96e7.jpg",
     "static/media/alian2.9354c9e6.jpg": "/hagar_ifrah/static/media/alian2.9354c9e6.jpg",
     "static/media/alian3.1dba320d.jpg": "/hagar_ifrah/static/media/alian3.1dba320d.jpg",
@@ -75,9 +77,9 @@
     "static/media/whatsapp.c28000b0.png": "/hagar_ifrah/static/media/whatsapp.c28000b0.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.315b6510.js",
-    "static/js/2.f489461b.chunk.js",
+    "static/js/runtime-main.99b3248f.js",
+    "static/js/2.ffb30c1e.chunk.js",
     "static/css/main.959d44e0.chunk.css",
-    "static/js/main.52353ab5.chunk.js"
+    "static/js/main.b533e0e5.chunk.js"
   ]
 }
