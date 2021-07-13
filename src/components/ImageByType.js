@@ -8,7 +8,7 @@ const ImageByType = (props) => {
     const isDesktopOrLaptop = useMediaQuery({minWidth: 1224})
     const [hover, setHover] = useState(false);
     const [firstClick,setFirstClick]=useState(true);
-    const dimension = isDesktopOrLaptop ? '18vw' : '85vw';
+    const dimension = isDesktopOrLaptop ? '13vw' : '95vw';
     const mainImage=props.item.mainImage;
     const type=props.item.type;
     const id=props.item.id;
@@ -16,8 +16,7 @@ const ImageByType = (props) => {
     const imageDivStyle = {
         cursor: mainImage != -1 ? 'pointer' : undefined,
         height:isDesktopOrLaptop? dimension:mainImage == -1?0:dimension,
-        marginLeft: '1vh',
-        marginRight: '1vh',
+        outline: 'none',
         width: dimension,
         backgroundColor: 'transparent',
         borderColor: 'transparent',
@@ -43,7 +42,7 @@ const ImageByType = (props) => {
     }
     const onClick=()=>{
         if(!navigator.userAgent.includes("Mobile")||type == TYPE_OF_IMAGE.FILTERED){
-            if(props.onClick!=undefined){
+            if(props.onClick!=undefined&&mainImage!=-1){
                 props.onClick(id);
             }
         }else{
@@ -77,6 +76,7 @@ const ImageByType = (props) => {
                 <img
 
                     style={{
+                        outline: 'none',
                         filter,
                         height: '100%',
                         width: '100%',

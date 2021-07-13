@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import cosmetic_logo from './res/category/cosmetic/cosmetic_logo.png'
 import landLogo from './res/category/land_car/land_logo.png'
 import lifeBoatLogo from './res/category/save_boat/life_boat_logo.png'
@@ -7,14 +7,21 @@ import pizzaLogo from './res/category/pizza/pizza_logo.png'
 import alian_logo from './res/category/alian/alian_logo.png'
 import tourLogo from './res/category/tour/tour_logo.jpg'
 import bibiLogo from './res/category/bibi/bibi_logo.jpg'
-import weddingLogo from './res/category/events/event_logo.jpg'
+import {ReactSVG} from 'react-svg'
+import israel from './res/icons/Flag_of_Israel.svg'
+import usa from './res/icons/EnglishIcon.svg'
+import myGoal1 from './res/category/my_goal/my_goal1.jpg'
+import myGoal2 from './res/category/my_goal/my_goal2.jpg'
+import myGoal3 from './res/category/my_goal/my_goal3.jpg'
+
 import photoshop1 from './res/category/photo_shop/photoshop1.jpg'
 import photoshop2 from './res/category/photo_shop/photoshop2.jpg'
 import photoshop3 from './res/category/photo_shop/photoshop3.jpg'
 import photoshop4 from './res/category/photo_shop/photoshop4.jpg'
 
-import landCar1 from './res/category/land_car/land_car_1.jpg'
-import landCar2 from './res/category/land_car/land_car_2.jpg'
+import landCar1 from './res/category/land_car/land_car_4.jpg'
+import landCar2 from './res/category/land_car/land_car_5.jpg'
+import landCar4 from './res/category/land_car/land_car_6.jpg'
 import landCar3 from './res/category/land_car/land_car_3.jpg'
 
 import lifeBoat1 from './res/category/save_boat/life_boat_1.jpg'
@@ -34,6 +41,8 @@ import betterFly1 from './res/category/better_fly/better_fly_1.jpg'
 import betterFly2 from './res/category/better_fly/better_fly_2.jpg'
 import betterFly3 from './res/category/better_fly/better_fly_3.jpg'
 import betterFly4 from './res/category/better_fly/better_fly_4.jpg'
+import betterFly5 from './res/category/better_fly/better_fly_5.jpg'
+import betterFly6 from './res/category/better_fly/better_fly_logo.png'
 
 import event1 from './res/category/events/event_logo.jpg'
 import event2 from './res/category/events/event2.jpg'
@@ -42,12 +51,20 @@ import event3 from './res/category/events/event_3.jpg'
 import UIUX1 from './res/category/ui_ux/ui_ux_1.jpg'
 import UIUX2 from './res/category/ui_ux/ui_ux_2.jpg'
 
-import tour1 from './res/category/tour/tour1.jpg'
-import tour2 from './res/category/tour/tour2.jpg'
+
+import tour7 from './res/category/tour/tour7.jpg'
+import tour8 from './res/category/tour/tour8.jpg'
+import tour9 from './res/category/tour/tour9.jpg'
+
 
 import running1 from './res/category/running/running1.jpg'
 import running2 from './res/category/running/running2.jpg'
 import running3 from './res/category/running/running3.jpg'
+
+import simaLogo from './res/category/sima/sima_logo.png'
+import sima1 from './res/category/sima/sima1.jpg'
+import sima2 from './res/category/sima/sima2.jpg'
+import sima3 from './res/category/sima/sima3.jpg'
 
 import bibi1 from './res/category/bibi/bibi1.jpg'
 import bibi2 from './res/category/bibi/bibi2.jpg'
@@ -58,7 +75,7 @@ import {BsChevronRight, BsChevronLeft} from 'react-icons/bs';
 import {BiDotsHorizontalRounded} from "react-icons/bi";
 import Row from "./components/Row";
 import {FiX} from "react-icons/fi"
-import {APP_COLOR, TYPE_OF_IMAGE} from "./utils/Utils";
+import {APP_COLOR, marginValue, TYPE_OF_IMAGE} from "./utils/Utils";
 import logo from './res/logo.png'
 import {useMediaQuery} from "react-responsive";
 import ContactForm from "./components/ContactForm";
@@ -69,42 +86,74 @@ import cosmetic3 from './res/category/cosmetic/cosmetic3.jpg'
 import cosmetic4 from './res/category/cosmetic/cosmetic4.jpg'
 import ImageOnFullScreen from "./components/ImageOnFullScreen";
 import {useSwipeable} from "react-swipeable";
+import strings from "./localization/localization";
+
 
 const App = (props) => {
 
     const handlers = useSwipeable({
-        onSwipedLeft:()=>{
-           leftClick();
+        onSwipedLeft: () => {
+            leftClick();
         },
-        onSwipedRight:()=>{
-          rightClick();
+        onSwipedRight: () => {
+            rightClick();
         },
-
 
 
     });
     const [yPosition, setYPosition] = useState(0);
-    const [history,setHistory]=useState([]);
-    const [imagesArrayOnFullScreen, setImagesArrayOnFullScreen] = useState(undefined);
+    const [history, setHistory] = useState([]);
     const [showFullScreen, setShowFullScreen] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [currentCategory, setCurrentCategory] = useState(undefined);
     const [twoColumn, setTwoColumn] = useState(false);
     const [moveBetweenCategoriesObjects, setMoveBetweenCategoriesObjects] = useState([]);
+    const [lang, setLang] = useState(!navigator.language.includes("he"));
+    let stateRef = useRef({
+        yPosition,
+        history,
+        showFullScreen,
+        currentIndex,
+        currentCategory,
+        twoColumn,
+        moveBetweenCategoriesObjects
+    });
+
+    useEffect(() => {
+        stateRef.current.yPosition = yPosition;
+    }, [yPosition])
+    useEffect(() => {
+        stateRef.current.history = history;
+
+    }, [history])
+    useEffect(() => {
+        stateRef.current.currentIndex = currentIndex;
+    }, [currentIndex])
+    useEffect(() => {
+        stateRef.current.twoColumn = twoColumn;
+    }, [twoColumn])
+
     useEffect(() => {
 
         if (currentCategory != undefined) {
-
-
+            stateRef.current.currentCategory = currentCategory;
+            window.history.pushState("asfasf", "title");
             setShowFullScreen(true)
         }
     }, [currentCategory])
+    useEffect(() => {
+        if (currentCategory != undefined && currentCategory.secondLevelEnter) {
+            stateRef.current.moveBetweenCategoriesObjects = moveBetweenCategoriesObjects;
+        }
 
+    }, [moveBetweenCategoriesObjects])
     useEffect(() => {
         if (!showFullScreen) {
             window.scrollTo(0, yPosition);
             setPositionOfButtonDiv(0)
+
         }
+        stateRef.current.showFullScreen = showFullScreen;
 
     }, [showFullScreen])
 
@@ -129,15 +178,31 @@ const App = (props) => {
             showLogoOnFullScreen: true,
             type: TYPE_OF_IMAGE.FILTERED,
             arrayOfImages: [
-                landCar1,
+
                 landCar2,
+                landCar1,
                 landCar3,
+                landCar4
             ],
             category: 1,
             mainImage: landLogo,
             title: 'Land',
             key: 1,
             id: 1
+        },
+        14: {
+            showLogoOnFullScreen: true,
+            type: TYPE_OF_IMAGE.FILTERED,
+            arrayOfImages: [
+                sima3,
+                sima2,
+
+            ],
+            category: 1,
+            mainImage: simaLogo,
+            title: 'Sima',
+            key: 14,
+            id: 14
         },
         2: {
             showLogoOnFullScreen: true,
@@ -161,6 +226,7 @@ const App = (props) => {
                 betterFly2,
                 betterFly3,
                 betterFly4,
+                betterFly5,
             ],
             category: 1,
             mainImage: betterFlyLogo,
@@ -209,7 +275,7 @@ const App = (props) => {
             ],
 
             mainImage: event1,
-            title: 'Events',
+            title: strings.events,
             key: 6,
             id: 6
         },
@@ -221,38 +287,53 @@ const App = (props) => {
             arrayOfImages: [
                 UIUX1,
                 UIUX2,
+                myGoal1
             ],
             secondLevelEnter: true,
             nextObject: [{
+                twoColumn: false,
                 type: TYPE_OF_IMAGE.FILTERED,
                 arrayOfImages: [
-                    alian1,
-                    alian2,
-                    alian3,
-                    alian4
-                ],
-                category: 4,
-                mainImage: alian_logo,
-                title: 'Alian',
-                key: 5,
-                id: 5
-            }, {
-                showLogoOnFullScreen: false,
-                type: TYPE_OF_IMAGE.FILTERED,
-                arrayOfImages: [
-                    alian1,
-                    alian2,
+                    running1,
+                    running2,
+                    running3,
 
                 ],
                 category: 4,
-                mainImage: alian_logo,
-                title: 'Alian',
+                mainImage: running1,
                 key: 5,
                 id: 5
+            }, {
+                twoColumn: false,
+                showLogoOnFullScreen: false,
+                type: TYPE_OF_IMAGE.FILTERED,
+                arrayOfImages: [
+
+                    tour8,
+                    tour9,
+                    tour7,
+                ],
+                category: 4,
+                mainImage: tourLogo,
+                key: 6,
+                id: 6
+            }, {
+                twoColumn: false,
+                mainImage: tourLogo,
+                showLogoOnFullScreen: false,
+                type: TYPE_OF_IMAGE.FILTERED,
+                arrayOfImages: [
+                    myGoal2,
+                    myGoal3,
+                    myGoal1,
+                ],
+                category: 4,
+                key: 7,
+                id: 7
             }],
             category: 2,
             mainImage: tourLogo,
-            title: 'Tour',
+            title: strings.uiux,
             key: 7,
             id: 7
         },
@@ -268,7 +349,7 @@ const App = (props) => {
 
             ],
             mainImage: bibiLogo,
-            title: 'bibi',
+            title: strings.bookDesign,
             key: 8,
             id: 8
         },
@@ -321,7 +402,7 @@ const App = (props) => {
             id: 13
         }
     }
-    const leftClick=()=>{
+    const leftClick = () => {
         for (let i = 0; i < Object.keys(moveBetweenCategoriesObjects).length; i++) {
 
 
@@ -339,7 +420,8 @@ const App = (props) => {
             }
         }
     }
-    const rightClick=()=>{
+    const rightClick = () => {
+        console.log(moveBetweenCategoriesObjects.length)
         for (let i = 0; i < Object.keys(moveBetweenCategoriesObjects).length; i++) {
 
 
@@ -359,8 +441,9 @@ const App = (props) => {
     const FullScreenTest = () => {
         const onClickImage = (index) => {
             if (currentCategory.secondLevelEnter) {
-                onClickFullScreen(currentCategory.nextObject[index]);
-                const history1=history;
+                onClickFullScreen(currentCategory.nextObject[index], true);
+                const history1 = history;
+                const test = [];
                 history1.push(currentCategory);
                 setHistory(history1);
             }
@@ -370,7 +453,7 @@ const App = (props) => {
             {...handlers}
             style={{
 
-                height: currentCategory.arrayOfImages.length<=1&&!isDesktopOrLaptop?'100vh':undefined,
+                height: currentCategory.arrayOfImages.length <= 1 && !isDesktopOrLaptop ? '100vh' : undefined,
                 width: '100%',
                 display: 'flex',
                 alignItems: 'center',
@@ -494,15 +577,18 @@ const App = (props) => {
             }
 
             {
-                history.length>0?
+                history.length > 0 ?
                     <BsChevronLeft
                         color={APP_COLOR.MAIN_COLOR}
                         onClick={() => {
-                                setTwoColumn(history[0].twoColumn)
-                                setCurrentCategory(history[0])
-                                setHistory([]);
+                            setMoveBetweenCategoriesObjects(stateRef.current.moveBetweenCategoriesObjects)
+                            setTwoColumn(stateRef.current.history[0].twoColumn);
+                            setCurrentCategory(stateRef.current.history[0])
+                            setHistory([])
+
                         }}
                         style={{
+                            transform: !lang ? "rotate(0deg)" : "rotate(180deg)",
                             zIndex: 100,
                             position: 'fixed',
                             padding: '5vmin',
@@ -510,10 +596,10 @@ const App = (props) => {
                             alignSelf: 'flex-end'
                         }}
                         size={'5vh'}
-                    />:
+                    /> :
                     <FiX
                         onClick={() => {
-                                setShowFullScreen(false)
+                            setShowFullScreen(false)
                         }}
                         style={{
                             zIndex: 100,
@@ -526,23 +612,26 @@ const App = (props) => {
             }
 
 
-
         </div>
     }
 
-    const onClickFullScreen = (props) => {
+    const onClickFullScreen = (props, secondLevel) => {
         setCurrentCategory(props);
         const test = [];
-        Object.values(allCategories).map((item) => {
-            if (item.category == props.category) {
-                test.push(item)
-            }
+        if (!secondLevel && props.category != 4) {
+            Object.values(allCategories).map((item) => {
+                if (item.category == props.category) {
+                    test.push(item)
+                }
 
-        })
-        setYPosition(window.pageYOffset)
+            })
+            setMoveBetweenCategoriesObjects(test);
+            setYPosition(window.pageYOffset)
+
+            setCurrentIndex(props.id)
+        }
         setTwoColumn(props.twoColumn)
-        setCurrentIndex(props.id)
-        setMoveBetweenCategoriesObjects(test);
+
         window.scrollTo(0, 0)
     }
     const ShowWork = (props) => {
@@ -561,7 +650,7 @@ const App = (props) => {
         }}>
             <div style={{
                 fontFamily: 'OpenSansHebrewCondensedRegular',
-                fontSize: isDesktopOrLaptop ? '2rem' : '3rem',
+                fontSize: isDesktopOrLaptop ? '2.5rem' : '3rem',
                 color: APP_COLOR.MAIN_COLOR,
                 textAlign: 'center'
             }}>
@@ -605,13 +694,57 @@ const App = (props) => {
                 backgroundColor: 'transparent',
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'center'
+                justifyContent: 'center',
+                outline: 'none',
+                marginBottom: isDesktopOrLaptop ? 0 : '25vmin'
             }}>
-            <BiDotsHorizontalRounded color={"#E9A8A9"} size={isDesktopOrLaptop ? "5vmin" : '10vmin'}/>
+            <BiDotsHorizontalRounded color={"#E9A8A9"} size={isDesktopOrLaptop ? "3vmin" : '10vmin'}/>
         </button>
     }
     const MainFrame = () => {
         return <>
+            <button
+                onClick={() => {
+                    if (lang) {
+                        strings.setLanguage('heb');
+                        document.getElementById("root").style.direction = "rtl";
+                    } else {
+                        strings.setLanguage('en');
+                        document.getElementById("root").style.direction = "ltr";
+                    }
+
+                    setLang(!lang)
+                }}
+                style={{
+
+                    backgroundColor: 'transparent',
+                    borderColor: 'transparent',
+                    margin: '5vmin',
+                    alignSelf: 'flex-end',
+                    cursor: 'pointer',
+                    outline: 'none',
+                }}>
+
+                <ReactSVG
+                    beforeInjection={svg => {
+                        const style = isDesktopOrLaptop ? 'height: 100%;width:5vmin' : 'height: 100%;width:10vmin'
+                        svg.setAttribute('style', style);
+                        // Height is 190 here to account for `stroke-width: 5`.
+                        svg.querySelector('rect').setAttribute('style', 'borderRadius:100;width:15vmin');
+                    }}
+                    src={lang ? israel : usa}/>
+               {/* <div style={{
+
+                    fontFamily: 'OpenSansHebrewCondensedRegular',
+                    fontSize: '1.5rem',
+                    color: 'black',
+                    textAlign: 'center',
+                }}>
+                    {
+                     lang? "Hebrew":'English'
+                    }
+                </div>*/}
+            </button>
             <Header/>
             <ShowWork
                 title={"מיתוג"}
@@ -619,8 +752,10 @@ const App = (props) => {
                     [
                         allCategories["4"],
                         allCategories["5"],
-                        {},
-                        {}
+                        allCategories["14"],
+                        {
+                            mainImage: -1
+                        }
                     ]
                 ]}
                 row={[
@@ -658,7 +793,7 @@ const App = (props) => {
             }}>
                 צור קשר
             </div>
-            <ContactForm/>
+            <ContactForm lang={lang}/>
             <Contact/>
         </>
     }
@@ -713,7 +848,7 @@ const TextComponent = (props) => {
     const lineStyle = {
         width: '10vmin',
         borderWidth: 0,
-        borderBottomWidth:1,
+        borderBottomWidth: 1,
         borderStyle: 'solid',
         borderColor: APP_COLOR.TEXT_COLOR,
     }
@@ -773,8 +908,11 @@ const Header = () => {
             justifyContent: 'center',
             flexDirection: 'column'
         }}>
-            <div style={{height: isDesktopOrLaptop ? '20vh' : '50vw',}}>
-                <img style={{height: '100%'}} src={logo}/>
+            <div style={{
+                marginBottom: isDesktopOrLaptop ? 0 : '10vmin',
+                width: isDesktopOrLaptop ? '50vmin' : '85vmin',
+            }}>
+                <img style={{width: '100%', height: 'auto'}} src={logo}/>
             </div>
 
             <TextComponent

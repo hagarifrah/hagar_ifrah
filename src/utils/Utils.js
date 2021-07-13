@@ -8,3 +8,5 @@ export const APP_COLOR={
     MAIN_COLOR:'#E9A8A9',
     TEXT_COLOR:'#575756'
 }
+
+export const marginValue='5vmin'

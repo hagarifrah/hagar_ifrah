@@ -3,7 +3,8 @@ import instagram from '../res/icons/instagram.png';
 import whatsApp from '../res/icons/whatsapp.png';
 import facebook from '../res/icons/facebook.png'
 import {useMediaQuery} from "react-responsive";
-import {APP_COLOR} from "../utils/Utils";
+import {APP_COLOR, marginValue} from "../utils/Utils";
+import strings from "../localization/localization";
 
 const InputSection = (props) => {
     const isDesktopOrLaptop = useMediaQuery({minWidth: 1224})
@@ -13,12 +14,15 @@ const InputSection = (props) => {
         fontFamily: 'Assistant',
         fontSize: '1em',
         borderRadius: isDesktopOrLaptop ? '0.5vw' : '1vh',
-        paddingRight: '2%',
+        paddingLeft: '2%',
+        paddingRight:'2%',
         outlineWidth: 0,
-        height: isDesktopOrLaptop ? '7vmin' : '10vmin',
+        textAlign:!props.lang?'right':'left',
+        height: isDesktopOrLaptop ? '5vmin' : '10vmin',
         color: '#575756',
-        width: isDesktopOrLaptop ? undefined : '80vmin',
+        width: isDesktopOrLaptop ? undefined : '90vmin',
         borderColor: 'transparent',
+        margin:'0.5vmin'
     }
 
     return <div style={{
@@ -26,10 +30,7 @@ const InputSection = (props) => {
         display: 'flex',
         flexDirection: 'column',
         alignItems: isDesktopOrLaptop ? 'unset' : 'center',
-        margin: '1.7vh',
-        marginLeft: 0,
-        marginRight: 0,
-        marginBottom: isDesktopOrLaptop ? '1.7vh' : '2.5%'
+
     }}>
 
         <input
@@ -39,9 +40,9 @@ const InputSection = (props) => {
             }}
             value={props.fullName}
             style={inputStyle}
-            placeholder={"שם מלא"}/>
+            placeholder={strings.fullName}/>
         <div style={{
-            marginTop: '2.5%',
+
         }}/>
 
         <input
@@ -51,9 +52,9 @@ const InputSection = (props) => {
             }}
             value={props.phone}
             style={inputStyle}
-            placeholder={"טלפון"}/>
+            placeholder={strings.phone}/>
         <div style={{
-            marginTop: '2.5%',
+
         }}/>
         <input
             onChange={(event) => {
@@ -61,7 +62,7 @@ const InputSection = (props) => {
             }}
             value={props.subject}
             style={inputStyle}
-            placeholder={"נושא"}/>
+            placeholder={strings.title}/>
 
     </div>
 }
@@ -69,12 +70,13 @@ const InputSection = (props) => {
 const TextSend = (props) => {
     const isDesktopOrLaptop = useMediaQuery({minWidth: 1224})
     return <div style={{
-
-        width: isDesktopOrLaptop ? undefined : '80vmin',
+        width: isDesktopOrLaptop ? undefined : '90vmin',
         flex: 1,
         display: 'flex',
         alignSelf: isDesktopOrLaptop ? undefined : 'center',
-        flexDirection: isDesktopOrLaptop ? undefined : 'column'
+        flexDirection: isDesktopOrLaptop ? undefined : 'column',
+
+
 
     }}>
 
@@ -84,7 +86,12 @@ const TextSend = (props) => {
             }}
             value={props.body}
             style={{
-                paddingRight: '2%',
+                textAlign:!props.lang?'right':'left',
+                margin:'0.5vmin',
+                marginLeft:isDesktopOrLaptop?"1vmin":0,
+                marginRight:isDesktopOrLaptop?"1vmin":0,
+                paddingLeft: '2%',
+                paddingRight:'2%',
                 paddingTop: '2%',
                 boxSizing: 'border-box',
                 fontFamily: 'Assistant',
@@ -95,16 +102,14 @@ const TextSend = (props) => {
                 resize: 'none',
                 borderColor: 'transparent',
                 borderRadius: isDesktopOrLaptop ? '0.5vw' : '1vh',
-                margin: '1.7vh',
-                marginRight: isDesktopOrLaptop ? "1.7vh" : 0,
+
                 height: isDesktopOrLaptop ? undefined : '20vmin',
-                marginTop: isDesktopOrLaptop ? '1.7vh' : 0,
-                marginBottom: isDesktopOrLaptop ? '1.7vh' : '2.5%'
+
             }}
-            placeholder={"תוכן הודעה"}/>
+            placeholder={strings.message}/>
         <a
             onClick={()=>{
-                const text="subject="+ props.subject + "&body=" + props.body + '%0d%0a' + "מספר טלפון: " + props.phone + '%0d%0a' + "שם מלא: " + props.fullName
+                const text="subject="+ props.subject + "&body=" + props.body + '%0d%0a' + " "+strings.phone + props.phone + '%0d%0a' + " "+strings.fullName + props.fullName
                 const url=navigator.userAgent.includes("Mobile")?
                     'mailto:hagar.ifrah@gmail.com?'+text:
                     "https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=hagar.ifrah94@gmail.com&su=" +text
@@ -120,19 +125,16 @@ const TextSend = (props) => {
             }
             }
             style={{
+                margin:'0.5vmin',
+                marginLeft:isDesktopOrLaptop?"1vmin":0,
+                marginRight:isDesktopOrLaptop?"1vmin":0,
                 color: 'transparent',
                 borderRadius: isDesktopOrLaptop ? '0.5vw' : '1vh',
-                padding: isDesktopOrLaptop ? '2%' : 0,
+                padding: isDesktopOrLaptop ? '1%' : 0,
                 borderColor: 'transparent',
                 alignItems: 'center',
                 justifyContent: 'center',
                 display: 'flex',
-                margin: '1.7vh',
-                marginRight: 0,
-                marginLeft: 0,
-                marginBottom: isDesktopOrLaptop ? '1.7vh' : 0,
-                marginTop: isDesktopOrLaptop ? '1.7vh' : 0,
-
                 height: isDesktopOrLaptop ? undefined : '10vmin',
                 backgroundColor: props.hover || !isDesktopOrLaptop ? '#E9A8A9' : '#a5a5a5',
             }}>
@@ -144,12 +146,14 @@ const TextSend = (props) => {
                 fontSize: '1em',
                 transform: isDesktopOrLaptop ? 'rotate(90deg)' : undefined,
             }}>
-                שלח
+                {
+                    strings.send
+                }
             </div>
         </a>
     </div>
 }
-const ContactForm = () => {
+const ContactForm = (props) => {
     const isDesktopOrLaptop = useMediaQuery({minWidth: 1224})
     const [phone, setPhone] = useState("");
     const [fullName, setFullName] = useState("");
@@ -165,19 +169,25 @@ const ContactForm = () => {
         flexDirection: isDesktopOrLaptop ? 'row' : 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        marginTop: isDesktopOrLaptop ? '5vh' : 0,
+        alignSelf:'center',
+        paddingTop:marginValue,
+        paddingBottom:marginValue,
 
-        paddingBottom: '5vmin',
     }}>
         <div style={{
             flexDirection: isDesktopOrLaptop ? 'row' : 'column',
             justifyContent: 'space-between',
 
             display: 'flex',
-            width: '150vmin',
+            width: '51.5vw',
+            height:'100%',
 
         }}>
+
+
+
             <InputSection
+                lang={props.lang}
                 phone={phone}
                 fullName={fullName}
                 subject={subject}
@@ -190,8 +200,8 @@ const ContactForm = () => {
                 setSubject={(subject) => {
                     setSubject(subject)
                 }}/>
-
             <TextSend
+                lang={props.lang}
                 fullName={fullName}
                 phone={phone}
                 subject={subject}
