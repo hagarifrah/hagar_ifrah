@@ -23,7 +23,7 @@ let strings = new LocalizedStrings({
     },
     heb: {
         bookDesign:'עיצוב חוברות',
-        events:'אירועים',
+        events:'מיתוג לאירועים',
         branding:'מיתוג',
         photoShopDesign:"עיצובים בפוטושופ",
         moreDesign:'עיצובים נוספים',
@@ -34,7 +34,7 @@ let strings = new LocalizedStrings({
         phone:'פלאפון',
         fullName:"שם מלא",
         message:'הודעה',
-        uiux:'ממשק משתמש',
+        uiux:'UI/UX',
 
         mainTitle:"היי שמי הגר! למדתי תואר הנדסאי לעיצוב מדיה, במכללה הטכנולוגית באר שבע.\n" +
             "אני פרפקציוניסטית, תחרותית ותמיד שואפת ללמוד דברים חדשים.\n\n" +

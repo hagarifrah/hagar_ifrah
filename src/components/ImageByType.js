@@ -17,6 +17,7 @@ const ImageByType = (props) => {
         cursor: mainImage != -1 ? 'pointer' : undefined,
         height:isDesktopOrLaptop? dimension:mainImage == -1?0:dimension,
         outline: 'none',
+        marginBottom:isDesktopOrLaptop?0:'3vmin',
         width: dimension,
         backgroundColor: 'transparent',
         borderColor: 'transparent',
@@ -76,6 +77,8 @@ const ImageByType = (props) => {
                 <img
 
                     style={{
+                        borderRadius: isDesktopOrLaptop ? '0.5vw' : '1vh',
+                        userSelect:'none',
                         outline: 'none',
                         filter,
                         height: '100%',
@@ -90,6 +93,7 @@ const ImageByType = (props) => {
             {
                 hover && type === TYPE_OF_IMAGE.HOVER &&
                 <div style={{
+                    borderRadius: isDesktopOrLaptop ? '0.5vw' : '1vh',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',

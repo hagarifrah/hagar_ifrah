@@ -8,8 +8,7 @@ import alian_logo from './res/category/alian/alian_logo.png'
 import tourLogo from './res/category/tour/tour_logo.jpg'
 import bibiLogo from './res/category/bibi/bibi_logo.jpg'
 import {ReactSVG} from 'react-svg'
-import israel from './res/icons/Flag_of_Israel.svg'
-import usa from './res/icons/EnglishIcon.svg'
+import langSVG from './res/icons/lang.svg'
 import myGoal1 from './res/category/my_goal/my_goal1.jpg'
 import myGoal2 from './res/category/my_goal/my_goal2.jpg'
 import myGoal3 from './res/category/my_goal/my_goal3.jpg'
@@ -42,14 +41,16 @@ import betterFly2 from './res/category/better_fly/better_fly_2.jpg'
 import betterFly3 from './res/category/better_fly/better_fly_3.jpg'
 import betterFly4 from './res/category/better_fly/better_fly_4.jpg'
 import betterFly5 from './res/category/better_fly/better_fly_5.jpg'
-import betterFly6 from './res/category/better_fly/better_fly_logo.png'
 
+import firebase from "firebase/app";
+import "firebase/analytics";
 import event1 from './res/category/events/event_logo.jpg'
 import event2 from './res/category/events/event2.jpg'
 import event3 from './res/category/events/event_3.jpg'
 
 import UIUX1 from './res/category/ui_ux/ui_ux_1.jpg'
 import UIUX2 from './res/category/ui_ux/ui_ux_2.jpg'
+import UIUX3 from './res/category/ui_ux/ui_ux_3.jpg'
 
 
 import tour7 from './res/category/tour/tour7.jpg'
@@ -62,7 +63,8 @@ import running2 from './res/category/running/running2.jpg'
 import running3 from './res/category/running/running3.jpg'
 
 import simaLogo from './res/category/sima/sima_logo.png'
-import sima1 from './res/category/sima/sima1.jpg'
+import smartlookClient from 'smartlook-client'
+
 import sima2 from './res/category/sima/sima2.jpg'
 import sima3 from './res/category/sima/sima3.jpg'
 
@@ -88,7 +90,23 @@ import ImageOnFullScreen from "./components/ImageOnFullScreen";
 import {useSwipeable} from "react-swipeable";
 import strings from "./localization/localization";
 
+const firebaseConfig = {
+    apiKey: "AIzaSyDfaSZHh7VVRxWK0MnFAMtJNj37WljBKkM",
+    authDomain: "hagar-474df.firebaseapp.com",
+    projectId: "hagar-474df",
+    storageBucket: "hagar-474df.appspot.com",
+    messagingSenderId: "605564517895",
+    appId: "1:605564517895:web:cc1c1f1ee884f30bfb74a2",
+    measurementId: "G-6VMKDZ5J5E"
+};
+if (firebase.apps.length === 0) {
+    firebase.initializeApp(firebaseConfig);
+}
+smartlookClient.init('61ad7c53065b2f42de7ea055a9f02ad290cbaf1c')
 
+// Initialize Firebase
+
+firebase.analytics();
 const App = (props) => {
 
     const handlers = useSwipeable({
@@ -109,6 +127,7 @@ const App = (props) => {
     const [twoColumn, setTwoColumn] = useState(false);
     const [moveBetweenCategoriesObjects, setMoveBetweenCategoriesObjects] = useState([]);
     const [lang, setLang] = useState(!navigator.language.includes("he"));
+    const [firstInit, setFirstInit] = useState(false);
     let stateRef = useRef({
         yPosition,
         history,
@@ -119,6 +138,9 @@ const App = (props) => {
         moveBetweenCategoriesObjects
     });
 
+    useEffect(() => {
+        setFirstInit(true)
+    }, [lang])
     useEffect(() => {
         stateRef.current.yPosition = yPosition;
     }, [yPosition])
@@ -136,6 +158,15 @@ const App = (props) => {
     useEffect(() => {
 
         if (currentCategory != undefined) {
+            if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
+                // dev code
+            } else {
+                firebase.analytics().logEvent("category:" + currentCategory.category);
+                firebase.analytics().logEvent("titleOnFullScreen:" + currentCategory.titleOnFullScreen);
+
+            }
+
+
             stateRef.current.currentCategory = currentCategory;
             window.history.pushState("asfasf", "title");
             setShowFullScreen(true)
@@ -169,7 +200,6 @@ const App = (props) => {
         setLang(!navigator.language.includes("he"))
 
 
-
         window.onpopstate = () => {
 
             if (stateRef.current.history.length > 0 && stateRef.current.currentCategory != undefined) {
@@ -188,6 +218,7 @@ const App = (props) => {
 
         }
     }, [])
+
 
     const allCategories = {
         0: {
@@ -296,6 +327,7 @@ const App = (props) => {
             id: 5
         },
         6: {
+            titleOnFullScreen: strings.events,
             showLogoOnFullScreen: false,
             twoColumn: true,
             category: 2,
@@ -312,6 +344,7 @@ const App = (props) => {
             id: 6
         },
         7: {
+            titleOnFullScreen: strings.uiux,
             showLogoOnFullScreen: false,
             twoColumn: true,
             marginBetweenImages: true,
@@ -319,7 +352,7 @@ const App = (props) => {
             arrayOfImages: [
                 UIUX1,
                 UIUX2,
-                myGoal1
+                UIUX3,
             ],
             secondLevelEnter: true,
             nextObject: [{
@@ -340,9 +373,8 @@ const App = (props) => {
                 showLogoOnFullScreen: false,
                 type: TYPE_OF_IMAGE.FILTERED,
                 arrayOfImages: [
-
-                    tour8,
                     tour9,
+                    tour8,
                     tour7,
                 ],
                 category: 4,
@@ -364,12 +396,13 @@ const App = (props) => {
                 id: 7
             }],
             category: 2,
-            mainImage: tourLogo,
+            mainImage: UIUX2,
             title: strings.uiux,
             key: 7,
             id: 7
         },
         8: {
+            titleOnFullScreen: strings.bookDesign,
             showLogoOnFullScreen: false,
             category: 2,
             type: TYPE_OF_IMAGE.HOVER,
@@ -452,7 +485,6 @@ const App = (props) => {
         }
     }
     const rightClick = () => {
-        console.log(moveBetweenCategoriesObjects.length)
         for (let i = 0; i < Object.keys(moveBetweenCategoriesObjects).length; i++) {
 
 
@@ -470,6 +502,7 @@ const App = (props) => {
     }
 
     const FullScreenTest = () => {
+
         const onClickImage = (index) => {
             if (currentCategory.secondLevelEnter) {
                 onClickFullScreen(currentCategory.nextObject[index], true);
@@ -486,30 +519,41 @@ const App = (props) => {
                 window.history.pushState("asfasfss", "title2");
             }
         }
+
         return <div
 
             {...handlers}
             style={{
-
                 height: currentCategory.arrayOfImages.length <= 1 && !isDesktopOrLaptop ? '100vh' : undefined,
                 width: '100%',
                 display: 'flex',
                 alignItems: 'center',
                 flexDirection: 'column',
-                marginBottom: !isDesktopOrLaptop ? '5vmin' : 0
-
+                marginBottom: !isDesktopOrLaptop ? '5vmin' : 0,
+                marginTop: '10vmin',
 
             }}>
             {
                 currentCategory.showLogoOnFullScreen &&
-                <img style={{width: '50vmin'}} src={currentCategory.mainImage}/>
+                <img style={{userSelect: 'none', width: isDesktopOrLaptop?'25vmin':'50vmin'}} src={currentCategory.mainImage}/>
             }
 
+
             {
-                (currentCategory.showTitle == undefined || currentCategory.showTitle) &&
-                <>
-                    <TextComponent title={currentCategory.titleOnFullScreen}/>
-                </>
+
+                <div
+                    style={{
+                        marginTop: marginValue,
+                        fontFamily: 'OpenSansHebrewCondensedRegular',
+                        fontSize: isDesktopOrLaptop ? '2.5rem' : '2rem',
+                        color: APP_COLOR.MAIN_COLOR,
+                        textAlign: 'center',
+                        zIndex:200
+                    }}>
+                    {
+                        currentCategory.titleOnFullScreen
+                    }
+                </div>
 
             }
 
@@ -529,6 +573,7 @@ const App = (props) => {
                                         <ImageOnFullScreen
                                             pressAble={currentCategory.secondLevelEnter}
                                             width={"55vmin"}
+                                            item={currentCategory}
                                             key={index}
                                             onClick={() => onClickImage(index)}
                                             image={item}/>
@@ -552,6 +597,7 @@ const App = (props) => {
 
                                         }}>
                                         <ImageOnFullScreen
+                                            item={currentCategory}
                                             pressAble={currentCategory.secondLevelEnter}
                                             width={"55vmin"}
                                             key={index}
@@ -564,24 +610,30 @@ const App = (props) => {
                     </div>
 
                     :
-                    currentCategory.arrayOfImages.map((item, index) => {
-                        return <div
-                            style={{
-                                display: 'flex',
-                                flex: currentCategory.arrayOfImages.length <= 1 && !isDesktopOrLaptop ? 1 : 0,
-                                justifyContent: currentCategory.arrayOfImages.length <= 1 && !isDesktopOrLaptop ? 'center' : undefined,
-                                alignItems: currentCategory.arrayOfImages.length <= 1 && !isDesktopOrLaptop ? 'center' : undefined,
-                                zIndex: 100,
-                                marginTop: currentCategory.marginBetweenImages ? marginValue : 0
-                            }}>
-                            <ImageOnFullScreen
-                                pressAble={currentCategory.secondLevelEnter}
-                                onClick={() => onClickImage(index)}
-                                key={index}
-                                image={item}/>
-                        </div>
+                    <div style={{marginTop:currentCategory.marginBetweenImages?0:marginValue}}>
+                        {
+                            currentCategory.arrayOfImages.map((item, index) => {
+                                return <div
+                                    style={{
+                                        display: 'flex',
+                                        flex: currentCategory.arrayOfImages.length <= 1 && !isDesktopOrLaptop ? 1 : 0,
+                                        justifyContent: currentCategory.arrayOfImages.length <= 1 && !isDesktopOrLaptop ? 'center' : undefined,
+                                        alignItems: currentCategory.arrayOfImages.length <= 1 && !isDesktopOrLaptop ? 'center' : undefined,
+                                        zIndex: 100,
+                                        marginTop: currentCategory.marginBetweenImages ? marginValue : 0
+                                    }}>
+                                    <ImageOnFullScreen
+                                        item={currentCategory}
+                                        pressAble={currentCategory.secondLevelEnter}
+                                        onClick={() => onClickImage(index)}
+                                        key={index}
+                                        image={item}/>
+                                </div>
 
-                    })
+                            })
+                        }
+                    </div>
+
             }
             {
                 isDesktopOrLaptop &&
@@ -613,40 +665,29 @@ const App = (props) => {
                 </>
             }
 
-            {
-                history.length > 0 ?
-                    <BsChevronLeft
-                        color={APP_COLOR.MAIN_COLOR}
-                        onClick={() => {
-                            setMoveBetweenCategoriesObjects(stateRef.current.moveBetweenCategoriesObjects)
-                            setTwoColumn(stateRef.current.history[0].twoColumn);
-                            setCurrentCategory(stateRef.current.history[0])
-                            setHistory([])
 
-                        }}
-                        style={{
-                            transform: !lang ? "rotate(0deg)" : "rotate(180deg)",
-                            zIndex: 100,
-                            position: 'fixed',
-                            padding: '5vmin',
-                            display: 'flex',
-                            alignSelf: 'flex-end'
-                        }}
-                        size={'5vh'}
-                    /> :
-                    <FiX
-                        onClick={() => {
-                            setShowFullScreen(false)
-                        }}
-                        style={{
-                            zIndex: 100,
-                            position: 'fixed',
-                            padding: '5vmin',
-                            display: 'flex',
-                            alignSelf: 'flex-end'
-                        }}
-                        size={'5vh'}/>
-            }
+            <FiX
+                onClick={() => {
+                    if (history.length > 0) {
+                        setMoveBetweenCategoriesObjects(stateRef.current.moveBetweenCategoriesObjects)
+                        setTwoColumn(stateRef.current.history[0].twoColumn);
+                        setCurrentCategory(stateRef.current.history[0])
+                        setHistory([])
+                    } else
+                        setShowFullScreen(false)
+                }}
+                color={"#838383"}
+                style={{
+                    marginTop: 0,
+                    zIndex: 100,
+                    position: 'fixed',
+                    padding: '5vmin',
+                    paddingLeft: isDesktopOrLaptop?'20vmin':'5vmin',
+                    paddingTop: 0,
+                    display: 'flex',
+                    alignSelf: 'flex-end'
+                }}
+                size={isDesktopOrLaptop?'4vmin':'8vmin'}/>
 
 
         </div>
@@ -679,7 +720,6 @@ const App = (props) => {
         const [showSetMore, setMore] = useState(false);
         return <div style={{
             width: '100%',
-
             flexDirection: 'column',
             display: 'flex',
             alignItems: 'center',
@@ -687,7 +727,7 @@ const App = (props) => {
         }}>
             <div style={{
                 marginTop: marginValue,
-                marginBottom: marginValue,
+
                 fontFamily: 'OpenSansHebrewCondensedRegular',
                 fontSize: isDesktopOrLaptop ? '2.5rem' : '3rem',
                 color: APP_COLOR.MAIN_COLOR,
@@ -759,6 +799,9 @@ const App = (props) => {
                     backgroundColor: 'transparent',
                     borderColor: 'transparent',
                     margin: '5vmin',
+                    marginLeft: isDesktopOrLaptop ? "5vmin" : 0,
+                    position: 'absolute',
+                    left: isDesktopOrLaptop ? '5vmin' : 0,
                     alignSelf: 'flex-end',
                     cursor: 'pointer',
                     outline: 'none',
@@ -769,20 +812,10 @@ const App = (props) => {
                         const style = isDesktopOrLaptop ? 'height: 100%;width:5vmin' : 'height: 100%;width:10vmin'
                         svg.setAttribute('style', style);
                         // Height is 190 here to account for `stroke-width: 5`.
-                        svg.querySelector('rect').setAttribute('style', 'borderRadius:100;width:15vmin');
-                    }}
-                    src={lang ? israel : usa}/>
-               {/* <div style={{
 
-                    fontFamily: 'OpenSansHebrewCondensedRegular',
-                    fontSize: '1.5rem',
-                    color: 'black',
-                    textAlign: 'center',
-                }}>
-                    {
-                     lang? "Hebrew":'English'
-                    }
-                </div>*/}
+                    }} style={{position: 'absolute', left: '5vmin'}}
+                    src={langSVG}/>
+
             </button>
             <Header/>
             <ShowWork
@@ -830,7 +863,7 @@ const App = (props) => {
                 textAlign: 'center',
             }}>
                 {
-                    strings.fullName
+                    strings.contactMe
                 }
             </div>
             <ContactForm lang={lang}/>
@@ -896,8 +929,6 @@ const TextComponent = (props) => {
         style={{
             whiteSpace: 'pre-line',
             borderWidth: 0,
-            marginTop: marginValue,
-            marginBottom: marginValue,
             width: isDesktopOrLaptop ? '40vw' : '75vw',
             display: 'flex',
             alignItems: 'center',
@@ -941,17 +972,18 @@ const Header = () => {
     return (
         <div style={{
             width: '100vw',
+            marginTop: isDesktopOrLaptop ? '5vmin' : '25vmin',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             flexDirection: 'column',
-            marginTop: marginValue,
+
         }}>
             <div style={{
                 marginBottom: isDesktopOrLaptop ? 0 : '10vmin',
-                width: isDesktopOrLaptop ? '50vmin' : '85vmin',
+                width: isDesktopOrLaptop ? '45vmin' : '85vmin',
             }}>
-                <img style={{width: '100%', height: 'auto'}} src={logo}/>
+                <img style={{userSelect: 'none', width: '100%', height: 'auto'}} src={logo}/>
             </div>
 
             <TextComponent

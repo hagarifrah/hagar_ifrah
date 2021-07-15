@@ -22,7 +22,9 @@ const InputSection = (props) => {
         color: '#575756',
         width: isDesktopOrLaptop ? undefined : '90vmin',
         borderColor: 'transparent',
-        margin:'0.5vmin'
+        margin:isDesktopOrLaptop?'0.5vmin':'1.5vmin',
+        marginRight:0,
+        marginLeft:0,
     }
 
     return <div style={{
@@ -88,8 +90,9 @@ const TextSend = (props) => {
             style={{
                 textAlign:!props.lang?'right':'left',
                 margin:'0.5vmin',
-                marginLeft:isDesktopOrLaptop?"1vmin":0,
-                marginRight:isDesktopOrLaptop?"1vmin":0,
+                marginTop:isDesktopOrLaptop?'0.5vmin':'1.5vmin',
+                marginLeft:isDesktopOrLaptop&&props.lang?"1vmin":0,
+                marginRight:isDesktopOrLaptop&&!props.lang?"1vmin":0,
                 paddingLeft: '2%',
                 paddingRight:'2%',
                 paddingTop: '2%',
@@ -126,8 +129,9 @@ const TextSend = (props) => {
             }
             style={{
                 margin:'0.5vmin',
-                marginLeft:isDesktopOrLaptop?"1vmin":0,
-                marginRight:isDesktopOrLaptop?"1vmin":0,
+                marginLeft:isDesktopOrLaptop?"1vmin":'0.5vmin',
+                marginRight:isDesktopOrLaptop?"1vmin":'0.5vmin',
+                marginTop:isDesktopOrLaptop?'0.5vmin':'2vmin',
                 color: 'transparent',
                 borderRadius: isDesktopOrLaptop ? '0.5vw' : '1vh',
                 padding: isDesktopOrLaptop ? '1%' : 0,

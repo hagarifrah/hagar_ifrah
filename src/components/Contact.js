@@ -30,7 +30,7 @@ const Contact = () => {
                     onClick={()=>{
                         window.open(!navigator.userAgent.includes("Mobile")?"https://www.facebook.com/hagar.ifrah":'fb://profile/100007881699145');
                     }}
-                    style={{display:"flex",height:dimension}}
+                    style={{userSelect:'none',display:"flex",height:dimension}}
                     src={facebook}/>
         </div>
         <div style={divStyle}>
@@ -38,7 +38,7 @@ const Contact = () => {
                 onClick={()=>{
                     window.open(!navigator.userAgent.includes("Mobile")?"https://wa.me/0523080322?text=היי הגר":'whatsapp://send?phone=+9720523080322&text=היי הגר ');
                 }}
-                style={{display:"flex",height:dimension}}
+                style={{userSelect:'none',display:"flex",height:dimension}}
                 src={whatsApp}/>
         </div>
         <div style={divStyle}>
@@ -46,7 +46,7 @@ const Contact = () => {
                 onClick={()=>{
                     window.open(!navigator.userAgent.includes("Mobile")?"https://www.instagram.com/hagarifrah/":'instagram://user?username=hagarifrah');
                 }}
-                style={{display:"flex",height:dimension}}
+                style={{userSelect:'none',display:"flex",height:dimension}}
                 src={instagram}/>
         </div>
        {/* <div>
