@@ -1,20 +1,18 @@
 {
   "files": {
     "main.css": "/hagar_ifrah/static/css/main.959d44e0.chunk.css",
-    "main.js": "/hagar_ifrah/static/js/main.b8a5f574.chunk.js",
-    "main.js.map": "/hagar_ifrah/static/js/main.b8a5f574.chunk.js.map",
+    "main.js": "/hagar_ifrah/static/js/main.758fadd5.chunk.js",
+    "main.js.map": "/hagar_ifrah/static/js/main.758fadd5.chunk.js.map",
     "runtime-main.js": "/hagar_ifrah/static/js/runtime-main.ca254824.js",
     "runtime-main.js.map": "/hagar_ifrah/static/js/runtime-main.ca254824.js.map",
-    "static/js/2.582c82ca.chunk.js": "/hagar_ifrah/static/js/2.582c82ca.chunk.js",
-    "static/js/2.582c82ca.chunk.js.map": "/hagar_ifrah/static/js/2.582c82ca.chunk.js.map",
+    "static/js/2.572d42af.chunk.js": "/hagar_ifrah/static/js/2.572d42af.chunk.js",
+    "static/js/2.572d42af.chunk.js.map": "/hagar_ifrah/static/js/2.572d42af.chunk.js.map",
     "static/js/3.355f4db0.chunk.js": "/hagar_ifrah/static/js/3.355f4db0.chunk.js",
     "static/js/3.355f4db0.chunk.js.map": "/hagar_ifrah/static/js/3.355f4db0.chunk.js.map",
     "index.html": "/hagar_ifrah/index.html",
     "static/css/main.959d44e0.chunk.css.map": "/hagar_ifrah/static/css/main.959d44e0.chunk.css.map",
-    "static/js/2.582c82ca.chunk.js.LICENSE.txt": "/hagar_ifrah/static/js/2.582c82ca.chunk.js.LICENSE.txt",
+    "static/js/2.572d42af.chunk.js.LICENSE.txt": "/hagar_ifrah/static/js/2.572d42af.chunk.js.LICENSE.txt",
     "static/media/index.css": "/hagar_ifrah/static/media/OpenSansHebrewCondensed-Light.176e7602.ttf",
-    "static/media/EnglishIcon.8ba59b9f.svg": "/hagar_ifrah/static/media/EnglishIcon.8ba59b9f.svg",
-    "static/media/Flag_of_Israel.03cc4936.svg": "/hagar_ifrah/static/media/Flag_of_Israel.03cc4936.svg",
     "static/media/alian1.aaee96e7.jpg": "/hagar_ifrah/static/media/alian1.aaee96e7.jpg",
     "static/media/alian2.9354c9e6.jpg": "/hagar_ifrah/static/media/alian2.9354c9e6.jpg",
     "static/media/alian3.1dba320d.jpg": "/hagar_ifrah/static/media/alian3.1dba320d.jpg",
@@ -26,7 +24,7 @@
     "static/media/better_fly_4.9e5e996a.jpg": "/hagar_ifrah/static/media/better_fly_4.9e5e996a.jpg",
     "static/media/better_fly_5.e1198702.jpg": "/hagar_ifrah/static/media/better_fly_5.e1198702.jpg",
     "static/media/better_fly_logo.67d9e374.png": "/hagar_ifrah/static/media/better_fly_logo.67d9e374.png",
-    "static/media/bibi1.b61074da.jpg": "/hagar_ifrah/static/media/bibi1.b61074da.jpg",
+    "static/media/bibi1.bdc15e1a.jpg": "/hagar_ifrah/static/media/bibi1.bdc15e1a.jpg",
     "static/media/bibi2.a48dbaa1.jpg": "/hagar_ifrah/static/media/bibi2.a48dbaa1.jpg",
     "static/media/bibi3.ebb35ed4.jpg": "/hagar_ifrah/static/media/bibi3.ebb35ed4.jpg",
     "static/media/bibi4.32e8f259.jpg": "/hagar_ifrah/static/media/bibi4.32e8f259.jpg",
@@ -45,6 +43,7 @@
     "static/media/land_car_5.0936cac2.jpg": "/hagar_ifrah/static/media/land_car_5.0936cac2.jpg",
     "static/media/land_car_6.f236bc56.jpg": "/hagar_ifrah/static/media/land_car_6.f236bc56.jpg",
     "static/media/land_logo.4528838d.png": "/hagar_ifrah/static/media/land_logo.4528838d.png",
+    "static/media/lang.8a2db841.svg": "/hagar_ifrah/static/media/lang.8a2db841.svg",
     "static/media/life_boat_1.462c29ca.jpg": "/hagar_ifrah/static/media/life_boat_1.462c29ca.jpg",
     "static/media/life_boat_2.98b6493d.jpg": "/hagar_ifrah/static/media/life_boat_2.98b6493d.jpg",
     "static/media/life_boat_3.1ffc9d65.jpg": "/hagar_ifrah/static/media/life_boat_3.1ffc9d65.jpg",
@@ -78,8 +77,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.ca254824.js",
-    "static/js/2.582c82ca.chunk.js",
+    "static/js/2.572d42af.chunk.js",
     "static/css/main.959d44e0.chunk.css",
-    "static/js/main.b8a5f574.chunk.js"
+    "static/js/main.758fadd5.chunk.js"
   ]
 }
