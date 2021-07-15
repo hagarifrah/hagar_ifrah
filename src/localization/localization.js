@@ -13,15 +13,38 @@ let strings = new LocalizedStrings({
         moreDesign:"MORE DESIGN",
         uiux:'UI/UX',
         events:'Events',
+
+        first:'BRANDING - logo design, business card and marketing aids',
+        second:'BRANDING - logo design, brochure and marketing aids',
         bookDesign:'Booklet design',
         photoShopDesign:"PHOTOSHOP DESIGN",
         mainTitle: ".Hi my name is Hagar! I studied a practical degree in media design at the Be'er Sheva College of Technology.\n" +
             ".I am a perfectionist, competitive and always striving to learn new things\n\n" +
             ".I really like the minimalist and clean design And places emphasis on even the smallest details\n" +
             ".So whether you have a small or medium business, I would love to promote it with a unique and contemporary branding that will set you apart from your competitors\n" +
-            "Here are some of my works"
+            "Here are some of my works",
+        third:'BRANDING - Logo design and business card',
+        betterFly:'BRANDING - logo, website, app, posters and marketing aids',
+        lifeBoat:'BRANDING - logo design',
+        pizza:'BRANDING - logo design and marketing aids',
+        alian:'BRANDING - logo design, website, landing page and marketing aids',
+        photoShop1:'Watermelon - Photoshop Design',
+        photoShop2:'Banna/Kiwi - Photoshop Design',
+        photoShop3:'Global Warming - Photoshop Design',
+        photoShop4:'Flowers - Photoshop Design',
     },
     heb: {
+        photoShop1:'Watermelon - עיצוב בפוטושופ',
+        photoShop2:'Banna/Kiwi - עיצוב בפוטושופ',
+        photoShop3:'Global Warming - עיצוב בפוטושופ',
+        photoShop4:'Flowers - עיצוב בפוטושופ',
+        alian:'מיתוג - עיצוב לוגו, אתר, דף נחיתה ועזרים שיווקיים',
+        pizza:'מיתוג - עיצוב לוגו ועזרים שיווקיים',
+        lifeBoat:'מיתוג- עיצוב לוגו',
+        betterFly:'מיתוג - לוגו, אתר, אפליקציה, כרזות, עזרים שיווקיים',
+        third:'מיתוג - עיצוב לוגו וכרטיס ביקור',
+        first:'מיתוג - עיצוב לוגו, כרטיס ביקור ועזרים שיווקיים',
+        second:'מיתוג - עיצוב לוגו, ברושור ועזרים שיווקיים',
         bookDesign:'עיצוב חוברות',
         events:'מיתוג לאירועים',
         branding:'מיתוג',

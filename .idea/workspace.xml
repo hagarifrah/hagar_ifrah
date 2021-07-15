@@ -21,17 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="d29f8424-ba3c-41f7-b0eb-ce324c7d0188" name="Default Changelist" comment=".">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Contact.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ContactForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ContactForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ImageByType.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ImageByType.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ImageOnFullScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ImageOnFullScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/localization/localization.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/localization/localization.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/res/category/bibi/bibi1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/category/bibi/bibi1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/res/category/ui_ux/ui_ux_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/icons/lang.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/icons/lang.svg" afterDir="false" />
     </list>
     <list id="b7c7d12c-fe4e-4e53-9b8a-f62356dc7c21" name="FFDFDF" comment="FFDFDF" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,7 +43,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GithubDefaultAccount">
-    <option name="defaultAccountId" value="c52a2b0c-7891-48d7-87f4-21d8d6cae083" />
+    <option name="defaultAccountId" value="db5ac046-dae7-442f-90de-d12a9adb42a4" />
   </component>
   <component name="ProjectId" id="1uaSbbl0DHoIKwTBUqWSjFxxxos" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -63,7 +56,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/res/category/bibi" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/res" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -79,9 +72,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\user\WebstormProjects\hagar_finel\src\res" />
       <recent name="C:\Users\user\WebstormProjects\hagar_finel\src\res\category\bibi" />
       <recent name="C:\Users\user\WebstormProjects\hagar_finel\src\res\category\ui_ux" />
-      <recent name="C:\Users\user\WebstormProjects\hagar_finel\src\res" />
       <recent name="C:\Users\user\WebstormProjects\hagar_finel\src\res\icons" />
       <recent name="C:\Users\user\WebstormProjects\hagar_finel\src\res\category\my_goal" />
     </key>
@@ -135,7 +128,8 @@
       <workItem from="1626193098066" duration="10000" />
       <workItem from="1626198972481" duration="8557000" />
       <workItem from="1626283423407" duration="5655000" />
-      <workItem from="1626371591468" duration="4996000" />
+      <workItem from="1626371591468" duration="5425000" />
+      <workItem from="1626381394302" duration="3729000" />
     </task>
     <task id="LOCAL‎00001" summary=".">
       <created>1625081433632</created>
@@ -258,7 +252,13 @@
       <option name="presentableId" value="LOCAL‎00020" />
       <updated>1626211878452</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL‎00021" summary=".">
+      <created>1626376961538</created>
+      <option name="number" value="LOCAL‎00021" />
+      <option name="presentableId" value="LOCAL‎00021" />
+      <updated>1626376961538</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,9 +280,9 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="." />
     <MESSAGE value="FFDFDF" />
-    <option name="LAST_COMMIT_MESSAGE" value="FFDFDF" />
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

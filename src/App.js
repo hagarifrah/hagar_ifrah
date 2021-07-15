@@ -78,7 +78,7 @@ import {BiDotsHorizontalRounded} from "react-icons/bi";
 import Row from "./components/Row";
 import {FiX} from "react-icons/fi"
 import {APP_COLOR, marginValue, TYPE_OF_IMAGE} from "./utils/Utils";
-import logo from './res/logo.png'
+import logo from './res/logo.svg'
 import {useMediaQuery} from "react-responsive";
 import ContactForm from "./components/ContactForm";
 import Contact from "./components/Contact";
@@ -222,7 +222,7 @@ const App = (props) => {
 
     const allCategories = {
         0: {
-            titleOnFullScreen: 'BRANDING- Eden Cosmetics',
+            titleOnFullScreen: strings.first,
             type: TYPE_OF_IMAGE.FILTERED,
             arrayOfImages: [
                 cosmetic1,
@@ -238,6 +238,8 @@ const App = (props) => {
             id: 0
         },
         1: {
+            titleOnFullScreen: strings.second,
+
             showLogoOnFullScreen: true,
             type: TYPE_OF_IMAGE.FILTERED,
             arrayOfImages: [
@@ -254,6 +256,7 @@ const App = (props) => {
             id: 1
         },
         14: {
+            titleOnFullScreen: strings.third,
             showLogoOnFullScreen: true,
             type: TYPE_OF_IMAGE.FILTERED,
             arrayOfImages: [
@@ -268,20 +271,7 @@ const App = (props) => {
             id: 14
         },
         2: {
-            showLogoOnFullScreen: true,
-            type: TYPE_OF_IMAGE.FILTERED,
-            category: 1,
-            arrayOfImages: [
-                lifeBoat1,
-                lifeBoat2,
-                lifeBoat3,
-            ],
-            mainImage: lifeBoatLogo,
-            title: 'Life Boat',
-            key: 2,
-            id: 2
-        },
-        3: {
+            titleOnFullScreen: strings.betterFly,
             showLogoOnFullScreen: true,
             type: TYPE_OF_IMAGE.FILTERED,
             arrayOfImages: [
@@ -294,10 +284,27 @@ const App = (props) => {
             category: 1,
             mainImage: betterFlyLogo,
             title: 'Better Fly',
+            key: 2,
+            id: 2
+
+        },
+        3: {
+            titleOnFullScreen: strings.lifeBoat,
+            showLogoOnFullScreen: true,
+            type: TYPE_OF_IMAGE.FILTERED,
+            category: 1,
+            arrayOfImages: [
+                lifeBoat1,
+                lifeBoat2,
+                lifeBoat3,
+            ],
+            mainImage: lifeBoatLogo,
+            title: 'Life Boat',
             key: 3,
             id: 3
         },
         4: {
+            titleOnFullScreen: strings.pizza,
             showLogoOnFullScreen: true,
             type: TYPE_OF_IMAGE.FILTERED,
             arrayOfImages: [
@@ -312,6 +319,7 @@ const App = (props) => {
             id: 4
         },
         5: {
+            titleOnFullScreen: strings.alian,
             showLogoOnFullScreen: true,
             type: TYPE_OF_IMAGE.FILTERED,
             arrayOfImages: [
@@ -327,6 +335,7 @@ const App = (props) => {
             id: 5
         },
         6: {
+
             titleOnFullScreen: strings.events,
             showLogoOnFullScreen: false,
             twoColumn: true,
@@ -426,6 +435,7 @@ const App = (props) => {
             id: 9
         },
         10: {
+            titleOnFullScreen: strings.photoShop1,
             showLogoOnFullScreen: false,
             category: 3,
             type: TYPE_OF_IMAGE.FILTERED,
@@ -436,6 +446,7 @@ const App = (props) => {
             id: 10
         },
         11: {
+            titleOnFullScreen: strings.photoShop2,
             showLogoOnFullScreen: false,
             category: 3,
             type: TYPE_OF_IMAGE.FILTERED,
@@ -446,6 +457,7 @@ const App = (props) => {
             id: 11
         },
         12: {
+            titleOnFullScreen: strings.photoShop3,
             showLogoOnFullScreen: false,
             category: 3,
             type: TYPE_OF_IMAGE.FILTERED,
@@ -456,6 +468,7 @@ const App = (props) => {
             id: 12
         },
         13: {
+            titleOnFullScreen: strings.photoShop4,
             showLogoOnFullScreen: false,
             category: 3,
             type: TYPE_OF_IMAGE.FILTERED,
@@ -535,7 +548,7 @@ const App = (props) => {
             }}>
             {
                 currentCategory.showLogoOnFullScreen &&
-                <img style={{userSelect: 'none', width: isDesktopOrLaptop?'25vmin':'50vmin'}} src={currentCategory.mainImage}/>
+                <img style={{userSelect: 'none', width: isDesktopOrLaptop?'30vmin':'65vmin'}} src={currentCategory.mainImage}/>
             }
 
 
@@ -545,8 +558,8 @@ const App = (props) => {
                     style={{
                         marginTop: marginValue,
                         fontFamily: 'OpenSansHebrewCondensedRegular',
-                        fontSize: isDesktopOrLaptop ? '2.5rem' : '2rem',
-                        color: APP_COLOR.MAIN_COLOR,
+                        fontSize: isDesktopOrLaptop ? '1.5rem' : '1.2rem',
+                        color: APP_COLOR.TEXT_COLOR,
                         textAlign: 'center',
                         zIndex:200
                     }}>
@@ -795,7 +808,6 @@ const App = (props) => {
                     setLang(!lang)
                 }}
                 style={{
-
                     backgroundColor: 'transparent',
                     borderColor: 'transparent',
                     margin: '5vmin',
@@ -808,12 +820,15 @@ const App = (props) => {
                 }}>
 
                 <ReactSVG
+
                     beforeInjection={svg => {
-                        const style = isDesktopOrLaptop ? 'height: 100%;width:5vmin' : 'height: 100%;width:10vmin'
+                        const style = isDesktopOrLaptop ? 'fill:'+APP_COLOR.MAIN_COLOR+';height: 100%;width:4.5vmin' : 'fill:'+APP_COLOR.MAIN_COLOR+';height: 100%;width:10vmin'
                         svg.setAttribute('style', style);
                         // Height is 190 here to account for `stroke-width: 5`.
 
-                    }} style={{position: 'absolute', left: '5vmin'}}
+                    }}
+
+                    style={{position: 'absolute', left: '5vmin'}}
                     src={langSVG}/>
 
             </button>
@@ -922,7 +937,7 @@ const TextComponent = (props) => {
         borderBottomWidth: 1,
         borderStyle: 'solid',
         borderColor: APP_COLOR.TEXT_COLOR,
-        marginTop: '2.5vmin',
+        marginTop: isDesktopOrLaptop?'6vmin':'2.5vmin',
         marginBottom: '2.5vmin',
     }
     return <div
@@ -981,7 +996,7 @@ const Header = () => {
         }}>
             <div style={{
                 marginBottom: isDesktopOrLaptop ? 0 : '10vmin',
-                width: isDesktopOrLaptop ? '45vmin' : '85vmin',
+                width: isDesktopOrLaptop ? '35vmin' : '85vmin',
             }}>
                 <img style={{userSelect: 'none', width: '100%', height: 'auto'}} src={logo}/>
             </div>
