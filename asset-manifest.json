@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/hagar_ifrah/static/css/main.959d44e0.chunk.css",
-    "main.js": "/hagar_ifrah/static/js/main.59939c51.chunk.js",
-    "main.js.map": "/hagar_ifrah/static/js/main.59939c51.chunk.js.map",
-    "runtime-main.js": "/hagar_ifrah/static/js/runtime-main.ca254824.js",
-    "runtime-main.js.map": "/hagar_ifrah/static/js/runtime-main.ca254824.js.map",
-    "static/js/2.572d42af.chunk.js": "/hagar_ifrah/static/js/2.572d42af.chunk.js",
-    "static/js/2.572d42af.chunk.js.map": "/hagar_ifrah/static/js/2.572d42af.chunk.js.map",
-    "static/js/3.355f4db0.chunk.js": "/hagar_ifrah/static/js/3.355f4db0.chunk.js",
-    "static/js/3.355f4db0.chunk.js.map": "/hagar_ifrah/static/js/3.355f4db0.chunk.js.map",
+    "main.css": "/hagar_ifrah/static/css/main.94fc3585.chunk.css",
+    "main.js": "/hagar_ifrah/static/js/main.62325afd.chunk.js",
+    "main.js.map": "/hagar_ifrah/static/js/main.62325afd.chunk.js.map",
+    "runtime-main.js": "/hagar_ifrah/static/js/runtime-main.b549990b.js",
+    "runtime-main.js.map": "/hagar_ifrah/static/js/runtime-main.b549990b.js.map",
+    "static/js/2.8475c17c.chunk.js": "/hagar_ifrah/static/js/2.8475c17c.chunk.js",
+    "static/js/2.8475c17c.chunk.js.map": "/hagar_ifrah/static/js/2.8475c17c.chunk.js.map",
+    "static/js/3.6b5d46a4.chunk.js": "/hagar_ifrah/static/js/3.6b5d46a4.chunk.js",
+    "static/js/3.6b5d46a4.chunk.js.map": "/hagar_ifrah/static/js/3.6b5d46a4.chunk.js.map",
     "index.html": "/hagar_ifrah/index.html",
-    "static/css/main.959d44e0.chunk.css.map": "/hagar_ifrah/static/css/main.959d44e0.chunk.css.map",
-    "static/js/2.572d42af.chunk.js.LICENSE.txt": "/hagar_ifrah/static/js/2.572d42af.chunk.js.LICENSE.txt",
+    "static/css/main.94fc3585.chunk.css.map": "/hagar_ifrah/static/css/main.94fc3585.chunk.css.map",
+    "static/js/2.8475c17c.chunk.js.LICENSE.txt": "/hagar_ifrah/static/js/2.8475c17c.chunk.js.LICENSE.txt",
     "static/media/index.css": "/hagar_ifrah/static/media/OpenSansHebrewCondensed-Light.176e7602.ttf",
     "static/media/alian1.aaee96e7.jpg": "/hagar_ifrah/static/media/alian1.aaee96e7.jpg",
     "static/media/alian2.9354c9e6.jpg": "/hagar_ifrah/static/media/alian2.9354c9e6.jpg",
@@ -76,9 +76,9 @@
     "static/media/whatsapp.c28000b0.png": "/hagar_ifrah/static/media/whatsapp.c28000b0.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.ca254824.js",
-    "static/js/2.572d42af.chunk.js",
-    "static/css/main.959d44e0.chunk.css",
-    "static/js/main.59939c51.chunk.js"
+    "static/js/runtime-main.b549990b.js",
+    "static/js/2.8475c17c.chunk.js",
+    "static/css/main.94fc3585.chunk.css",
+    "static/js/main.62325afd.chunk.js"
   ]
 }
