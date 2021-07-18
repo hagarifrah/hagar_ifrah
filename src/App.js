@@ -919,7 +919,7 @@ const App = () => {
                                 style={{
                                     zIndex: 0,
                                     position: 'absolute',
-                                    top: (twoColumn && currentCategory.arrayOfImages.length <= 2) ? "80vmin" : positionOfBottomDiv - window.innerHeight / 10,
+                                    top: (twoColumn && currentCategory.arrayOfImages.length <= 1) ? "80vmin" : positionOfBottomDiv - window.innerHeight / 10,
                                     height: '20vmin',
                                     width: '100vw',
                                     backgroundColor: APP_COLOR.MAIN_COLOR + "50"

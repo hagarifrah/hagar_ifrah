@@ -20,17 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d29f8424-ba3c-41f7-b0eb-ce324c7d0188" name="Default Changelist" comment=".">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Contact.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ContactForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ContactForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ImageByType.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ImageByType.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ImageOnFullScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ImageOnFullScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Row.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Row.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/localization/localization.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/localization/localization.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <list id="b7c7d12c-fe4e-4e53-9b8a-f62356dc7c21" name="FFDFDF" comment="FFDFDF" />
     <option name="SHOW_DIALOG" value="false" />
@@ -144,6 +134,7 @@
       <workItem from="1626512777715" duration="18000" />
       <workItem from="1626524606754" duration="590000" />
       <workItem from="1626525215299" duration="9788000" />
+      <workItem from="1626633918665" duration="109000" />
     </task>
     <task id="LOCAL‎00001" summary=".">
       <created>1625081433632</created>
@@ -278,7 +269,13 @@
       <option name="presentableId" value="LOCAL‎00022" />
       <updated>1626385171900</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL‎00023" summary=".">
+      <created>1626634000961</created>
+      <option name="number" value="LOCAL‎00023" />
+      <option name="presentableId" value="LOCAL‎00023" />
+      <updated>1626634000961</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
