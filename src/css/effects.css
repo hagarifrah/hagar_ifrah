@@ -1,0 +1,101 @@
+.fadeIn:hover{
+    animation-name: imageFilter;
+    animation-direction: alternate;
+    animation-duration: 0.8s;
+}
+@keyframes imageFilter{
+    from{
+        filter: grayscale(100%);
+    }
+    to{
+        filter: grayscale(0%);
+    }
+}
+
+
+.test{
+    animation-name: test2;
+    animation-direction: alternate;
+    animation-duration: 0.3s;
+}
+.imageRotate{
+    animation-name: rotateImage;
+    animation-duration: 0.5s;
+    transform:  rotate(2deg) scale(1.1);
+
+}
+.unImageRotate{
+    animation-name: unRotateImage;
+    animation-duration: 0.5s;
+    transform:  rotate(0deg) scale(1);
+
+}
+
+.hover{
+    animation-name: hover;
+    animation-direction: normal;
+    animation-duration: 0.5s;
+    background-color: #E9A8A999;
+
+}
+.showTextAfterHover{
+    animation-name: showTextAfterHover;
+    animation-direction: normal;
+    animation-duration: 0.5s;
+    visibility: visible;
+
+}
+@keyframes showTextAfterHover {
+    0% {
+
+        visibility: hidden;
+
+
+    }
+    100% {
+        visibility: visible;
+    }
+}
+@keyframes hover{
+    0% {
+        background-color: #E9A8A900;
+
+    }
+    100% {
+        background-color: #E9A8A999;
+    }
+}
+
+@keyframes unRotateImage{
+    0% {
+        transform:rotate(2deg) scale(1.1);
+    }
+    100% {
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+@keyframes rotateImage{
+    0% {
+
+        transform:rotate(0deg) scale(1);
+
+
+    }
+    100% {
+        transform: rotate(2deg) scale(1.1);
+
+
+    }
+}
+
+@keyframes test2{
+    0% {
+        opacity: 0;
+
+    }
+    100% {
+        opacity: 0.5;
+
+    }
+}

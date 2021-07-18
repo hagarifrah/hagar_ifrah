@@ -12,6 +12,7 @@ import langSVG from './res/icons/lang.svg'
 import myGoal1 from './res/category/my_goal/my_goal1.jpg'
 import myGoal2 from './res/category/my_goal/my_goal2.jpg'
 import myGoal3 from './res/category/my_goal/my_goal3.jpg'
+import {motion} from "framer-motion"
 
 import photoshop1 from './res/category/photo_shop/photoshop1.jpg'
 import photoshop2 from './res/category/photo_shop/photoshop2.jpg'
@@ -107,7 +108,8 @@ smartlookClient.init('61ad7c53065b2f42de7ea055a9f02ad290cbaf1c')
 // Initialize Firebase
 
 firebase.analytics();
-const App = (props) => {
+const App = () => {
+
 
     const handlers = useSwipeable({
         onSwipedLeft: () => {
@@ -137,6 +139,7 @@ const App = (props) => {
         twoColumn,
         moveBetweenCategoriesObjects
     });
+
 
     useEffect(() => {
         setFirstInit(true)
@@ -217,6 +220,7 @@ const App = (props) => {
             }
 
         }
+
     }, [])
 
 
@@ -359,12 +363,11 @@ const App = (props) => {
             marginBetweenImages: true,
             type: TYPE_OF_IMAGE.HOVER,
             arrayOfImages: [
-                UIUX1,
                 UIUX2,
                 UIUX3,
             ],
             secondLevelEnter: true,
-            nextObject: [{
+            nextObject: [/*{
                 twoColumn: false,
                 type: TYPE_OF_IMAGE.FILTERED,
                 arrayOfImages: [
@@ -377,7 +380,8 @@ const App = (props) => {
                 mainImage: running1,
                 key: 5,
                 id: 5
-            }, {
+            }*/ {
+                titleOnFullScreen: strings.uiux1,
                 twoColumn: false,
                 showLogoOnFullScreen: false,
                 type: TYPE_OF_IMAGE.FILTERED,
@@ -391,6 +395,7 @@ const App = (props) => {
                 key: 6,
                 id: 6
             }, {
+                titleOnFullScreen: strings.uiux2,
                 twoColumn: false,
                 mainImage: tourLogo,
                 showLogoOnFullScreen: false,
@@ -548,7 +553,8 @@ const App = (props) => {
             }}>
             {
                 currentCategory.showLogoOnFullScreen &&
-                <img style={{userSelect: 'none', width: isDesktopOrLaptop?'30vmin':'65vmin'}} src={currentCategory.mainImage}/>
+                <img style={{userSelect: 'none', width: isDesktopOrLaptop ? '30vmin' : '65vmin'}}
+                     src={currentCategory.mainImage}/>
             }
 
 
@@ -561,7 +567,7 @@ const App = (props) => {
                         fontSize: isDesktopOrLaptop ? '1.5rem' : '1.2rem',
                         color: APP_COLOR.TEXT_COLOR,
                         textAlign: 'center',
-                        zIndex:200
+                        zIndex: 200
                     }}>
                     {
                         currentCategory.titleOnFullScreen
@@ -623,7 +629,7 @@ const App = (props) => {
                     </div>
 
                     :
-                    <div style={{marginTop:currentCategory.marginBetweenImages?0:marginValue}}>
+                    <div style={{marginTop: currentCategory.marginBetweenImages ? 0 : marginValue}}>
                         {
                             currentCategory.arrayOfImages.map((item, index) => {
                                 return <div
@@ -695,12 +701,12 @@ const App = (props) => {
                     zIndex: 100,
                     position: 'fixed',
                     padding: '5vmin',
-                    paddingLeft: isDesktopOrLaptop?'20vmin':'5vmin',
+                    paddingLeft: isDesktopOrLaptop ? '20vmin' : '5vmin',
                     paddingTop: 0,
                     display: 'flex',
                     alignSelf: 'flex-end'
                 }}
-                size={isDesktopOrLaptop?'4vmin':'8vmin'}/>
+                size={isDesktopOrLaptop ? '4vmin' : '8vmin'}/>
 
 
         </div>
@@ -726,55 +732,57 @@ const App = (props) => {
         window.scrollTo(0, 0)
     }
     const ShowWork = (props) => {
+
         const action = (index) => {
             onClickFullScreen(allCategories[index])
         }
         const isDesktopOrLaptop = useMediaQuery({minWidth: 1224})
         const [showSetMore, setMore] = useState(false);
         return <div style={{
-            width: '100%',
-            flexDirection: 'column',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-        }}>
-            <div style={{
-                marginTop: marginValue,
-
-                fontFamily: 'OpenSansHebrewCondensedRegular',
-                fontSize: isDesktopOrLaptop ? '2.5rem' : '3rem',
-                color: APP_COLOR.MAIN_COLOR,
-                textAlign: 'center'
+                width: '100%',
+                flexDirection: 'column',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
             }}>
-                {props.title}
+                <div style={{
+                    marginTop: marginValue,
+
+                    fontFamily: 'OpenSansHebrewCondensedRegular',
+                    fontSize: isDesktopOrLaptop ? '2.5rem' : '3rem',
+                    color: APP_COLOR.MAIN_COLOR,
+                    textAlign: 'center'
+                }}>
+                    {props.title}
+                </div>
+
+                <Row
+                    data={props.row}
+                    onClick={action}
+                />
+                {
+                    showSetMore &&
+                    <>
+                        {
+                            props.moreArray.map((images) => {
+                                return <Row
+                                    data={images}
+                                    onClick={action}/>
+                            })
+                        }
+
+
+                    </>
+                }
+                {
+                    props.moreArray.length > 0 &&
+                    <MoreWork action={() => {
+                        setMore(!showSetMore)
+                    }}/>
+                }
+
             </div>
 
-            <Row
-                data={props.row}
-                onClick={action}
-            />
-            {
-                showSetMore &&
-                <>
-                    {
-                        props.moreArray.map((images) => {
-                            return <Row
-                                data={images}
-                                onClick={action}/>
-                        })
-                    }
-
-
-                </>
-            }
-            {
-                props.moreArray.length > 0 &&
-                <MoreWork action={() => {
-                    setMore(!showSetMore)
-                }}/>
-            }
-
-        </div>
     }
     const MoreWork = (props) => {
         const isDesktopOrLaptop = useMediaQuery({minWidth: 1224})
@@ -822,7 +830,7 @@ const App = (props) => {
                 <ReactSVG
 
                     beforeInjection={svg => {
-                        const style = isDesktopOrLaptop ? 'fill:'+APP_COLOR.MAIN_COLOR+';height: 100%;width:4.5vmin' : 'fill:'+APP_COLOR.MAIN_COLOR+';height: 100%;width:10vmin'
+                        const style = isDesktopOrLaptop ? 'fill:' + APP_COLOR.MAIN_COLOR + ';height: 100%;width:4.5vmin' : 'fill:' + APP_COLOR.MAIN_COLOR + ';height: 100%;width:8.5vmin'
                         svg.setAttribute('style', style);
                         // Height is 190 here to account for `stroke-width: 5`.
 
@@ -932,12 +940,12 @@ const App = (props) => {
 const TextComponent = (props) => {
     const isDesktopOrLaptop = useMediaQuery({minWidth: 1224})
     const lineStyle = {
-        width: '15vmin',
+        width: '10vmin',
         borderWidth: 0,
-        borderBottomWidth: 1,
+        borderBottomWidth: '0.2vmin',
         borderStyle: 'solid',
         borderColor: APP_COLOR.TEXT_COLOR,
-        marginTop: isDesktopOrLaptop?'6vmin':'2.5vmin',
+        marginTop:  '2.5vmin',
         marginBottom: '2.5vmin',
     }
     return <div
@@ -1010,3 +1018,21 @@ const Header = () => {
     )
 };
 export default App;
+
+export  function useOnScreen(ref,offset = 0) {
+
+    const [isIntersecting, setIntersecting] = useState(false)
+
+    const observer = new IntersectionObserver(
+        ([entry]) => setIntersecting(entry.isIntersecting)
+    )
+
+    useEffect(() => {
+        observer.observe(ref.current)
+        // Remove the observer as soon as the component is unmounted
+        return () => { observer.disconnect() }
+    }, [])
+
+    return isIntersecting
+
+}

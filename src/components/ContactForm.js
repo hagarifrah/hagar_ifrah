@@ -77,7 +77,7 @@ const TextSend = (props) => {
         display: 'flex',
         alignSelf: isDesktopOrLaptop ? undefined : 'center',
         flexDirection: isDesktopOrLaptop ? undefined : 'column',
-
+        marginBottom:isDesktopOrLaptop?0:'16.5vmin'
 
 
     }}>
@@ -176,6 +176,7 @@ const ContactForm = (props) => {
         alignSelf:'center',
         paddingTop:marginValue,
         paddingBottom:marginValue,
+
 
     }}>
         <div style={{

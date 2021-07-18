@@ -8,19 +8,26 @@ import {marginValue} from "../utils/Utils";
 const Contact = () => {
 
     const isDesktopOrLaptop = useMediaQuery({minWidth: 1224})
-    const dimension=isDesktopOrLaptop?"3vmin":'5vmin';
+    const dimension=isDesktopOrLaptop?"3vmin":'5.2vmin';
     const divStyle={
+
         marginLeft:isDesktopOrLaptop?'5vmin':0,
         display:'flex'
     }
     return <div style={{
-
+        position:isDesktopOrLaptop?'relative':'fixed',
+        bottom:0,
+        boxShadow:'0 3px 10px rgb(0 0 0 / 0.2)',
+        backgroundColor:'white',
         display: 'flex',
         alignItems: 'center',
         justifyContent:isDesktopOrLaptop? 'center':'space-evenly',
+        zIndex:500,
         height:dimension,
-        marginTop:marginValue,
-        marginBottom:marginValue,
+        padding:marginValue,
+        paddingRight:0,
+        paddingLeft:0,
+
         width:'100%',
         flexDirection: 'row',
     }}>

@@ -21,10 +21,16 @@
   <component name="ChangeListManager">
     <list default="true" id="d29f8424-ba3c-41f7-b0eb-ce324c7d0188" name="Default Changelist" comment=".">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Contact.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ContactForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ContactForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ImageByType.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ImageByType.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ImageOnFullScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ImageOnFullScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Row.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Row.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/localization/localization.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/localization/localization.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/res/icons/lang.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/icons/lang.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <list id="b7c7d12c-fe4e-4e53-9b8a-f62356dc7c21" name="FFDFDF" comment="FFDFDF" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,6 +41,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="CSS File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -57,6 +64,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/res" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -129,7 +137,13 @@
       <workItem from="1626198972481" duration="8557000" />
       <workItem from="1626283423407" duration="5655000" />
       <workItem from="1626371591468" duration="5425000" />
-      <workItem from="1626381394302" duration="3729000" />
+      <workItem from="1626381394302" duration="4847000" />
+      <workItem from="1626419658394" duration="4242000" />
+      <workItem from="1626435027929" duration="1461000" />
+      <workItem from="1626440192558" duration="5541000" />
+      <workItem from="1626512777715" duration="18000" />
+      <workItem from="1626524606754" duration="590000" />
+      <workItem from="1626525215299" duration="9788000" />
     </task>
     <task id="LOCAL‎00001" summary=".">
       <created>1625081433632</created>
@@ -258,7 +272,13 @@
       <option name="presentableId" value="LOCAL‎00021" />
       <updated>1626376961538</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL‎00022" summary=".">
+      <created>1626385171900</created>
+      <option name="number" value="LOCAL‎00022" />
+      <option name="presentableId" value="LOCAL‎00022" />
+      <updated>1626385171900</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

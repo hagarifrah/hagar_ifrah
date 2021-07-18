@@ -32,8 +32,12 @@ let strings = new LocalizedStrings({
         photoShop2:'Banna/Kiwi - Photoshop Design',
         photoShop3:'Global Warming - Photoshop Design',
         photoShop4:'Flowers - Photoshop Design',
+        uiux1:'UI/UX - Tour application',
+        uiux2:'UI/UX - Goals application',
     },
     heb: {
+        uiux2:'UI/UX - אפליקציית יעדים',
+        uiux1:'UI/UX - אפליקציית סיורים',
         photoShop1:'Watermelon - עיצוב בפוטושופ',
         photoShop2:'Banna/Kiwi - עיצוב בפוטושופ',
         photoShop3:'Global Warming - עיצוב בפוטושופ',

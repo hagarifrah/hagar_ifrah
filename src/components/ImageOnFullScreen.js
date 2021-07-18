@@ -3,7 +3,6 @@ import {useMediaQuery} from "react-responsive";
 
 const ImageOnFullScreen = (props) => {
     const isDesktopOrLaptop = useMediaQuery({minWidth: 1224})
-    console.log("props.item",props.item)
     return <img
         onClick={()=>{
             if(props.onClick!=undefined){
