@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/hagar_ifrah/static/css/main.94fc3585.chunk.css",
-    "main.js": "/hagar_ifrah/static/js/main.233a3940.chunk.js",
-    "main.js.map": "/hagar_ifrah/static/js/main.233a3940.chunk.js.map",
+    "main.js": "/hagar_ifrah/static/js/main.c7297fd4.chunk.js",
+    "main.js.map": "/hagar_ifrah/static/js/main.c7297fd4.chunk.js.map",
     "runtime-main.js": "/hagar_ifrah/static/js/runtime-main.b549990b.js",
     "runtime-main.js.map": "/hagar_ifrah/static/js/runtime-main.b549990b.js.map",
     "static/js/2.8475c17c.chunk.js": "/hagar_ifrah/static/js/2.8475c17c.chunk.js",
@@ -42,7 +42,7 @@
     "static/media/land_car_4.92892268.jpg": "/hagar_ifrah/static/media/land_car_4.92892268.jpg",
     "static/media/land_car_5.0936cac2.jpg": "/hagar_ifrah/static/media/land_car_5.0936cac2.jpg",
     "static/media/land_car_6.f236bc56.jpg": "/hagar_ifrah/static/media/land_car_6.f236bc56.jpg",
-    "static/media/land_logo.4528838d.png": "/hagar_ifrah/static/media/land_logo.4528838d.png",
+    "static/media/land_logo.70c4c26a.png": "/hagar_ifrah/static/media/land_logo.70c4c26a.png",
     "static/media/lang.b1224fd7.svg": "/hagar_ifrah/static/media/lang.b1224fd7.svg",
     "static/media/life_boat_1.462c29ca.jpg": "/hagar_ifrah/static/media/life_boat_1.462c29ca.jpg",
     "static/media/life_boat_2.98b6493d.jpg": "/hagar_ifrah/static/media/life_boat_2.98b6493d.jpg",
@@ -79,6 +79,6 @@
     "static/js/runtime-main.b549990b.js",
     "static/js/2.8475c17c.chunk.js",
     "static/css/main.94fc3585.chunk.css",
-    "static/js/main.233a3940.chunk.js"
+    "static/js/main.c7297fd4.chunk.js"
   ]
 }
