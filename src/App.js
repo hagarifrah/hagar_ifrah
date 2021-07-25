@@ -947,6 +947,7 @@ const TextComponent = (props) => {
         borderColor: APP_COLOR.TEXT_COLOR,
         marginTop:  '2.5vmin',
         marginBottom: '2.5vmin',
+
     }
     return <div
         style={{
@@ -967,7 +968,8 @@ const TextComponent = (props) => {
             fontSize: '1em',
             fontFamily: 'AssistantRegular',
             color: APP_COLOR.TEXT_COLOR,
-            textAlign: 'center'
+            textAlign: 'center',
+            direction: 'ltr'
         }}>
             {
                 props.title
