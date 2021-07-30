@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/hagar_ifrah/static/css/main.94fc3585.chunk.css",
-    "main.js": "/hagar_ifrah/static/js/main.3046ae75.chunk.js",
-    "main.js.map": "/hagar_ifrah/static/js/main.3046ae75.chunk.js.map",
+    "main.js": "/hagar_ifrah/static/js/main.07089b18.chunk.js",
+    "main.js.map": "/hagar_ifrah/static/js/main.07089b18.chunk.js.map",
     "runtime-main.js": "/hagar_ifrah/static/js/runtime-main.b549990b.js",
     "runtime-main.js.map": "/hagar_ifrah/static/js/runtime-main.b549990b.js.map",
     "static/js/2.8475c17c.chunk.js": "/hagar_ifrah/static/js/2.8475c17c.chunk.js",
@@ -38,6 +38,10 @@
     "static/media/event_3.dac2c9fe.jpg": "/hagar_ifrah/static/media/event_3.dac2c9fe.jpg",
     "static/media/event_logo.f35e55e0.jpg": "/hagar_ifrah/static/media/event_logo.f35e55e0.jpg",
     "static/media/instagram.66cfc24b.png": "/hagar_ifrah/static/media/instagram.66cfc24b.png",
+    "static/media/la nature2.4ae081a5.jpg": "/hagar_ifrah/static/media/la nature2.4ae081a5.jpg",
+    "static/media/la_nature1.d5a9d619.jpg": "/hagar_ifrah/static/media/la_nature1.d5a9d619.jpg",
+    "static/media/la_nature2.023b6533.jpg": "/hagar_ifrah/static/media/la_nature2.023b6533.jpg",
+    "static/media/la_nature3.384b7df3.jpg": "/hagar_ifrah/static/media/la_nature3.384b7df3.jpg",
     "static/media/land_car_3.e2217731.jpg": "/hagar_ifrah/static/media/land_car_3.e2217731.jpg",
     "static/media/land_car_4.92892268.jpg": "/hagar_ifrah/static/media/land_car_4.92892268.jpg",
     "static/media/land_car_5.0936cac2.jpg": "/hagar_ifrah/static/media/land_car_5.0936cac2.jpg",
@@ -79,6 +83,6 @@
     "static/js/runtime-main.b549990b.js",
     "static/js/2.8475c17c.chunk.js",
     "static/css/main.94fc3585.chunk.css",
-    "static/js/main.3046ae75.chunk.js"
+    "static/js/main.07089b18.chunk.js"
   ]
 }
