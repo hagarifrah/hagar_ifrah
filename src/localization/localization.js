@@ -13,6 +13,7 @@ let strings = new LocalizedStrings({
         moreDesign:"MORE DESIGN",
         uiux:'UI/UX',
         events:'Events',
+        laNature:'La Nature - Natural Cosmetics',
 
         first:'BRANDING - logo design, business card and marketing aids',
         second:'BRANDING - logo design, brochure and marketing aids',
@@ -36,6 +37,7 @@ let strings = new LocalizedStrings({
         uiux2:'UI/UX - Goals application',
     },
     heb: {
+        laNature:'La Nature - קוסמטיקה טבעית',
         uiux2:'UI/UX - אפליקציית יעדים',
         uiux1:'UI/UX - אפליקציית סיורים',
         photoShop1:'Watermelon - עיצוב בפוטושופ',

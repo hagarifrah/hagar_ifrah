@@ -12,6 +12,10 @@ import langSVG from './res/icons/lang.svg'
 import myGoal1 from './res/category/my_goal/my_goal1.jpg'
 import myGoal2 from './res/category/my_goal/my_goal2.jpg'
 import myGoal3 from './res/category/my_goal/my_goal3.jpg'
+import laNature from './res/category/laNature/la nature2.jpg'
+import laNature1 from './res/category/laNature/la_nature1.jpg'
+import laNature2 from './res/category/laNature/la_nature2.jpg'
+import laNature3 from './res/category/laNature/la_nature3.jpg'
 import {motion} from "framer-motion"
 
 import photoshop1 from './res/category/photo_shop/photoshop1.jpg'
@@ -118,6 +122,7 @@ const App = () => {
         onSwipedRight: () => {
             rightClick();
         },
+       delta:90
 
 
     });
@@ -365,6 +370,7 @@ const App = () => {
             arrayOfImages: [
                 UIUX2,
                 UIUX3,
+                laNature,
             ],
             secondLevelEnter: true,
             nextObject: [/*{
@@ -408,6 +414,20 @@ const App = () => {
                 category: 4,
                 key: 7,
                 id: 7
+            },{
+                titleOnFullScreen: strings.laNature,
+                twoColumn: false,
+                mainImage: laNature,
+                showLogoOnFullScreen: false,
+                type: TYPE_OF_IMAGE.FILTERED,
+                arrayOfImages: [
+                    laNature1,
+                    laNature2,
+                    laNature3,
+                ],
+                category: 4,
+                key: 8,
+                id: 8
             }],
             category: 2,
             mainImage: UIUX2,

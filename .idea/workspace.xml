@@ -21,10 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d29f8424-ba3c-41f7-b0eb-ce324c7d0188" name="Default Changelist" comment=".">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ContactForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ContactForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/localization/localization.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/localization/localization.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/res/category/land_car/land_logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/category/land_car/land_logo.png" afterDir="false" />
     </list>
     <list id="b7c7d12c-fe4e-4e53-9b8a-f62356dc7c21" name="FFDFDF" comment="FFDFDF" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +56,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/res/category/land_car" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/res/category/laNature" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -74,18 +73,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\user\WebstormProjects\hagar_finel\src\res\category\laNature" />
       <recent name="C:\Users\user\WebstormProjects\hagar_finel\src\res\category\land_car" />
       <recent name="C:\Users\user\WebstormProjects\hagar_finel\src\res" />
       <recent name="C:\Users\user\WebstormProjects\hagar_finel\src\res\category\bibi" />
       <recent name="C:\Users\user\WebstormProjects\hagar_finel\src\res\category\ui_ux" />
-      <recent name="C:\Users\user\WebstormProjects\hagar_finel\src\res\icons" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\user\WebstormProjects\hagar_finel\src\res\category\laNature" />
       <recent name="C:\Users\user\WebstormProjects\hagar_finel\src\res\icons" />
       <recent name="C:\Users\user\WebstormProjects\hagar_finel\src\res\category\ui_ux" />
       <recent name="C:\Users\user\WebstormProjects\hagar_finel\src\res\category\land_car" />
       <recent name="C:\Users\user\WebstormProjects\hagar_finel\src\res\category" />
-      <recent name="C:\Users\user\WebstormProjects\hagar_finel\src\res\category\bibi" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
@@ -142,7 +141,10 @@
       <workItem from="1626676932875" duration="22000" />
       <workItem from="1626679794944" duration="995000" />
       <workItem from="1626799393662" duration="1129000" />
-      <workItem from="1627227105366" duration="712000" />
+      <workItem from="1627227105366" duration="917000" />
+      <workItem from="1627238437529" duration="8000" />
+      <workItem from="1627676096684" duration="948000" />
+      <workItem from="1627720289245" duration="677000" />
     </task>
     <task id="LOCAL‎00001" summary=".">
       <created>1625081433632</created>
@@ -289,7 +291,13 @@
       <option name="presentableId" value="LOCAL‎00024" />
       <updated>1626634118618</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL‎00025" summary=".">
+      <created>1627228012141</created>
+      <option name="number" value="LOCAL‎00025" />
+      <option name="presentableId" value="LOCAL‎00025" />
+      <updated>1627228012141</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

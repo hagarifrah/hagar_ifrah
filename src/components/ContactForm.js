@@ -114,7 +114,7 @@ const TextSend = (props) => {
             onClick={()=>{
                 const text=""+ props.subject + "&body=" + props.body + '%0d%0a' + " "+strings.phone + props.phone + '%0d%0a' + " "+strings.fullName + props.fullName
                 const url=navigator.userAgent.includes("Mobile")?
-                    'mailto:hagar.ifrah@gmail.com?'+text:
+                    'mailto:hagar.ifrah94@gmail.com?'+text:
                     "https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=hagar.ifrah94@gmail.com&su=" +text
                 window.open(url)
             }}
