@@ -53,10 +53,20 @@ import event1 from './res/category/events/event_logo.jpg'
 import event2 from './res/category/events/event2.jpg'
 import event3 from './res/category/events/event_3.jpg'
 
-import UIUX1 from './res/category/ui_ux/ui_ux_1.jpg'
+
 import UIUX2 from './res/category/ui_ux/ui_ux_2.jpg'
 import UIUX3 from './res/category/ui_ux/ui_ux_3.jpg'
+import UIUX4 from './res/category/ui_ux/ui_ux_4.jpg'
+import UIUX5 from './res/category/ui_ux/ui_ux_5.jpg'
+import UIUX6 from './res/category/ui_ux/ui_ux_6.jpg'
+import UIUX7 from './res/category/ui_ux/ui_ux_7.jpg'
+import UIUX8 from './res/category/ui_ux/ui_ux_8.jpg'
 
+import uiux4 from './res/category/ui_ux/uiux4.jpg'
+import uiux5 from './res/category/ui_ux/uiux5.jpg'
+import uiux6 from './res/category/ui_ux/uiux6.jpg'
+import uiux7 from './res/category/ui_ux/uiux7.jpg'
+import uiux8 from './res/category/ui_ux/uiux8.jpg'
 
 import tour7 from './res/category/tour/tour7.jpg'
 import tour8 from './res/category/tour/tour8.jpg'
@@ -371,6 +381,11 @@ const App = () => {
                 UIUX2,
                 UIUX3,
                 laNature,
+                UIUX4,
+                UIUX5,
+                UIUX6,
+                UIUX7,
+                UIUX8,
             ],
             secondLevelEnter: true,
             nextObject: [/*{
@@ -428,6 +443,66 @@ const App = () => {
                 category: 4,
                 key: 8,
                 id: 8
+            },{
+                titleOnFullScreen: "",
+                twoColumn: false,
+                mainImage: UIUX4,
+                showLogoOnFullScreen: false,
+                type: TYPE_OF_IMAGE.FILTERED,
+                arrayOfImages: [
+                    uiux4
+                ],
+                category: 4,
+                key: 9,
+                id: 9
+            },{
+                titleOnFullScreen: "",
+                twoColumn: false,
+                mainImage: UIUX5,
+                showLogoOnFullScreen: false,
+                type: TYPE_OF_IMAGE.FILTERED,
+                arrayOfImages: [
+                    uiux5
+                ],
+                category: 4,
+                key: 10,
+                id: 10
+            },{
+                titleOnFullScreen: "",
+                twoColumn: false,
+                mainImage: UIUX6,
+                showLogoOnFullScreen: false,
+                type: TYPE_OF_IMAGE.FILTERED,
+                arrayOfImages: [
+                    uiux6
+                ],
+                category: 4,
+                key: 11,
+                id: 11
+            },{
+                titleOnFullScreen: "",
+                twoColumn: false,
+                mainImage: UIUX7,
+                showLogoOnFullScreen: false,
+                type: TYPE_OF_IMAGE.FILTERED,
+                arrayOfImages: [
+                    uiux7
+                ],
+                category: 4,
+                key: 12,
+                id: 12
+            },{
+                titleOnFullScreen: "",
+                twoColumn: false,
+                mainImage: UIUX8,
+                showLogoOnFullScreen: false,
+                type: TYPE_OF_IMAGE.FILTERED,
+                arrayOfImages: [
+                    uiux8
+                ],
+                category: 4,
+                key: 13,
+                id: 13
             }],
             category: 2,
             mainImage: UIUX2,
