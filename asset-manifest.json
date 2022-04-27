@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/hagar_ifrah/static/css/main.94fc3585.chunk.css",
-    "main.js": "/hagar_ifrah/static/js/main.a768fda8.chunk.js",
-    "main.js.map": "/hagar_ifrah/static/js/main.a768fda8.chunk.js.map",
-    "runtime-main.js": "/hagar_ifrah/static/js/runtime-main.b549990b.js",
-    "runtime-main.js.map": "/hagar_ifrah/static/js/runtime-main.b549990b.js.map",
+    "main.js": "/hagar_ifrah/static/js/main.000c1ede.chunk.js",
+    "main.js.map": "/hagar_ifrah/static/js/main.000c1ede.chunk.js.map",
+    "runtime-main.js": "/hagar_ifrah/static/js/runtime-main.f8f6f7d9.js",
+    "runtime-main.js.map": "/hagar_ifrah/static/js/runtime-main.f8f6f7d9.js.map",
     "static/js/2.8475c17c.chunk.js": "/hagar_ifrah/static/js/2.8475c17c.chunk.js",
     "static/js/2.8475c17c.chunk.js.map": "/hagar_ifrah/static/js/2.8475c17c.chunk.js.map",
-    "static/js/3.6b5d46a4.chunk.js": "/hagar_ifrah/static/js/3.6b5d46a4.chunk.js",
-    "static/js/3.6b5d46a4.chunk.js.map": "/hagar_ifrah/static/js/3.6b5d46a4.chunk.js.map",
+    "static/js/3.56563ea6.chunk.js": "/hagar_ifrah/static/js/3.56563ea6.chunk.js",
+    "static/js/3.56563ea6.chunk.js.map": "/hagar_ifrah/static/js/3.56563ea6.chunk.js.map",
     "index.html": "/hagar_ifrah/index.html",
     "static/css/main.94fc3585.chunk.css.map": "/hagar_ifrah/static/css/main.94fc3585.chunk.css.map",
     "static/js/2.8475c17c.chunk.js.LICENSE.txt": "/hagar_ifrah/static/js/2.8475c17c.chunk.js.LICENSE.txt",
@@ -28,7 +28,6 @@
     "static/media/bibi2.a48dbaa1.jpg": "/hagar_ifrah/static/media/bibi2.a48dbaa1.jpg",
     "static/media/bibi3.ebb35ed4.jpg": "/hagar_ifrah/static/media/bibi3.ebb35ed4.jpg",
     "static/media/bibi4.32e8f259.jpg": "/hagar_ifrah/static/media/bibi4.32e8f259.jpg",
-    "static/media/bibi_logo.a7cc8145.jpg": "/hagar_ifrah/static/media/bibi_logo.a7cc8145.jpg",
     "static/media/cosmetic1.e0a4426d.jpg": "/hagar_ifrah/static/media/cosmetic1.e0a4426d.jpg",
     "static/media/cosmetic2.754c2345.jpg": "/hagar_ifrah/static/media/cosmetic2.754c2345.jpg",
     "static/media/cosmetic3.70115de2.jpg": "/hagar_ifrah/static/media/cosmetic3.70115de2.jpg",
@@ -89,9 +88,9 @@
     "static/media/whatsapp.c28000b0.png": "/hagar_ifrah/static/media/whatsapp.c28000b0.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.b549990b.js",
+    "static/js/runtime-main.f8f6f7d9.js",
     "static/js/2.8475c17c.chunk.js",
     "static/css/main.94fc3585.chunk.css",
-    "static/js/main.a768fda8.chunk.js"
+    "static/js/main.000c1ede.chunk.js"
   ]
 }
