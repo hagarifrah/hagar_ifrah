@@ -6,7 +6,7 @@ import betterFlyLogo from './res/category/better_fly/better_fly_logo.png'
 import pizzaLogo from './res/category/pizza/pizza_logo.png'
 import alian_logo from './res/category/alian/alian_logo.png'
 import tourLogo from './res/category/tour/tour_logo.jpg'
-import bibiLogo from './res/category/bibi/bibi_logo.jpg'
+
 import {ReactSVG} from 'react-svg'
 import langSVG from './res/icons/lang.svg'
 import myGoal1 from './res/category/my_goal/my_goal1.jpg'
@@ -16,7 +16,7 @@ import laNature from './res/category/laNature/la nature2.jpg'
 import laNature1 from './res/category/laNature/la_nature1.jpg'
 import laNature2 from './res/category/laNature/la_nature2.jpg'
 import laNature3 from './res/category/laNature/la_nature3.jpg'
-import {motion} from "framer-motion"
+
 
 import photoshop1 from './res/category/photo_shop/photoshop1.jpg'
 import photoshop2 from './res/category/photo_shop/photoshop2.jpg'
@@ -353,25 +353,7 @@ const App = () => {
             key: 5,
             id: 5
         },
-        6: {
-
-            titleOnFullScreen: strings.events,
-            showLogoOnFullScreen: false,
-            twoColumn: true,
-            category: 2,
-            type: TYPE_OF_IMAGE.HOVER,
-            arrayOfImages: [
-                event1,
-                event2,
-                event3,
-            ],
-            marginBetweenImages: true,
-            mainImage: event1,
-            title: strings.events,
-            key: 6,
-            id: 6
-        },
-        7: {
+        /*7: {
             titleOnFullScreen: strings.uiux,
             showLogoOnFullScreen: false,
             twoColumn: true,
@@ -388,146 +370,63 @@ const App = () => {
                 UIUX8,
             ],
             secondLevelEnter: true,
-            nextObject: [/*{
-                twoColumn: false,
-                type: TYPE_OF_IMAGE.FILTERED,
-                arrayOfImages: [
-                    running1,
-                    running2,
-                    running3,
-
-                ],
-                category: 4,
-                mainImage: running1,
-                key: 5,
-                id: 5
-            }*/ {
-                titleOnFullScreen: strings.uiux1,
-                twoColumn: false,
-                showLogoOnFullScreen: false,
-                type: TYPE_OF_IMAGE.FILTERED,
-                arrayOfImages: [
-                    tour9,
-                    tour8,
-                    tour7,
-                ],
-                category: 4,
-                mainImage: tourLogo,
-                key: 6,
-                id: 6
-            }, {
-                titleOnFullScreen: strings.uiux2,
-                twoColumn: false,
-                mainImage: tourLogo,
-                showLogoOnFullScreen: false,
-                type: TYPE_OF_IMAGE.FILTERED,
-                arrayOfImages: [
-                    myGoal2,
-                    myGoal3,
-                    myGoal1,
-                ],
-                category: 4,
-                key: 7,
-                id: 7
-            },{
-                titleOnFullScreen: strings.laNature,
-                twoColumn: false,
-                mainImage: laNature,
-                showLogoOnFullScreen: false,
-                type: TYPE_OF_IMAGE.FILTERED,
-                arrayOfImages: [
-                    laNature1,
-                    laNature2,
-                    laNature3,
-                ],
-                category: 4,
-                key: 8,
-                id: 8
-            },{
-                titleOnFullScreen: "",
-                twoColumn: false,
-                mainImage: UIUX4,
-                showLogoOnFullScreen: false,
-                type: TYPE_OF_IMAGE.FILTERED,
-                arrayOfImages: [
-                    uiux4
-                ],
-                category: 4,
-                key: 9,
-                id: 9
-            },{
-                titleOnFullScreen: "",
-                twoColumn: false,
-                mainImage: UIUX5,
-                showLogoOnFullScreen: false,
-                type: TYPE_OF_IMAGE.FILTERED,
-                arrayOfImages: [
-                    uiux5
-                ],
-                category: 4,
-                key: 10,
-                id: 10
-            },{
-                titleOnFullScreen: "",
-                twoColumn: false,
-                mainImage: UIUX6,
-                showLogoOnFullScreen: false,
-                type: TYPE_OF_IMAGE.FILTERED,
-                arrayOfImages: [
-                    uiux6
-                ],
-                category: 4,
-                key: 11,
-                id: 11
-            },{
-                titleOnFullScreen: "",
-                twoColumn: false,
-                mainImage: UIUX7,
-                showLogoOnFullScreen: false,
-                type: TYPE_OF_IMAGE.FILTERED,
-                arrayOfImages: [
-                    uiux7
-                ],
-                category: 4,
-                key: 12,
-                id: 12
-            },{
-                titleOnFullScreen: "",
-                twoColumn: false,
-                mainImage: UIUX8,
-                showLogoOnFullScreen: false,
-                type: TYPE_OF_IMAGE.FILTERED,
-                arrayOfImages: [
-                    uiux8
-                ],
-                category: 4,
-                key: 13,
-                id: 13
-            }],
+            nextObject: [ ],
             category: 2,
             mainImage: UIUX2,
             title: strings.uiux,
             key: 7,
             id: 7
-        },
-        8: {
-            titleOnFullScreen: strings.bookDesign,
+        },*/
+        18:{
+            titleOnFullScreen: strings.laNature,
+            title: strings.laNatureTitle,
+            twoColumn: false,
+            mainImage: laNature,
             showLogoOnFullScreen: false,
-            category: 2,
             type: TYPE_OF_IMAGE.HOVER,
             arrayOfImages: [
-                bibi1,
-                bibi2,
-                bibi3,
-                bibi4,
-
+                laNature1,
+                laNature2,
+                laNature3,
             ],
-            mainImage: bibiLogo,
-            title: strings.bookDesign,
-            key: 8,
-            id: 8
+            category: 2,
+            key: 18,
+            id: 18
+        },
+        17:{
+            title: strings.uiux2title,
+            titleOnFullScreen: strings.uiux2,
+            twoColumn: false,
+            mainImage: UIUX3,
+            showLogoOnFullScreen: false,
+            type: TYPE_OF_IMAGE.HOVER,
+            arrayOfImages: [
+                myGoal2,
+                myGoal3,
+                myGoal1,
+            ],
+            category: 2,
+            key: 17,
+            id: 17
+        },
+        16:{
+            title: strings.uiux3title,
+            titleOnFullScreen: strings.uiux1,
+            twoColumn: false,
+            showLogoOnFullScreen: false,
+            type: TYPE_OF_IMAGE.HOVER,
+            arrayOfImages: [
+                tour9,
+                tour8,
+                tour7,
+            ],
+            category: 2,
+            mainImage: tourLogo,
+            key: 16,
+            id: 16
         },
         9: {
+            /*break*/
             arrayOfImages: [],
             mainImage: -1,
             title: '',
@@ -577,7 +476,8 @@ const App = () => {
             title: '',
             key: 13,
             id: 13
-        }
+        },
+
     }
     const leftClick = () => {
         for (let i = 0; i < Object.keys(moveBetweenCategoriesObjects).length; i++) {
@@ -925,7 +825,7 @@ const App = () => {
                 <ReactSVG
 
                     beforeInjection={svg => {
-                        const style = isDesktopOrLaptop ? 'fill:' + APP_COLOR.MAIN_COLOR + ';height: 100%;width:4.5vmin' : 'fill:' + APP_COLOR.MAIN_COLOR + ';height: 100%;width:8.5vmin'
+                        const style = isDesktopOrLaptop ? 'fill:' + APP_COLOR.MAIN_COLOR + ';height: 100%;width:4vmin' : 'fill:' + APP_COLOR.MAIN_COLOR + ';height: 100%;width:8.5vmin'
                         svg.setAttribute('style', style);
                         // Height is 190 here to account for `stroke-width: 5`.
 
@@ -958,10 +858,13 @@ const App = () => {
                 title={strings.moreDesign}
                 moreArray={[]}
                 row={[
-                    allCategories["6"],
-                    allCategories["7"],
-                    allCategories["8"],
-                    allCategories["9"]
+
+                    allCategories["16"],
+                    allCategories["17"],
+                    allCategories["18"],
+                    {
+                        mainImage: -1
+                    }
                 ]}/>
             <ShowWork
                 title={strings.photoShopDesign}

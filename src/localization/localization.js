@@ -10,20 +10,23 @@ let strings = new LocalizedStrings({
         branding:'BRANDING',
         fullName:"FULL NAME",
         message:'MESSAGE',
-        moreDesign:"MORE DESIGN",
+        moreDesign:"UX/UI",
         uiux:'UI/UX',
         events:'Events',
         laNature:'La Nature - Natural Cosmetics',
+        laNatureTitle:'La Nature',
 
         first:'BRANDING - logo design, business card and marketing aids',
         second:'BRANDING - logo design, brochure and marketing aids',
         bookDesign:'Booklet design',
         photoShopDesign:"PHOTOSHOP DESIGN",
-        mainTitle: "Hi, my name is Hagar ifrah an Israeli freelance graphic designer\n" +
-            "I am a perfectionist, competitive and always striving to learn new things.\n\n" +
-            "I really like the minimalist and clean design And places emphasis on even the smallest details.\n" +
-            "So whether you have a small or medium business, I would love to promote it with a unique and contemporary branding that will set you apart from your competitors.\n" +
-            "Here are some of my works.",
+        mainTitle: 'I\'m Hagar Ifrah, a freelance graphic designer from Israel\n' +
+            'I\'m a perfectionist, competitive, and constantly looking for new knowledge.\n' +
+            '\n' +
+            'I love the minimalist and clean design, I place emphasis on even the smallest details.\n' +
+            'I would love to help you promote your small or medium business using a unique and contemporary branding style that will set you apart from your competition.\n' +
+            '\n' +
+            'Take a look at some of the work I\'ve done.',
         third:'BRANDING - Logo design and business card',
         betterFly:'BRANDING - logo, website, app, posters and marketing aids',
         lifeBoat:'BRANDING - logo design',
@@ -35,8 +38,12 @@ let strings = new LocalizedStrings({
         photoShop4:'Flowers - Photoshop Design',
         uiux1:'UI/UX - Tour application',
         uiux2:'UI/UX - Goals application',
+        uiux2title:'Goals application',
+        uiux3title:'Tour application'
     },
     heb: {
+        uiux2title:'אפליקצית יעדים',
+        laNatureTitle:'La Nature',
         laNature:'La Nature - קוסמטיקה טבעית',
         uiux2:'UI/UX - אפליקציית יעדים',
         uiux1:'UI/UX - אפליקציית סיורים',
@@ -55,7 +62,7 @@ let strings = new LocalizedStrings({
         events:'מיתוג לאירועים',
         branding:'מיתוג',
         photoShopDesign:"עיצובים בפוטושופ",
-        moreDesign:'עיצובים נוספים',
+        moreDesign:'UX/UI',
         lang:'Hebrew',
         send:"שלח",
         contactMe:'צור קשר',
@@ -64,6 +71,7 @@ let strings = new LocalizedStrings({
         fullName:"שם מלא",
         message:'הודעה',
         uiux:'UI/UX',
+        uiux3title:'אפליקצית סיורים',
 
         mainTitle:"היי, שמי הגר יפרח ואני מעצבת גרפית ופרילנסרית.\n" +
             "אני פרפקציוניסטית, תחרותית ותמיד שואפת ללמוד דברים חדשים.\n\n" +
