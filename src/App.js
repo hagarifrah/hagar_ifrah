@@ -49,33 +49,14 @@ import betterFly5 from './res/category/better_fly/better_fly_5.jpg'
 
 import firebase from "firebase/app";
 import "firebase/analytics";
-import event1 from './res/category/events/event_logo.jpg'
-import event2 from './res/category/events/event2.jpg'
-import event3 from './res/category/events/event_3.jpg'
-
-
-import UIUX2 from './res/category/ui_ux/ui_ux_2.jpg'
 import UIUX3 from './res/category/ui_ux/ui_ux_3.jpg'
-import UIUX4 from './res/category/ui_ux/ui_ux_4.jpg'
-import UIUX5 from './res/category/ui_ux/ui_ux_5.jpg'
-import UIUX6 from './res/category/ui_ux/ui_ux_6.jpg'
-import UIUX7 from './res/category/ui_ux/ui_ux_7.jpg'
-import UIUX8 from './res/category/ui_ux/ui_ux_8.jpg'
 
-import uiux4 from './res/category/ui_ux/uiux4.jpg'
-import uiux5 from './res/category/ui_ux/uiux5.jpg'
-import uiux6 from './res/category/ui_ux/uiux6.jpg'
-import uiux7 from './res/category/ui_ux/uiux7.jpg'
-import uiux8 from './res/category/ui_ux/uiux8.jpg'
 
 import tour7 from './res/category/tour/tour7.jpg'
 import tour8 from './res/category/tour/tour8.jpg'
 import tour9 from './res/category/tour/tour9.jpg'
 
 
-import running1 from './res/category/running/running1.jpg'
-import running2 from './res/category/running/running2.jpg'
-import running3 from './res/category/running/running3.jpg'
 
 import simaLogo from './res/category/sima/sima_logo.png'
 import smartlookClient from 'smartlook-client'
@@ -83,10 +64,6 @@ import smartlookClient from 'smartlook-client'
 import sima2 from './res/category/sima/sima2.jpg'
 import sima3 from './res/category/sima/sima3.jpg'
 
-import bibi1 from './res/category/bibi/bibi1.jpg'
-import bibi2 from './res/category/bibi/bibi2.jpg'
-import bibi3 from './res/category/bibi/bibi3.jpg'
-import bibi4 from './res/category/bibi/bibi4.jpg'
 
 import {BsChevronRight, BsChevronLeft} from 'react-icons/bs';
 import {BiDotsHorizontalRounded} from "react-icons/bi";
