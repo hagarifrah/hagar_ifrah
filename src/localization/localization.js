@@ -2,6 +2,7 @@ import LocalizedStrings from 'react-localization';
 
 let strings = new LocalizedStrings({
     en:{
+        postTitle:'Rotzild Ice Cream',
         lang:'English',
         send:"SEND",
         contactMe:'CONTACT',
@@ -39,12 +40,15 @@ let strings = new LocalizedStrings({
         uiux1:'UI/UX - Tour application',
         uiux2:'UI/UX - Goals application',
         uiux2title:'Goals application',
-        uiux3title:'Tour application'
+        uiux3title:'Tour application',
+        postDesign:'Post Design',
     },
     heb: {
+        postTitle:'גלידות רוטשילד',
         uiux2title:'אפליקצית יעדים',
         laNatureTitle:'La Nature',
         laNature:'La Nature - קוסמטיקה טבעית',
+        postDesign:'עיצוב פוסטים',
         uiux2:'UI/UX - אפליקציית יעדים',
         uiux1:'UI/UX - אפליקציית סיורים',
         photoShop1:'Watermelon - עיצוב בפוטושופ',
