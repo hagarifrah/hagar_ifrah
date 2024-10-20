@@ -18,14 +18,18 @@ import laNature1 from './res/category/laNature/la_nature1.jpg'
 import laNature2 from './res/category/laNature/la_nature2.jpg'
 import laNature3 from './res/category/laNature/la_nature3.jpg'
 
+import order12 from './res/category/order2/order12.png'
+import orderLogo1 from './res/category/order2/order_logo2.png'
+
+import orderLogo from './res/category/order1/order_logo.png'
+import order1 from './res/category/order1/order1.png'
+
+import player1 from './res/category/players/player1.png'
+import player_logo from './res/category/players/player_logo.png'
+
 import yarden1 from './res/category/yarden/yarden1.jpg'
 import yarden2 from './res/category/yarden/yarden2.jpg'
 import yardenLogo from './res/category/yarden/yardenLogo.png'
-
-import photoshop1 from './res/category/photo_shop/photoshop1.jpg'
-import photoshop2 from './res/category/photo_shop/photoshop2.jpg'
-import photoshop3 from './res/category/photo_shop/photoshop3.jpg'
-import photoshop4 from './res/category/photo_shop/photoshop4.jpg'
 
 import landCar1 from './res/category/land_car/land_car_4.jpg'
 import landCar2 from './res/category/land_car/land_car_5.jpg'
@@ -36,14 +40,16 @@ import lifeBoat1 from './res/category/save_boat/life_boat_1.jpg'
 import lifeBoat2 from './res/category/save_boat/life_boat_2.jpg'
 import lifeBoat3 from './res/category/save_boat/life_boat_3.jpg'
 
-import pizza1 from './res/category/pizza/pizza1.jpg'
-import pizza2 from './res/category/pizza/pizza2.jpg'
-import pizza3 from './res/category/pizza/pizza3.jpg'
+import pizza1 from './res/category/pizza/pizza1.png'
+import pizza2 from './res/category/pizza/pizza2.png'
+import pizza3 from './res/category/pizza/pizza3.png'
+import pizza4 from './res/category/pizza/pizza4.png'
 
-import alian1 from './res/category/alian/alian1.jpg'
-import alian2 from './res/category/alian/alian2.jpg'
-import alian3 from './res/category/alian/alian3.jpg'
-import alian4 from './res/category/alian/alian4.jpg'
+import logo_eden from './res/category/eden_new/logo_eden.png'
+import edenNew1 from './res/category/eden_new/eden_new1.png'
+import edenNew2 from './res/category/eden_new/eden_new2.png'
+import edenNew3 from './res/category/eden_new/eden_new3.png'
+
 
 import betterFly1 from './res/category/better_fly/better_fly_1.jpg'
 import betterFly2 from './res/category/better_fly/better_fly_2.jpg'
@@ -322,9 +328,12 @@ const App = () => {
       showLogoOnFullScreen: true,
       type: TYPE_OF_IMAGE.FILTERED,
       arrayOfImages: [
-        pizza1,
         pizza2,
+
         pizza3,
+        pizza1,
+
+          pizza4
       ],
       category: 1,
       mainImage: pizzaLogo,
@@ -333,18 +342,17 @@ const App = () => {
       id: 4
     },
     5: {
-      titleOnFullScreen: strings.alian,
+      titleOnFullScreen: 'Eden cosmetics',
       showLogoOnFullScreen: true,
       type: TYPE_OF_IMAGE.FILTERED,
       arrayOfImages: [
-        alian1,
-        alian2,
-        alian3,
-        alian4
+        edenNew2,
+        edenNew3,
+        edenNew1,
       ],
       category: 1,
-      mainImage: alian_logo,
-      title: 'Alian',
+      mainImage: logo_eden,
+      title: 'Eden cosmetics',
       key: 5,
       id: 5
     },
@@ -382,7 +390,7 @@ const App = () => {
       arrayOfImages: [
         post,
       ],
-      category: 2,
+      category: 3,
       key: 19,
       id: 19
     },
@@ -442,51 +450,39 @@ const App = () => {
       key: 9,
       id: 9
     },
-    10: {
-      titleOnFullScreen: strings.photoShop1,
-      showLogoOnFullScreen: false,
-      category: 3,
-      type: TYPE_OF_IMAGE.FILTERED,
-      arrayOfImages: [photoshop1],
-      mainImage: photoshop1,
-      title: '',
-      key: 10,
-      id: 10
-    },
-    11: {
-      titleOnFullScreen: strings.photoShop2,
-      showLogoOnFullScreen: false,
-      category: 3,
-      type: TYPE_OF_IMAGE.FILTERED,
-      arrayOfImages: [photoshop2],
-      mainImage: photoshop2,
-      title: '',
-      key: 11,
-      id: 11
-    },
-    12: {
-      titleOnFullScreen: strings.photoShop3,
-      showLogoOnFullScreen: false,
-      category: 3,
-      type: TYPE_OF_IMAGE.FILTERED,
-      arrayOfImages: [photoshop3],
-      mainImage: photoshop3,
-      title: '',
-      key: 12,
-      id: 12
-    },
-    13: {
+    21: {
       titleOnFullScreen: strings.photoShop4,
       showLogoOnFullScreen: false,
       category: 3,
-      type: TYPE_OF_IMAGE.FILTERED,
-      arrayOfImages: [photoshop4],
-      mainImage: photoshop4,
-      title: '',
-      key: 13,
-      id: 13
+      type: TYPE_OF_IMAGE.HOVER,
+      arrayOfImages: [player1],
+      mainImage: player_logo,
+      title: strings.photoShop4,
+      key: 21,
+      id: 21
     },
-
+    22: {
+      titleOnFullScreen: strings.order,
+      showLogoOnFullScreen: false,
+      category: 3,
+      type: TYPE_OF_IMAGE.HOVER,
+      arrayOfImages: [order1],
+      mainImage: orderLogo,
+      title: strings.order,
+      key: 22,
+      id: 22
+    },
+    23: {
+      titleOnFullScreen: strings.order,
+      showLogoOnFullScreen: false,
+      category: 3,
+      type: TYPE_OF_IMAGE.HOVER,
+      arrayOfImages: [order12],
+      mainImage: orderLogo1,
+      title: strings.order,
+      key: 23,
+      id: 23
+    },
   }
   const leftClick = () => {
     for (let i = 0; i < Object.keys(moveBetweenCategoriesObjects).length; i++) {
@@ -849,8 +845,9 @@ const App = () => {
           title={strings.branding}
           moreArray={[
             [
-              allCategories["4"],
-              allCategories["5"],
+              allCategories["1"],
+              allCategories["2"],
+
               allCategories["14"],
               allCategories["0"],
             ]
@@ -858,8 +855,9 @@ const App = () => {
           row={[
             allCategories["20"],
 
-            allCategories["1"],
-            allCategories["2"],
+
+            allCategories["4"],
+            allCategories["5"],
             allCategories["3"]
           ]}/>
       <ShowWork
@@ -870,16 +868,17 @@ const App = () => {
             allCategories["16"],
             allCategories["17"],
             allCategories["18"],
-            allCategories["19"]
+
           ]}/>
       <ShowWork
           title={strings.photoShopDesign}
           moreArray={[]}
           row={[
-            allCategories["10"],
-            allCategories["11"],
-            allCategories["12"],
-            allCategories["13"]
+            allCategories["21"],
+            allCategories["22"],
+            allCategories["19"],
+
+            allCategories["23"]
           ]}/>
       <div style={{
         marginTop: marginValue,

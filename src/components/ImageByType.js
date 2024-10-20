@@ -84,7 +84,6 @@ const ImageByType = (props) => {
                             height: '100%',
                             width: '100%',
                             textIndent: -10000,
-
                         }}
                         src={mainImage}/>
 

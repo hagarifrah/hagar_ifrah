@@ -23,26 +23,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d29f8424-ba3c-41f7-b0eb-ce324c7d0188" name="Default Changelist" comment=".">
-      <change afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/category/posts/post.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/category/posts/post_preview.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/category/yarden/yarden1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/category/yarden/yarden2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/category/yarden/yardenLogo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/setupTests.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/category/eden_new/eden_new1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/category/eden_new/eden_new2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/category/eden_new/logo_eden.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/category/order1/order1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/category/order1/order_logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/category/order2/order12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/category/order2/order_logo2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/category/pizza/pizza1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/category/pizza/pizza2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/category/pizza/pizza3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/category/pizza/pizza4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/category/players/player1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/category/players/player_logo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ImageByType.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ImageByType.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/localization/localization.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/localization/localization.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reportWebVitals.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reportWebVitals.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/category/pizza/pizza1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/category/eden_new/eden_new3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/category/pizza/pizza2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/category/pizza/pizza3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/category/pizza/pizza_logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/category/pizza/pizza_logo.png" afterDir="false" />
     </list>
     <list id="b7c7d12c-fe4e-4e53-9b8a-f62356dc7c21" name="FFDFDF" comment="FFDFDF" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,9 +63,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GithubDefaultAccount">
-    <option name="defaultAccountId" value="db5ac046-dae7-442f-90de-d12a9adb42a4" />
-  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "jeffreybenabou"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/hagarifrah/hagar_ifrah.git",
+    "accountId": "f7699c30-5011-416e-915d-3ea1807d64cf"
+  }
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -80,30 +91,33 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Jeff/WebstormProjects/hagar_ifrah",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/Jeff/WebstormProjects/hagar_ifrah/src/res/category/order2",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "yarn",
     "npm.npm start.executor": "Debug",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2023.3.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Jeff\WebstormProjects\hagar_ifrah" />
-      <recent name="C:\Users\user\WebstormProjects\hagar_finel\src\res\category\ui_ux" />
-      <recent name="C:\Users\user\WebstormProjects\hagar_finel\src\res\category\laNature" />
-      <recent name="C:\Users\user\WebstormProjects\hagar_finel\src\res\category\land_car" />
-      <recent name="C:\Users\user\WebstormProjects\hagar_finel\src\res" />
+      <recent name="C:\Users\Jeff\WebstormProjects\hagar_ifrah\src\res\category\order2" />
+      <recent name="C:\Users\Jeff\WebstormProjects\hagar_ifrah\src\res\category\order1" />
+      <recent name="C:\Users\Jeff\WebstormProjects\hagar_ifrah\src\res\category\players" />
+      <recent name="C:\Users\Jeff\WebstormProjects\hagar_ifrah\src\res\category\eden_new" />
+      <recent name="C:\Users\Jeff\WebstormProjects\hagar_ifrah\src\res\category\pizza" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Jeff\WebstormProjects\hagar_ifrah\src\res\category\eden_new" />
+      <recent name="C:\Users\Jeff\WebstormProjects\hagar_ifrah\src\res\category\pizza" />
       <recent name="C:\Users\user\WebstormProjects\hagar_finel\src\res\category\laNature" />
       <recent name="C:\Users\user\WebstormProjects\hagar_finel\src\res\icons" />
       <recent name="C:\Users\user\WebstormProjects\hagar_finel\src\res\category\ui_ux" />
-      <recent name="C:\Users\user\WebstormProjects\hagar_finel\src\res\category\land_car" />
-      <recent name="C:\Users\user\WebstormProjects\hagar_finel\src\res\category" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
@@ -120,6 +134,13 @@
       <envs />
       <method v="2" />
     </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-WS-242.21829.149" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -170,7 +191,8 @@
       <workItem from="1651084887685" duration="3394000" />
       <workItem from="1651171198836" duration="9000" />
       <workItem from="1709664580795" duration="2474000" />
-      <workItem from="1709670495600" duration="1815000" />
+      <workItem from="1709670495600" duration="2070000" />
+      <workItem from="1729448660196" duration="4304000" />
     </task>
     <task id="LOCAL‎00001" summary=".">
       <created>1625081433632</created>
@@ -341,7 +363,15 @@
       <option name="presentableId" value="LOCAL‎00028" />
       <updated>1651088225368</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary=".">
+      <option name="closed" value="true" />
+      <created>1709673133704</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1709673133704</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -2,6 +2,7 @@ import LocalizedStrings from 'react-localization';
 
 let strings = new LocalizedStrings({
     en:{
+        order:'Invitation',
         postTitle:'Rotzild Ice Cream',
         lang:'English',
         send:"SEND",
@@ -20,7 +21,7 @@ let strings = new LocalizedStrings({
         first:'BRANDING - logo design, business card and marketing aids',
         second:'BRANDING - logo design, brochure and marketing aids',
         bookDesign:'Booklet design',
-        photoShopDesign:"PHOTOSHOP DESIGN",
+        photoShopDesign:"OTHER",
         mainTitle: 'I\'m Hagar Ifrah, a freelance graphic designer from Israel\n' +
             'I\'m a perfectionist, competitive, and constantly looking for new knowledge.\n' +
             '\n' +
@@ -36,7 +37,7 @@ let strings = new LocalizedStrings({
         photoShop1:'Watermelon - Photoshop Design',
         photoShop2:'Banna/Kiwi - Photoshop Design',
         photoShop3:'Global Warming - Photoshop Design',
-        photoShop4:'Flowers - Photoshop Design',
+        photoShop4:'Textile Arad',
         uiux1:'UI/UX - Tour application',
         uiux2:'UI/UX - Goals application',
         uiux2title:'Goals application',
@@ -44,6 +45,7 @@ let strings = new LocalizedStrings({
         postDesign:'Post Design',
     },
     heb: {
+        order:'הזמנה',
         postTitle:'גלידות רוטשילד',
         uiux2title:'אפליקצית יעדים',
         laNatureTitle:'La Nature',
@@ -54,7 +56,7 @@ let strings = new LocalizedStrings({
         photoShop1:'Watermelon - עיצוב בפוטושופ',
         photoShop2:'Banna/Kiwi - עיצוב בפוטושופ',
         photoShop3:'Global Warming - עיצוב בפוטושופ',
-        photoShop4:'Flowers - עיצוב בפוטושופ',
+        photoShop4:'טקסטיל ערד',
         alian:'מיתוג - עיצוב לוגו, אתר, דף נחיתה ועזרים שיווקיים',
         pizza:'מיתוג - עיצוב לוגו ועזרים שיווקיים',
         lifeBoat:'מיתוג- עיצוב לוגו',
@@ -65,7 +67,7 @@ let strings = new LocalizedStrings({
         bookDesign:'עיצוב חוברות',
         events:'מיתוג לאירועים',
         branding:'מיתוג',
-        photoShopDesign:"עיצובים בפוטושופ",
+        photoShopDesign:"שונות",
         moreDesign:'UX/UI',
         lang:'Hebrew',
         send:"שלח",
